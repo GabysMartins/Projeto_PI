@@ -16,7 +16,7 @@ namespace OficinaMec
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TelaAgendamento());
+            Application.Run(new TelaInicial());
         }
     }
 }

@@ -16,5 +16,26 @@ namespace OficinaMec
         {
             InitializeComponent();
         }
+
+        private void BSFinalizar_Click(object sender, EventArgs e)
+        {
+            TelaOrcamento telaOrcamento = new TelaOrcamento();
+            this.Hide();
+            telaOrcamento.ShowDialog();
+        }
+
+        private void BSSair_Click(object sender, EventArgs e)
+        {
+            TelaMenu telaMenu = new TelaMenu();
+            this.Hide();
+            telaMenu.ShowDialog();
+        }
+
+        private void BSEstoque_Click(object sender, EventArgs e)
+        {
+            TelaEstoque telaEstoque = new TelaEstoque();
+            this.Hide();
+            telaEstoque.ShowDialog();
+        }
     }
 }

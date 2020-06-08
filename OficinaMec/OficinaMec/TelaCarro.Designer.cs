@@ -196,6 +196,7 @@
             this.BCCSair.TabIndex = 48;
             this.BCCSair.Text = "SAIR";
             this.BCCSair.UseVisualStyleBackColor = false;
+            this.BCCSair.Click += new System.EventHandler(this.BCCSair_Click);
             // 
             // TelaCarro
             // 

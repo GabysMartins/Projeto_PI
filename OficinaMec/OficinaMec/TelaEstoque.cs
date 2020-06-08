@@ -16,5 +16,20 @@ namespace OficinaMec
         {
             InitializeComponent();
         }
+
+        private void BEOrdemServico_Click(object sender, EventArgs e)
+        {
+            TelaOrdemServico telaOrdemServico = new TelaOrdemServico();
+            this.Hide();
+            telaOrdemServico.ShowDialog();
+
+        }
+
+        private void BESair_Click(object sender, EventArgs e)
+        {
+            TelaMenu telaMenu = new TelaMenu();
+            this.Hide();
+            telaMenu.ShowDialog();
+        }
     }
 }

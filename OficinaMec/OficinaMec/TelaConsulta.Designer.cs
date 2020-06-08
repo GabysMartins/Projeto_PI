@@ -49,6 +49,7 @@
             this.BCSair.TabIndex = 54;
             this.BCSair.Text = "SAIR";
             this.BCSair.UseVisualStyleBackColor = false;
+            this.BCSair.Click += new System.EventHandler(this.BCSair_Click);
             // 
             // BCConsultar
             // 

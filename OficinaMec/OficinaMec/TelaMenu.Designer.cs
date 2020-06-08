@@ -49,6 +49,7 @@
             this.BMUsuario.TabIndex = 18;
             this.BMUsuario.Text = "USUÁRIO";
             this.BMUsuario.UseVisualStyleBackColor = false;
+            this.BMUsuario.Click += new System.EventHandler(this.BMUsuario_Click);
             // 
             // BMSair
             // 
@@ -61,6 +62,7 @@
             this.BMSair.TabIndex = 17;
             this.BMSair.Text = "SAIR";
             this.BMSair.UseVisualStyleBackColor = false;
+            this.BMSair.Click += new System.EventHandler(this.BMSair_Click);
             // 
             // BMConsulta
             // 
@@ -73,6 +75,7 @@
             this.BMConsulta.TabIndex = 16;
             this.BMConsulta.Text = "CONSULTA";
             this.BMConsulta.UseVisualStyleBackColor = false;
+            this.BMConsulta.Click += new System.EventHandler(this.BMConsulta_Click);
             // 
             // BMEstoque
             // 
@@ -85,6 +88,7 @@
             this.BMEstoque.TabIndex = 15;
             this.BMEstoque.Text = "ESTOQUE";
             this.BMEstoque.UseVisualStyleBackColor = false;
+            this.BMEstoque.Click += new System.EventHandler(this.BMEstoque_Click);
             // 
             // BMOrcamento
             // 
@@ -97,6 +101,7 @@
             this.BMOrcamento.TabIndex = 14;
             this.BMOrcamento.Text = "ORÇAMENTO";
             this.BMOrcamento.UseVisualStyleBackColor = false;
+            this.BMOrcamento.Click += new System.EventHandler(this.BMOrcamento_Click);
             // 
             // BMCadastro
             // 
@@ -109,6 +114,7 @@
             this.BMCadastro.TabIndex = 13;
             this.BMCadastro.Text = "CADASTRO";
             this.BMCadastro.UseVisualStyleBackColor = false;
+            this.BMCadastro.Click += new System.EventHandler(this.BMCadastro_Click);
             // 
             // BMAgendamento
             // 
@@ -121,6 +127,7 @@
             this.BMAgendamento.TabIndex = 12;
             this.BMAgendamento.Text = "AGENDAMENTO";
             this.BMAgendamento.UseVisualStyleBackColor = false;
+            this.BMAgendamento.Click += new System.EventHandler(this.BMAgendamento_Click);
             // 
             // TelaMenu
             // 
@@ -136,6 +143,7 @@
             this.Controls.Add(this.BMCadastro);
             this.Controls.Add(this.BMAgendamento);
             this.Name = "TelaMenu";
+            this.RightToLeftLayout = true;
             this.Text = "TelaMenu";
             this.ResumeLayout(false);
 

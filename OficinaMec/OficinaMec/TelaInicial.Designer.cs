@@ -48,6 +48,7 @@
             this.BIEntrar.TabIndex = 15;
             this.BIEntrar.Text = "ENTRAR";
             this.BIEntrar.UseVisualStyleBackColor = false;
+            this.BIEntrar.Click += new System.EventHandler(this.BIEntrar_Click);
             // 
             // TISenha
             // 

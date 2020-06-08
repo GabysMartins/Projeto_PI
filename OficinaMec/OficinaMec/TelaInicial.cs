@@ -16,5 +16,12 @@ namespace OficinaMec
         {
             InitializeComponent();
         }
+
+        private void BIEntrar_Click(object sender, EventArgs e)
+        {
+            TelaMenu telaMenu = new TelaMenu();
+            this.Hide();
+            telaMenu.ShowDialog();
+        }
     }
 }

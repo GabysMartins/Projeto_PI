@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaAgendamento));
             this.BACancelar = new System.Windows.Forms.Button();
             this.BAAgendar = new System.Windows.Forms.Button();
             this.TADescritivo = new System.Windows.Forms.TextBox();
@@ -59,6 +60,7 @@
             this.BACancelar.TabIndex = 35;
             this.BACancelar.Text = "CANCELAR";
             this.BACancelar.UseVisualStyleBackColor = false;
+            this.BACancelar.Click += new System.EventHandler(this.BACancelar_Click);
             // 
             // BAAgendar
             // 
@@ -242,6 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(833, 450);
             this.Controls.Add(this.BACancelar);
             this.Controls.Add(this.BAAgendar);

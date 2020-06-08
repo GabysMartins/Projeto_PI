@@ -85,6 +85,7 @@
             this.BOSair.TabIndex = 57;
             this.BOSair.Text = "SAIR";
             this.BOSair.UseVisualStyleBackColor = false;
+            this.BOSair.Click += new System.EventHandler(this.BOSair_Click);
             // 
             // BOCancelar
             // 
@@ -109,6 +110,7 @@
             this.BOAbrir.TabIndex = 55;
             this.BOAbrir.Text = "ABRIR ORDEM ";
             this.BOAbrir.UseVisualStyleBackColor = false;
+            this.BOAbrir.Click += new System.EventHandler(this.BOAbrir_Click);
             // 
             // BOEliminar
             // 

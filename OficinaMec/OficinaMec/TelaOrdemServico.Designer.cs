@@ -140,6 +140,7 @@
             this.BSEstoque.TabIndex = 56;
             this.BSEstoque.Text = "ESTOQUE";
             this.BSEstoque.UseVisualStyleBackColor = false;
+            this.BSEstoque.Click += new System.EventHandler(this.BSEstoque_Click);
             // 
             // BSFinalizar
             // 
@@ -152,6 +153,7 @@
             this.BSFinalizar.TabIndex = 55;
             this.BSFinalizar.Text = "FINALIZAR ORDEM";
             this.BSFinalizar.UseVisualStyleBackColor = false;
+            this.BSFinalizar.Click += new System.EventHandler(this.BSFinalizar_Click);
             // 
             // BSSair
             // 
@@ -164,6 +166,7 @@
             this.BSSair.TabIndex = 54;
             this.BSSair.Text = "SAIR";
             this.BSSair.UseVisualStyleBackColor = false;
+            this.BSSair.Click += new System.EventHandler(this.BSSair_Click);
             // 
             // TSKM
             // 

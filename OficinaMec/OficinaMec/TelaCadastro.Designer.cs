@@ -78,6 +78,7 @@
             this.BCadAdicionar.TabIndex = 53;
             this.BCadAdicionar.Text = "ADICIONAR CARRO";
             this.BCadAdicionar.UseVisualStyleBackColor = false;
+            this.BCadAdicionar.Click += new System.EventHandler(this.BCadAdicionar_Click);
             // 
             // TCadEndereco
             // 
@@ -207,6 +208,7 @@
             this.BCadSair.TabIndex = 41;
             this.BCadSair.Text = "SAIR";
             this.BCadSair.UseVisualStyleBackColor = false;
+            this.BCadSair.Click += new System.EventHandler(this.BCadSair_Click);
             // 
             // TelaCadastro
             // 

@@ -16,5 +16,12 @@ namespace OficinaMec
         {
             InitializeComponent();
         }
+
+        private void BCCSair_Click(object sender, EventArgs e)
+        {
+            TelaCadastro telaCadastro = new TelaCadastro();
+            this.Hide();
+            telaCadastro.ShowDialog();
+        }
     }
 }

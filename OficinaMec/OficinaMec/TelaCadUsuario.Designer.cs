@@ -196,6 +196,7 @@
             this.BCUSair.TabIndex = 65;
             this.BCUSair.Text = "SAIR";
             this.BCUSair.UseVisualStyleBackColor = false;
+            this.BCUSair.Click += new System.EventHandler(this.BCUSair_Click);
             // 
             // BCURemover
             // 
