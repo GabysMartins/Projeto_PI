@@ -54,13 +54,14 @@
             this.Modelo = new System.Windows.Forms.Label();
             this.placa = new System.Windows.Forms.Label();
             this.Informacoes = new System.Windows.Forms.Label();
+            this.BSImprimir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TSServico
             // 
             this.TSServico.BackColor = System.Drawing.Color.Moccasin;
             this.TSServico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TSServico.Location = new System.Drawing.Point(604, 292);
+            this.TSServico.Location = new System.Drawing.Point(604, 290);
             this.TSServico.Name = "TSServico";
             this.TSServico.Size = new System.Drawing.Size(184, 20);
             this.TSServico.TabIndex = 63;
@@ -71,7 +72,7 @@
             this.ValorServico.BackColor = System.Drawing.Color.Transparent;
             this.ValorServico.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValorServico.ForeColor = System.Drawing.Color.Moccasin;
-            this.ValorServico.Location = new System.Drawing.Point(600, 268);
+            this.ValorServico.Location = new System.Drawing.Point(600, 266);
             this.ValorServico.Name = "ValorServico";
             this.ValorServico.Size = new System.Drawing.Size(196, 21);
             this.ValorServico.TabIndex = 62;
@@ -81,7 +82,7 @@
             // 
             this.TSMao.BackColor = System.Drawing.Color.Moccasin;
             this.TSMao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TSMao.Location = new System.Drawing.Point(604, 238);
+            this.TSMao.Location = new System.Drawing.Point(604, 236);
             this.TSMao.Name = "TSMao";
             this.TSMao.Size = new System.Drawing.Size(184, 20);
             this.TSMao.TabIndex = 61;
@@ -92,7 +93,7 @@
             this.ValorMao.BackColor = System.Drawing.Color.Transparent;
             this.ValorMao.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValorMao.ForeColor = System.Drawing.Color.Moccasin;
-            this.ValorMao.Location = new System.Drawing.Point(602, 214);
+            this.ValorMao.Location = new System.Drawing.Point(602, 212);
             this.ValorMao.Name = "ValorMao";
             this.ValorMao.Size = new System.Drawing.Size(190, 21);
             this.ValorMao.TabIndex = 60;
@@ -102,7 +103,7 @@
             // 
             this.TSPecas.BackColor = System.Drawing.Color.Moccasin;
             this.TSPecas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TSPecas.Location = new System.Drawing.Point(604, 186);
+            this.TSPecas.Location = new System.Drawing.Point(604, 184);
             this.TSPecas.Name = "TSPecas";
             this.TSPecas.Size = new System.Drawing.Size(184, 20);
             this.TSPecas.TabIndex = 59;
@@ -113,7 +114,7 @@
             this.ValorTotal.BackColor = System.Drawing.Color.Transparent;
             this.ValorTotal.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValorTotal.ForeColor = System.Drawing.Color.Moccasin;
-            this.ValorTotal.Location = new System.Drawing.Point(600, 162);
+            this.ValorTotal.Location = new System.Drawing.Point(600, 160);
             this.ValorTotal.Name = "ValorTotal";
             this.ValorTotal.Size = new System.Drawing.Size(188, 21);
             this.ValorTotal.TabIndex = 58;
@@ -134,7 +135,7 @@
             this.BSEstoque.BackColor = System.Drawing.Color.Moccasin;
             this.BSEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BSEstoque.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BSEstoque.Location = new System.Drawing.Point(192, 381);
+            this.BSEstoque.Location = new System.Drawing.Point(60, 381);
             this.BSEstoque.Name = "BSEstoque";
             this.BSEstoque.Size = new System.Drawing.Size(151, 57);
             this.BSEstoque.TabIndex = 56;
@@ -147,7 +148,7 @@
             this.BSFinalizar.BackColor = System.Drawing.Color.Moccasin;
             this.BSFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BSFinalizar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BSFinalizar.Location = new System.Drawing.Point(371, 381);
+            this.BSFinalizar.Location = new System.Drawing.Point(239, 381);
             this.BSFinalizar.Name = "BSFinalizar";
             this.BSFinalizar.Size = new System.Drawing.Size(151, 57);
             this.BSFinalizar.TabIndex = 55;
@@ -160,7 +161,7 @@
             this.BSSair.BackColor = System.Drawing.Color.Moccasin;
             this.BSSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BSSair.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BSSair.Location = new System.Drawing.Point(547, 381);
+            this.BSSair.Location = new System.Drawing.Point(415, 381);
             this.BSSair.Name = "BSSair";
             this.BSSair.Size = new System.Drawing.Size(151, 57);
             this.BSSair.TabIndex = 54;
@@ -327,12 +328,25 @@
             this.Informacoes.TabIndex = 39;
             this.Informacoes.Text = "INFORMAÇÕES CLIENTES";
             // 
+            // BSImprimir
+            // 
+            this.BSImprimir.BackColor = System.Drawing.Color.Moccasin;
+            this.BSImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BSImprimir.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BSImprimir.Location = new System.Drawing.Point(587, 381);
+            this.BSImprimir.Name = "BSImprimir";
+            this.BSImprimir.Size = new System.Drawing.Size(151, 57);
+            this.BSImprimir.TabIndex = 64;
+            this.BSImprimir.Text = "IMPRIMIR";
+            this.BSImprimir.UseVisualStyleBackColor = false;
+            // 
             // TelaOrdemServico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BSImprimir);
             this.Controls.Add(this.TSServico);
             this.Controls.Add(this.ValorServico);
             this.Controls.Add(this.TSMao);
@@ -392,5 +406,6 @@
         private System.Windows.Forms.Label Modelo;
         private System.Windows.Forms.Label placa;
         private System.Windows.Forms.Label Informacoes;
+        private System.Windows.Forms.Button BSImprimir;
     }
 }

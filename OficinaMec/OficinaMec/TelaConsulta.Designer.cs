@@ -68,7 +68,7 @@
             // 
             this.TCCPF.BackColor = System.Drawing.Color.Moccasin;
             this.TCCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TCCPF.Location = new System.Drawing.Point(240, 196);
+            this.TCCPF.Location = new System.Drawing.Point(240, 212);
             this.TCCPF.Name = "TCCPF";
             this.TCCPF.Size = new System.Drawing.Size(148, 20);
             this.TCCPF.TabIndex = 52;
@@ -88,7 +88,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Moccasin;
-            this.label3.Location = new System.Drawing.Point(165, 196);
+            this.label3.Location = new System.Drawing.Point(165, 212);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 21);
             this.label3.TabIndex = 50;

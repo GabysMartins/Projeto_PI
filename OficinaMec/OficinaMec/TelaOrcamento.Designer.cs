@@ -51,6 +51,12 @@
             this.Modelo = new System.Windows.Forms.Label();
             this.placa = new System.Windows.Forms.Label();
             this.Informacoes = new System.Windows.Forms.Label();
+            this.TOServico = new System.Windows.Forms.TextBox();
+            this.ValorServico = new System.Windows.Forms.Label();
+            this.TOMao = new System.Windows.Forms.TextBox();
+            this.ValorMao = new System.Windows.Forms.Label();
+            this.TOPecas = new System.Windows.Forms.TextBox();
+            this.ValorTotal = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TOKM
@@ -79,7 +85,7 @@
             this.BOSair.BackColor = System.Drawing.Color.Moccasin;
             this.BOSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BOSair.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOSair.Location = new System.Drawing.Point(657, 384);
+            this.BOSair.Location = new System.Drawing.Point(601, 381);
             this.BOSair.Name = "BOSair";
             this.BOSair.Size = new System.Drawing.Size(122, 57);
             this.BOSair.TabIndex = 57;
@@ -92,7 +98,7 @@
             this.BOCancelar.BackColor = System.Drawing.Color.Moccasin;
             this.BOCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BOCancelar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOCancelar.Location = new System.Drawing.Point(529, 384);
+            this.BOCancelar.Location = new System.Drawing.Point(473, 381);
             this.BOCancelar.Name = "BOCancelar";
             this.BOCancelar.Size = new System.Drawing.Size(122, 57);
             this.BOCancelar.TabIndex = 56;
@@ -104,7 +110,7 @@
             this.BOAbrir.BackColor = System.Drawing.Color.Moccasin;
             this.BOAbrir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BOAbrir.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOAbrir.Location = new System.Drawing.Point(401, 384);
+            this.BOAbrir.Location = new System.Drawing.Point(345, 381);
             this.BOAbrir.Name = "BOAbrir";
             this.BOAbrir.Size = new System.Drawing.Size(122, 57);
             this.BOAbrir.TabIndex = 55;
@@ -117,7 +123,7 @@
             this.BOEliminar.BackColor = System.Drawing.Color.Moccasin;
             this.BOEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BOEliminar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOEliminar.Location = new System.Drawing.Point(273, 384);
+            this.BOEliminar.Location = new System.Drawing.Point(217, 381);
             this.BOEliminar.Name = "BOEliminar";
             this.BOEliminar.Size = new System.Drawing.Size(122, 57);
             this.BOEliminar.TabIndex = 54;
@@ -129,7 +135,7 @@
             this.BOAcrescentar.BackColor = System.Drawing.Color.Moccasin;
             this.BOAcrescentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BOAcrescentar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOAcrescentar.Location = new System.Drawing.Point(145, 384);
+            this.BOAcrescentar.Location = new System.Drawing.Point(89, 381);
             this.BOAcrescentar.Name = "BOAcrescentar";
             this.BOAcrescentar.Size = new System.Drawing.Size(122, 57);
             this.BOAcrescentar.TabIndex = 53;
@@ -296,12 +302,81 @@
             this.Informacoes.TabIndex = 38;
             this.Informacoes.Text = "INFORMAÇÕES CLIENTES";
             // 
+            // TOServico
+            // 
+            this.TOServico.BackColor = System.Drawing.Color.Moccasin;
+            this.TOServico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TOServico.Location = new System.Drawing.Point(595, 296);
+            this.TOServico.Name = "TOServico";
+            this.TOServico.Size = new System.Drawing.Size(184, 20);
+            this.TOServico.TabIndex = 69;
+            // 
+            // ValorServico
+            // 
+            this.ValorServico.AutoSize = true;
+            this.ValorServico.BackColor = System.Drawing.Color.Transparent;
+            this.ValorServico.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValorServico.ForeColor = System.Drawing.Color.Moccasin;
+            this.ValorServico.Location = new System.Drawing.Point(591, 272);
+            this.ValorServico.Name = "ValorServico";
+            this.ValorServico.Size = new System.Drawing.Size(196, 21);
+            this.ValorServico.TabIndex = 68;
+            this.ValorServico.Text = "VALOR TOTAL DO SERVIÇO:";
+            // 
+            // TOMao
+            // 
+            this.TOMao.BackColor = System.Drawing.Color.Moccasin;
+            this.TOMao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TOMao.Location = new System.Drawing.Point(595, 242);
+            this.TOMao.Name = "TOMao";
+            this.TOMao.Size = new System.Drawing.Size(184, 20);
+            this.TOMao.TabIndex = 67;
+            // 
+            // ValorMao
+            // 
+            this.ValorMao.AutoSize = true;
+            this.ValorMao.BackColor = System.Drawing.Color.Transparent;
+            this.ValorMao.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValorMao.ForeColor = System.Drawing.Color.Moccasin;
+            this.ValorMao.Location = new System.Drawing.Point(593, 218);
+            this.ValorMao.Name = "ValorMao";
+            this.ValorMao.Size = new System.Drawing.Size(190, 21);
+            this.ValorMao.TabIndex = 66;
+            this.ValorMao.Text = "VALOR DA MÃO DE OBRA:";
+            // 
+            // TOPecas
+            // 
+            this.TOPecas.BackColor = System.Drawing.Color.Moccasin;
+            this.TOPecas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TOPecas.Location = new System.Drawing.Point(595, 190);
+            this.TOPecas.Name = "TOPecas";
+            this.TOPecas.Size = new System.Drawing.Size(184, 20);
+            this.TOPecas.TabIndex = 65;
+            // 
+            // ValorTotal
+            // 
+            this.ValorTotal.AutoSize = true;
+            this.ValorTotal.BackColor = System.Drawing.Color.Transparent;
+            this.ValorTotal.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ValorTotal.ForeColor = System.Drawing.Color.Moccasin;
+            this.ValorTotal.Location = new System.Drawing.Point(591, 166);
+            this.ValorTotal.Name = "ValorTotal";
+            this.ValorTotal.Size = new System.Drawing.Size(188, 21);
+            this.ValorTotal.TabIndex = 64;
+            this.ValorTotal.Text = "VALOR TOTAL DAS PEÇAS:";
+            // 
             // TelaOrcamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TOServico);
+            this.Controls.Add(this.ValorServico);
+            this.Controls.Add(this.TOMao);
+            this.Controls.Add(this.ValorMao);
+            this.Controls.Add(this.TOPecas);
+            this.Controls.Add(this.ValorTotal);
             this.Controls.Add(this.TOKM);
             this.Controls.Add(this.Km);
             this.Controls.Add(this.BOSair);
@@ -355,5 +430,11 @@
         private System.Windows.Forms.Label Modelo;
         private System.Windows.Forms.Label placa;
         private System.Windows.Forms.Label Informacoes;
+        private System.Windows.Forms.TextBox TOServico;
+        private System.Windows.Forms.Label ValorServico;
+        private System.Windows.Forms.TextBox TOMao;
+        private System.Windows.Forms.Label ValorMao;
+        private System.Windows.Forms.TextBox TOPecas;
+        private System.Windows.Forms.Label ValorTotal;
     }
 }
