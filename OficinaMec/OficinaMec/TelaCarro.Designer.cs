@@ -43,6 +43,8 @@
             this.CPF = new System.Windows.Forms.Label();
             this.BCCSalvar = new System.Windows.Forms.Button();
             this.BCCSair = new System.Windows.Forms.Button();
+            this.BCCAlterar = new System.Windows.Forms.Button();
+            this.BCCExcluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TCCFabricante
@@ -178,7 +180,7 @@
             this.BCCSalvar.BackColor = System.Drawing.Color.Moccasin;
             this.BCCSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BCCSalvar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BCCSalvar.Location = new System.Drawing.Point(263, 381);
+            this.BCCSalvar.Location = new System.Drawing.Point(592, 381);
             this.BCCSalvar.Name = "BCCSalvar";
             this.BCCSalvar.Size = new System.Drawing.Size(151, 57);
             this.BCCSalvar.TabIndex = 49;
@@ -190,7 +192,7 @@
             this.BCCSair.BackColor = System.Drawing.Color.Moccasin;
             this.BCCSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BCCSair.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BCCSair.Location = new System.Drawing.Point(434, 381);
+            this.BCCSair.Location = new System.Drawing.Point(419, 381);
             this.BCCSair.Name = "BCCSair";
             this.BCCSair.Size = new System.Drawing.Size(151, 57);
             this.BCCSair.TabIndex = 48;
@@ -198,12 +200,38 @@
             this.BCCSair.UseVisualStyleBackColor = false;
             this.BCCSair.Click += new System.EventHandler(this.BCCSair_Click);
             // 
+            // BCCAlterar
+            // 
+            this.BCCAlterar.BackColor = System.Drawing.Color.Moccasin;
+            this.BCCAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BCCAlterar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BCCAlterar.Location = new System.Drawing.Point(78, 381);
+            this.BCCAlterar.Name = "BCCAlterar";
+            this.BCCAlterar.Size = new System.Drawing.Size(151, 57);
+            this.BCCAlterar.TabIndex = 62;
+            this.BCCAlterar.Text = "ALTERAR";
+            this.BCCAlterar.UseVisualStyleBackColor = false;
+            // 
+            // BCCExcluir
+            // 
+            this.BCCExcluir.BackColor = System.Drawing.Color.Moccasin;
+            this.BCCExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BCCExcluir.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BCCExcluir.Location = new System.Drawing.Point(247, 381);
+            this.BCCExcluir.Name = "BCCExcluir";
+            this.BCCExcluir.Size = new System.Drawing.Size(151, 57);
+            this.BCCExcluir.TabIndex = 63;
+            this.BCCExcluir.Text = "EXCLUIR";
+            this.BCCExcluir.UseVisualStyleBackColor = false;
+            // 
             // TelaCarro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BCCExcluir);
+            this.Controls.Add(this.BCCAlterar);
             this.Controls.Add(this.TCCFabricante);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TCCAno);
@@ -241,5 +269,7 @@
         private System.Windows.Forms.Label CPF;
         private System.Windows.Forms.Button BCCSalvar;
         private System.Windows.Forms.Button BCCSair;
+        private System.Windows.Forms.Button BCCAlterar;
+        private System.Windows.Forms.Button BCCExcluir;
     }
 }

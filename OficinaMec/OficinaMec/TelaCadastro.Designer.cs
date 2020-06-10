@@ -44,6 +44,7 @@
             this.Nome = new System.Windows.Forms.Label();
             this.BCadSalvar = new System.Windows.Forms.Button();
             this.BCadSair = new System.Windows.Forms.Button();
+            this.BCadLimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TCadEmail
@@ -190,7 +191,7 @@
             this.BCadSalvar.BackColor = System.Drawing.Color.Moccasin;
             this.BCadSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BCadSalvar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BCadSalvar.Location = new System.Drawing.Point(213, 381);
+            this.BCadSalvar.Location = new System.Drawing.Point(347, 381);
             this.BCadSalvar.Name = "BCadSalvar";
             this.BCadSalvar.Size = new System.Drawing.Size(151, 57);
             this.BCadSalvar.TabIndex = 42;
@@ -202,7 +203,7 @@
             this.BCadSair.BackColor = System.Drawing.Color.Moccasin;
             this.BCadSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BCadSair.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BCadSair.Location = new System.Drawing.Point(398, 381);
+            this.BCadSair.Location = new System.Drawing.Point(532, 381);
             this.BCadSair.Name = "BCadSair";
             this.BCadSair.Size = new System.Drawing.Size(151, 57);
             this.BCadSair.TabIndex = 41;
@@ -210,12 +211,25 @@
             this.BCadSair.UseVisualStyleBackColor = false;
             this.BCadSair.Click += new System.EventHandler(this.BCadSair_Click);
             // 
+            // BCadLimpar
+            // 
+            this.BCadLimpar.BackColor = System.Drawing.Color.Moccasin;
+            this.BCadLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BCadLimpar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BCadLimpar.Location = new System.Drawing.Point(165, 381);
+            this.BCadLimpar.Name = "BCadLimpar";
+            this.BCadLimpar.Size = new System.Drawing.Size(151, 57);
+            this.BCadLimpar.TabIndex = 56;
+            this.BCadLimpar.Text = "LIMPAR";
+            this.BCadLimpar.UseVisualStyleBackColor = false;
+            // 
             // TelaCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.BCadLimpar);
             this.Controls.Add(this.TCadEmail);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.BCadAdicionar);
@@ -255,5 +269,6 @@
         private System.Windows.Forms.Label Nome;
         private System.Windows.Forms.Button BCadSalvar;
         private System.Windows.Forms.Button BCadSair;
+        private System.Windows.Forms.Button BCadLimpar;
     }
 }

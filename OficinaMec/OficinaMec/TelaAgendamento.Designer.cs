@@ -47,6 +47,7 @@
             this.Modelo = new System.Windows.Forms.Label();
             this.placa = new System.Windows.Forms.Label();
             this.Informacoes = new System.Windows.Forms.Label();
+            this.BALimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BACancelar
@@ -54,7 +55,7 @@
             this.BACancelar.BackColor = System.Drawing.Color.Moccasin;
             this.BACancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BACancelar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BACancelar.Location = new System.Drawing.Point(12, 381);
+            this.BACancelar.Location = new System.Drawing.Point(12, 383);
             this.BACancelar.Name = "BACancelar";
             this.BACancelar.Size = new System.Drawing.Size(151, 57);
             this.BACancelar.TabIndex = 35;
@@ -67,7 +68,7 @@
             this.BAAgendar.BackColor = System.Drawing.Color.Moccasin;
             this.BAAgendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAAgendar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BAAgendar.Location = new System.Drawing.Point(183, 381);
+            this.BAAgendar.Location = new System.Drawing.Point(180, 383);
             this.BAAgendar.Name = "BAAgendar";
             this.BAAgendar.Size = new System.Drawing.Size(151, 57);
             this.BAAgendar.TabIndex = 34;
@@ -240,12 +241,26 @@
             this.Informacoes.TabIndex = 18;
             this.Informacoes.Text = "INFORMAÇÕES CLIENTES";
             // 
+            // BALimpar
+            // 
+            this.BALimpar.BackColor = System.Drawing.Color.Moccasin;
+            this.BALimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BALimpar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BALimpar.Location = new System.Drawing.Point(350, 383);
+            this.BALimpar.Name = "BALimpar";
+            this.BALimpar.Size = new System.Drawing.Size(151, 57);
+            this.BALimpar.TabIndex = 36;
+            this.BALimpar.Text = "LIMPAR";
+            this.BALimpar.UseVisualStyleBackColor = false;
+            this.BALimpar.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TelaAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(833, 450);
+            this.Controls.Add(this.BALimpar);
             this.Controls.Add(this.BACancelar);
             this.Controls.Add(this.BAAgendar);
             this.Controls.Add(this.TADescritivo);
@@ -291,6 +306,7 @@
         private System.Windows.Forms.Label Modelo;
         private System.Windows.Forms.Label placa;
         private System.Windows.Forms.Label Informacoes;
+        private System.Windows.Forms.Button BALimpar;
     }
 }
 

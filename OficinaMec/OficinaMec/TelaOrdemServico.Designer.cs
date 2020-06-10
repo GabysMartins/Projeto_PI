@@ -36,8 +36,6 @@
             this.TSPecas = new System.Windows.Forms.TextBox();
             this.ValorTotal = new System.Windows.Forms.Label();
             this.TSNumero = new System.Windows.Forms.TextBox();
-            this.BSEstoque = new System.Windows.Forms.Button();
-            this.BSFinalizar = new System.Windows.Forms.Button();
             this.BSSair = new System.Windows.Forms.Button();
             this.TSKM = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -130,38 +128,12 @@
             this.TSNumero.Size = new System.Drawing.Size(239, 59);
             this.TSNumero.TabIndex = 57;
             // 
-            // BSEstoque
-            // 
-            this.BSEstoque.BackColor = System.Drawing.Color.Moccasin;
-            this.BSEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BSEstoque.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BSEstoque.Location = new System.Drawing.Point(60, 381);
-            this.BSEstoque.Name = "BSEstoque";
-            this.BSEstoque.Size = new System.Drawing.Size(151, 57);
-            this.BSEstoque.TabIndex = 56;
-            this.BSEstoque.Text = "ESTOQUE";
-            this.BSEstoque.UseVisualStyleBackColor = false;
-            this.BSEstoque.Click += new System.EventHandler(this.BSEstoque_Click);
-            // 
-            // BSFinalizar
-            // 
-            this.BSFinalizar.BackColor = System.Drawing.Color.Moccasin;
-            this.BSFinalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BSFinalizar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BSFinalizar.Location = new System.Drawing.Point(239, 381);
-            this.BSFinalizar.Name = "BSFinalizar";
-            this.BSFinalizar.Size = new System.Drawing.Size(151, 57);
-            this.BSFinalizar.TabIndex = 55;
-            this.BSFinalizar.Text = "FINALIZAR ORDEM";
-            this.BSFinalizar.UseVisualStyleBackColor = false;
-            this.BSFinalizar.Click += new System.EventHandler(this.BSFinalizar_Click);
-            // 
             // BSSair
             // 
             this.BSSair.BackColor = System.Drawing.Color.Moccasin;
             this.BSSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BSSair.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BSSair.Location = new System.Drawing.Point(415, 381);
+            this.BSSair.Location = new System.Drawing.Point(260, 381);
             this.BSSair.Name = "BSSair";
             this.BSSair.Size = new System.Drawing.Size(151, 57);
             this.BSSair.TabIndex = 54;
@@ -333,7 +305,7 @@
             this.BSImprimir.BackColor = System.Drawing.Color.Moccasin;
             this.BSImprimir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BSImprimir.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BSImprimir.Location = new System.Drawing.Point(587, 381);
+            this.BSImprimir.Location = new System.Drawing.Point(432, 381);
             this.BSImprimir.Name = "BSImprimir";
             this.BSImprimir.Size = new System.Drawing.Size(151, 57);
             this.BSImprimir.TabIndex = 64;
@@ -354,8 +326,6 @@
             this.Controls.Add(this.TSPecas);
             this.Controls.Add(this.ValorTotal);
             this.Controls.Add(this.TSNumero);
-            this.Controls.Add(this.BSEstoque);
-            this.Controls.Add(this.BSFinalizar);
             this.Controls.Add(this.BSSair);
             this.Controls.Add(this.TSKM);
             this.Controls.Add(this.label1);
@@ -388,8 +358,6 @@
         private System.Windows.Forms.TextBox TSPecas;
         private System.Windows.Forms.Label ValorTotal;
         private System.Windows.Forms.TextBox TSNumero;
-        private System.Windows.Forms.Button BSEstoque;
-        private System.Windows.Forms.Button BSFinalizar;
         private System.Windows.Forms.Button BSSair;
         private System.Windows.Forms.TextBox TSKM;
         private System.Windows.Forms.Label label1;
