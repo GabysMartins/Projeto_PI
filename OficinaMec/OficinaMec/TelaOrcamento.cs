@@ -26,9 +26,17 @@ namespace OficinaMec
 
         private void BOAbrir_Click(object sender, EventArgs e)
         {
-            TelaOrdemServico telaOrdemServico = new TelaOrdemServico();
-            this.Hide();
-            telaOrdemServico.ShowDialog();
+            if(TOKM.Text=="")
+            {
+                MessageBox.Show("Existem campos que precisam ser preenchidos!");
+            }
+            else 
+            {
+                TelaOrdemServico telaOrdemServico = new TelaOrdemServico();
+                this.Hide();
+                telaOrdemServico.ShowDialog();
+            }
         }
+            
     }
 }

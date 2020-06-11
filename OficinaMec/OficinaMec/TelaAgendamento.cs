@@ -24,7 +24,12 @@ namespace OficinaMec
             telaMenu.ShowDialog();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BALimpar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BAAgendar_Click(object sender, EventArgs e)
         {
 
         }

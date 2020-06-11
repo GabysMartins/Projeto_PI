@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaAgendamento));
-            this.BACancelar = new System.Windows.Forms.Button();
+            this.BASair = new System.Windows.Forms.Button();
             this.BAAgendar = new System.Windows.Forms.Button();
             this.TADescritivo = new System.Windows.Forms.TextBox();
             this.Descritivo = new System.Windows.Forms.Label();
@@ -50,18 +50,18 @@
             this.BALimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // BACancelar
+            // BASair
             // 
-            this.BACancelar.BackColor = System.Drawing.Color.Moccasin;
-            this.BACancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BACancelar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BACancelar.Location = new System.Drawing.Point(12, 383);
-            this.BACancelar.Name = "BACancelar";
-            this.BACancelar.Size = new System.Drawing.Size(151, 57);
-            this.BACancelar.TabIndex = 35;
-            this.BACancelar.Text = "CANCELAR";
-            this.BACancelar.UseVisualStyleBackColor = false;
-            this.BACancelar.Click += new System.EventHandler(this.BACancelar_Click);
+            this.BASair.BackColor = System.Drawing.Color.Moccasin;
+            this.BASair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BASair.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BASair.Location = new System.Drawing.Point(12, 383);
+            this.BASair.Name = "BASair";
+            this.BASair.Size = new System.Drawing.Size(151, 57);
+            this.BASair.TabIndex = 35;
+            this.BASair.Text = "SAIR";
+            this.BASair.UseVisualStyleBackColor = false;
+            this.BASair.Click += new System.EventHandler(this.BACancelar_Click);
             // 
             // BAAgendar
             // 
@@ -74,6 +74,7 @@
             this.BAAgendar.TabIndex = 34;
             this.BAAgendar.Text = "AGENDAR";
             this.BAAgendar.UseVisualStyleBackColor = false;
+            this.BAAgendar.Click += new System.EventHandler(this.BAAgendar_Click);
             // 
             // TADescritivo
             // 
@@ -252,7 +253,7 @@
             this.BALimpar.TabIndex = 36;
             this.BALimpar.Text = "LIMPAR";
             this.BALimpar.UseVisualStyleBackColor = false;
-            this.BALimpar.Click += new System.EventHandler(this.button1_Click);
+            this.BALimpar.Click += new System.EventHandler(this.BALimpar_Click);
             // 
             // TelaAgendamento
             // 
@@ -261,7 +262,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(833, 450);
             this.Controls.Add(this.BALimpar);
-            this.Controls.Add(this.BACancelar);
+            this.Controls.Add(this.BASair);
             this.Controls.Add(this.BAAgendar);
             this.Controls.Add(this.TADescritivo);
             this.Controls.Add(this.Descritivo);
@@ -288,7 +289,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button BACancelar;
+        private System.Windows.Forms.Button BASair;
         private System.Windows.Forms.Button BAAgendar;
         private System.Windows.Forms.TextBox TADescritivo;
         private System.Windows.Forms.Label Descritivo;
