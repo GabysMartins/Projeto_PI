@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OficinaMecDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OficinaMecDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="TelaCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +153,19 @@
     <EmbeddedResource Include="TelaOrdemServico.resx">
       <DependentUpon>TelaOrdemServico.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="OficinaMecDataSet.xsc">
+      <DependentUpon>OficinaMecDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OficinaMecDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OficinaMecDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OficinaMecDataSet.xss">
+      <DependentUpon>OficinaMecDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\OficinaMec.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\OficinaMec.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
