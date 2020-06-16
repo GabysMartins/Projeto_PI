@@ -46,74 +46,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroUsu.cs" />
+    <Compile Include="Conexao.cs" />
     <Compile Include="OficinaMecDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OficinaMecDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="TelaCadastro.cs">
+    <Compile Include="Telas\TelaCadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaCadastro.Designer.cs">
+    <Compile Include="Telas\TelaCadastro.Designer.cs">
       <DependentUpon>TelaCadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaAgendamento.cs">
+    <Compile Include="Telas\TelaAgendamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaAgendamento.Designer.cs">
+    <Compile Include="Telas\TelaAgendamento.Designer.cs">
       <DependentUpon>TelaAgendamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TelaCadUsuario.cs">
+    <Compile Include="Telas\TelaCadUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaCadUsuario.Designer.cs">
+    <Compile Include="Telas\TelaCadUsuario.Designer.cs">
       <DependentUpon>TelaCadUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaCarro.cs">
+    <Compile Include="Telas\TelaCarro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaCarro.Designer.cs">
+    <Compile Include="Telas\TelaCarro.Designer.cs">
       <DependentUpon>TelaCarro.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaConsulta.cs">
+    <Compile Include="Telas\TelaConsulta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaConsulta.Designer.cs">
+    <Compile Include="Telas\TelaConsulta.Designer.cs">
       <DependentUpon>TelaConsulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaEstoque.cs">
+    <Compile Include="Telas\TelaEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaEstoque.Designer.cs">
+    <Compile Include="Telas\TelaEstoque.Designer.cs">
       <DependentUpon>TelaEstoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaInicial.cs">
+    <Compile Include="Telas\TelaInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaInicial.Designer.cs">
+    <Compile Include="Telas\TelaInicial.Designer.cs">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaMenu.cs">
+    <Compile Include="Telas\TelaMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaMenu.Designer.cs">
+    <Compile Include="Telas\TelaMenu.Designer.cs">
       <DependentUpon>TelaMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaOrcamento.cs">
+    <Compile Include="Telas\TelaOrcamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaOrcamento.Designer.cs">
+    <Compile Include="Telas\TelaOrcamento.Designer.cs">
       <DependentUpon>TelaOrcamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="TelaOrdemServico.cs">
+    <Compile Include="Telas\TelaOrdemServico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TelaOrdemServico.Designer.cs">
+    <Compile Include="Telas\TelaOrdemServico.Designer.cs">
       <DependentUpon>TelaOrdemServico.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TelaAgendamento.resx">
+    <EmbeddedResource Include="Telas\TelaAgendamento.resx">
       <DependentUpon>TelaAgendamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -126,31 +128,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="TelaCadastro.resx">
+    <EmbeddedResource Include="Telas\TelaCadastro.resx">
       <DependentUpon>TelaCadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaCadUsuario.resx">
+    <EmbeddedResource Include="Telas\TelaCadUsuario.resx">
       <DependentUpon>TelaCadUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaCarro.resx">
+    <EmbeddedResource Include="Telas\TelaCarro.resx">
       <DependentUpon>TelaCarro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaConsulta.resx">
+    <EmbeddedResource Include="Telas\TelaConsulta.resx">
       <DependentUpon>TelaConsulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaEstoque.resx">
+    <EmbeddedResource Include="Telas\TelaEstoque.resx">
       <DependentUpon>TelaEstoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaInicial.resx">
+    <EmbeddedResource Include="Telas\TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaMenu.resx">
+    <EmbeddedResource Include="Telas\TelaMenu.resx">
       <DependentUpon>TelaMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaOrcamento.resx">
+    <EmbeddedResource Include="Telas\TelaOrcamento.resx">
       <DependentUpon>TelaOrcamento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TelaOrdemServico.resx">
+    <EmbeddedResource Include="Telas\TelaOrdemServico.resx">
       <DependentUpon>TelaOrdemServico.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="OficinaMecDataSet.xsc">
