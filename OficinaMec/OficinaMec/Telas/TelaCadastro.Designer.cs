@@ -197,6 +197,7 @@
             this.BCadSalvar.TabIndex = 42;
             this.BCadSalvar.Text = "SALVAR";
             this.BCadSalvar.UseVisualStyleBackColor = false;
+            this.BCadSalvar.Click += new System.EventHandler(this.BCadSalvar_Click);
             // 
             // BCadSair
             // 

@@ -46,12 +46,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CadastroUsu.cs" />
-    <Compile Include="Conexao.cs" />
+    <Compile Include="Arquivos\RemoveUsu.cs" />
+    <Compile Include="Arquivos\CadastroUsu.cs" />
+    <Compile Include="Arquivos\Conexao.cs" />
+    <Compile Include="Arquivos\Controle.cs" />
+    <Compile Include="Arquivos\LoginDaoComandos.cs" />
     <Compile Include="OficinaMecDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OficinaMecDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Arquivos\Permissao.cs" />
+    <Compile Include="Telas\TelaRemoverUsu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\TelaRemoverUsu.Designer.cs">
+      <DependentUpon>TelaRemoverUsu.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\TelaCadastro.cs">
       <SubType>Form</SubType>
@@ -65,7 +75,7 @@
     <Compile Include="Telas\TelaAgendamento.Designer.cs">
       <DependentUpon>TelaAgendamento.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Arquivos\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Telas\TelaCadUsuario.cs">
       <SubType>Form</SubType>
@@ -115,6 +125,9 @@
     <Compile Include="Telas\TelaOrdemServico.Designer.cs">
       <DependentUpon>TelaOrdemServico.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Telas\TelaRemoverUsu.resx">
+      <DependentUpon>TelaRemoverUsu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\TelaAgendamento.resx">
       <DependentUpon>TelaAgendamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,9 +159,9 @@
     <EmbeddedResource Include="Telas\TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\TelaMenu.resx">
+    <None Include="Telas\TelaMenu.resx">
       <DependentUpon>TelaMenu.cs</DependentUpon>
-    </EmbeddedResource>
+    </None>
     <EmbeddedResource Include="Telas\TelaOrcamento.resx">
       <DependentUpon>TelaOrcamento.cs</DependentUpon>
     </EmbeddedResource>

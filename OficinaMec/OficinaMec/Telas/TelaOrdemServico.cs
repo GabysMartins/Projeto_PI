@@ -26,9 +26,9 @@ namespace OficinaMec
 
         private void BSSair_Click(object sender, EventArgs e)
         {
-            TelaMenu telaMenu = new TelaMenu();
+            TelaInicial telaInicial = new TelaInicial();
             this.Hide();
-            telaMenu.ShowDialog();
+            telaInicial.ShowDialog();
         }
 
         private void BSEstoque_Click(object sender, EventArgs e)

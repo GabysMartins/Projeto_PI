@@ -27,9 +27,9 @@ namespace OficinaMec
 
         private void BESair_Click(object sender, EventArgs e)
         {
-            TelaMenu telaMenu = new TelaMenu();
+            TelaInicial telaInicial = new TelaInicial();
             this.Hide();
-            telaMenu.ShowDialog();
+            telaInicial.ShowDialog();
         }
     }
 }

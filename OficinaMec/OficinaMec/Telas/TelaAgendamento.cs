@@ -19,9 +19,9 @@ namespace OficinaMec
 
         private void BACancelar_Click(object sender, EventArgs e)
         {
-            TelaMenu telaMenu = new TelaMenu();
+            TelaInicial telaInicial = new TelaInicial();
             this.Hide();
-            telaMenu.ShowDialog();
+            telaInicial.ShowDialog();
         }
 
         private void BALimpar_Click(object sender, EventArgs e)

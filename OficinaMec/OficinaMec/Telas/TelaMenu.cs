@@ -15,49 +15,125 @@ namespace OficinaMec
         public TelaMenu()
         {
             InitializeComponent();
+            
         }
+
+        public string Propriedade { get; set; }
+        public string PropriedadeUsu { get; set; }
+       
 
         private void BMAgendamento_Click(object sender, EventArgs e)
         {
-            TelaAgendamento telaAgendamento = new TelaAgendamento();
-            this.Hide();
-            telaAgendamento.ShowDialog();
-            
+            if (label2.Text == "Administrador")
+            {
+                TelaAgendamento telaAgendamento = new TelaAgendamento();
+                this.Hide();
+                telaAgendamento.ShowDialog();
+            }else if (label2.Text == "Secretaria")
+            {
+                TelaAgendamento telaAgendamento = new TelaAgendamento();
+                this.Hide();
+                telaAgendamento.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Você não tem permissão para esta ferramenta","Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BMOrcamento_Click(object sender, EventArgs e)
         {
+            if (label2.Text == "Administrador")
+            {
+                TelaAgendamento telaAgendamento = new TelaAgendamento();
+                this.Hide();
+                telaAgendamento.ShowDialog();
+            }
+            else if (label2.Text == "Mecanico")
+            {
             TelaOrcamento telaOrcamento = new TelaOrcamento();
             this.Hide();
             telaOrcamento.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Você não tem permissão para esta ferramenta", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BMCadastro_Click(object sender, EventArgs e)
         {
-            TelaCadastro telaCadastro = new TelaCadastro();
+            if (label2.Text == "Administrador")
+            {
+                TelaAgendamento telaAgendamento = new TelaAgendamento();
+                this.Hide();
+                telaAgendamento.ShowDialog();
+            }
+            else if (label2.Text == "Secretaria")
+            {
+                TelaCadastro telaCadastro = new TelaCadastro();
             this.Hide();
             telaCadastro.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Você não tem permissão para esta ferramenta", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BMEstoque_Click(object sender, EventArgs e)
         {
-            TelaEstoque telaEstoque = new TelaEstoque();
+            if (label2.Text == "Administrador")
+            {
+                TelaAgendamento telaAgendamento = new TelaAgendamento();
+                this.Hide();
+                telaAgendamento.ShowDialog();
+            }
+            else if (label2.Text == "Estoquista")
+            {
+                TelaEstoque telaEstoque = new TelaEstoque();
             this.Hide();
             telaEstoque.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Você não tem permissão para esta ferramenta", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BMUsuario_Click(object sender, EventArgs e)
         {
-            TelaCadUsuario telaCadUsuario = new TelaCadUsuario();
-            this.Hide();
-            telaCadUsuario.ShowDialog();
-        }
+            if (label2.Text == "Administrador")
+            {
+                TelaCadUsuario telaCadUsuario = new TelaCadUsuario();
+                this.Hide();
+                telaCadUsuario.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Você não tem permissão para esta ferramenta", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            }
 
         private void BMConsulta_Click(object sender, EventArgs e)
         {
-            TelaConsulta telaConsulta = new TelaConsulta();
+            if (label2.Text == "Administrador")
+            {
+                TelaAgendamento telaAgendamento = new TelaAgendamento();
+                this.Hide();
+                telaAgendamento.ShowDialog();
+            }
+            else if (label2.Text == "Secretaria")
+            {
+                TelaConsulta telaConsulta = new TelaConsulta();
             this.Hide();
             telaConsulta.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Você não tem permissão para esta ferramenta", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void BMSair_Click(object sender, EventArgs e)
@@ -65,6 +141,33 @@ namespace OficinaMec
             TelaInicial telaInicial = new TelaInicial();
             this.Hide();
             telaInicial.ShowDialog();
+        }
+
+      
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+        private void TelaMenu_Load(object sender, EventArgs e)
+        {
+           // if (!this.Propriedade.Equals(""))
+            //{
+                label2.Text = this.Propriedade;
+                label4.Text = this.PropriedadeUsu;
+            //}
+            
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaMenu));
             this.BMUsuario = new System.Windows.Forms.Button();
             this.BMSair = new System.Windows.Forms.Button();
             this.BMConsulta = new System.Windows.Forms.Button();
@@ -36,6 +35,10 @@
             this.BMOrcamento = new System.Windows.Forms.Button();
             this.BMCadastro = new System.Windows.Forms.Button();
             this.BMAgendamento = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BMUsuario
@@ -43,7 +46,7 @@
             this.BMUsuario.BackColor = System.Drawing.Color.Moccasin;
             this.BMUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BMUsuario.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BMUsuario.Location = new System.Drawing.Point(12, 29);
+            this.BMUsuario.Location = new System.Drawing.Point(353, 381);
             this.BMUsuario.Name = "BMUsuario";
             this.BMUsuario.Size = new System.Drawing.Size(151, 57);
             this.BMUsuario.TabIndex = 18;
@@ -82,7 +85,7 @@
             this.BMEstoque.BackColor = System.Drawing.Color.Moccasin;
             this.BMEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BMEstoque.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BMEstoque.Location = new System.Drawing.Point(423, 257);
+            this.BMEstoque.Location = new System.Drawing.Point(453, 257);
             this.BMEstoque.Name = "BMEstoque";
             this.BMEstoque.Size = new System.Drawing.Size(151, 57);
             this.BMEstoque.TabIndex = 15;
@@ -95,7 +98,7 @@
             this.BMOrcamento.BackColor = System.Drawing.Color.Moccasin;
             this.BMOrcamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BMOrcamento.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BMOrcamento.Location = new System.Drawing.Point(221, 257);
+            this.BMOrcamento.Location = new System.Drawing.Point(251, 257);
             this.BMOrcamento.Name = "BMOrcamento";
             this.BMOrcamento.Size = new System.Drawing.Size(151, 57);
             this.BMOrcamento.TabIndex = 14;
@@ -108,7 +111,7 @@
             this.BMCadastro.BackColor = System.Drawing.Color.Moccasin;
             this.BMCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BMCadastro.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BMCadastro.Location = new System.Drawing.Point(423, 161);
+            this.BMCadastro.Location = new System.Drawing.Point(453, 161);
             this.BMCadastro.Name = "BMCadastro";
             this.BMCadastro.Size = new System.Drawing.Size(151, 57);
             this.BMCadastro.TabIndex = 13;
@@ -121,7 +124,7 @@
             this.BMAgendamento.BackColor = System.Drawing.Color.Moccasin;
             this.BMAgendamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BMAgendamento.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BMAgendamento.Location = new System.Drawing.Point(221, 161);
+            this.BMAgendamento.Location = new System.Drawing.Point(251, 161);
             this.BMAgendamento.Name = "BMAgendamento";
             this.BMAgendamento.Size = new System.Drawing.Size(151, 57);
             this.BMAgendamento.TabIndex = 12;
@@ -129,12 +132,65 @@
             this.BMAgendamento.UseVisualStyleBackColor = false;
             this.BMAgendamento.Click += new System.EventHandler(this.BMAgendamento_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Moccasin;
+            this.label1.Location = new System.Drawing.Point(8, 236);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(97, 21);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "PERMISSÃO:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Moccasin;
+            this.label3.Location = new System.Drawing.Point(26, 215);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 21);
+            this.label3.TabIndex = 91;
+            this.label3.Text = "USUARIO:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Moccasin;
+            this.label2.Location = new System.Drawing.Point(102, 236);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 21);
+            this.label2.TabIndex = 93;
+            this.label2.Text = "PERMISSÃO";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Moccasin;
+            this.label4.Location = new System.Drawing.Point(102, 215);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 21);
+            this.label4.TabIndex = 94;
+            this.label4.Text = "USUARIO";
+            // 
             // TelaMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::OficinaMec.Properties.Resources.Editado3;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BMUsuario);
             this.Controls.Add(this.BMSair);
             this.Controls.Add(this.BMConsulta);
@@ -145,7 +201,9 @@
             this.Name = "TelaMenu";
             this.RightToLeftLayout = true;
             this.Text = "TelaMenu";
+            this.Load += new System.EventHandler(this.TelaMenu_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -158,5 +216,9 @@
         private System.Windows.Forms.Button BMOrcamento;
         private System.Windows.Forms.Button BMCadastro;
         private System.Windows.Forms.Button BMAgendamento;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
     }
 }

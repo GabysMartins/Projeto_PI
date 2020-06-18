@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OficinaMec.Telas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,17 +20,33 @@ namespace OficinaMec
 
         private void BCUSair_Click(object sender, EventArgs e)
         {
-            TelaMenu telaMenu = new TelaMenu();
+            TelaInicial telaInicial = new TelaInicial();
             this.Hide();
-            telaMenu.ShowDialog();
+            telaInicial.ShowDialog();
         }
 
         private void BCUSalvar_Click(object sender, EventArgs e)
         {
-
-        CadastroUsu cad = new CadastroUsu(textBox1.Text, TCUCPF.Text, TCUNome.Text, TCUEmail.Text, TCUSenha.Text,TCUPermissao.Text); 
-            MessageBox.Show(cad.mensagem);
-         
+            if (radioButton1.Checked)
+            {
+                CadastroUsu cad = new CadastroUsu(textBox1.Text, TCUCPF.Text, TCUNome.Text, TCUEmail.Text, TCUSenha.Text, "Administrador");
+                MessageBox.Show(cad.mensagem);
+            }
+            else if (radioButton2.Checked)
+            {
+                CadastroUsu cad = new CadastroUsu(textBox1.Text, TCUCPF.Text, TCUNome.Text, TCUEmail.Text, TCUSenha.Text, "Secretária");
+                MessageBox.Show(cad.mensagem);
+            }
+            else if (radioButton3.Checked)
+            {
+                CadastroUsu cad = new CadastroUsu(textBox1.Text, TCUCPF.Text, TCUNome.Text, TCUEmail.Text, TCUSenha.Text, "Mecanico");
+                MessageBox.Show(cad.mensagem);
+            }
+            else if (radioButton4.Checked)
+            {
+                CadastroUsu cad = new CadastroUsu(textBox1.Text, TCUCPF.Text, TCUNome.Text, TCUEmail.Text, TCUSenha.Text, "Estoquista");
+                MessageBox.Show(cad.mensagem);
+            }
         }
 
         private void TCUEmail_TextChanged(object sender, EventArgs e)
@@ -67,6 +84,18 @@ namespace OficinaMec
         private void radioButton4_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BCURemover_Click(object sender, EventArgs e)
+        {
+            TelaRemoverUsuario TelaRemoverUsu = new TelaRemoverUsuario();
+            this.Hide();
+            TelaRemoverUsu.ShowDialog();
         }
     }
 }

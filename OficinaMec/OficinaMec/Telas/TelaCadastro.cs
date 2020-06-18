@@ -26,9 +26,14 @@ namespace OficinaMec
 
         private void BCadSair_Click(object sender, EventArgs e)
         {
-            TelaMenu telaMenu = new TelaMenu();
+            TelaInicial telaInicial = new TelaInicial();
             this.Hide();
-            telaMenu.ShowDialog();
+            telaInicial.ShowDialog();
+        }
+
+        private void BCadSalvar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
