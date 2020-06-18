@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Arquivos\AddCarro.cs" />
+    <Compile Include="Arquivos\AddCli.cs" />
+    <Compile Include="Arquivos\BaixaPecas.cs" />
+    <Compile Include="Arquivos\Estoque.cs" />
+    <Compile Include="Arquivos\ExcluiCarro.cs" />
+    <Compile Include="Arquivos\ExcluiPeca.cs" />
     <Compile Include="Arquivos\RemoveUsu.cs" />
     <Compile Include="Arquivos\CadastroUsu.cs" />
     <Compile Include="Arquivos\Conexao.cs" />
@@ -57,6 +63,36 @@
       <DependentUpon>OficinaMecDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Arquivos\Permissao.cs" />
+    <Compile Include="Telas\BaixaEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\BaixaEstoque.Designer.cs">
+      <DependentUpon>BaixaEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\ExcluirCarro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\ExcluirCarro.Designer.cs">
+      <DependentUpon>ExcluirCarro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\ExcluirPeca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\ExcluirPeca.Designer.cs">
+      <DependentUpon>ExcluirPeca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\InserirPeca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\InserirPeca.Designer.cs">
+      <DependentUpon>InserirPeca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\TelaBaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\TelaBaixa.Designer.cs">
+      <DependentUpon>TelaBaixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\TelaRemoverUsu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +161,21 @@
     <Compile Include="Telas\TelaOrdemServico.Designer.cs">
       <DependentUpon>TelaOrdemServico.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Telas\BaixaEstoque.resx">
+      <DependentUpon>BaixaEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\ExcluirCarro.resx">
+      <DependentUpon>ExcluirCarro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\ExcluirPeca.resx">
+      <DependentUpon>ExcluirPeca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\InserirPeca.resx">
+      <DependentUpon>InserirPeca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\TelaBaixa.resx">
+      <DependentUpon>TelaBaixa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\TelaRemoverUsu.resx">
       <DependentUpon>TelaRemoverUsu.cs</DependentUpon>
     </EmbeddedResource>

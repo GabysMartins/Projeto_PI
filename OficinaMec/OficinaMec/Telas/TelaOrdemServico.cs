@@ -37,5 +37,10 @@ namespace OficinaMec
             this.Hide();
             telaEstoque.ShowDialog();
         }
+
+        private void TelaOrdemServico_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

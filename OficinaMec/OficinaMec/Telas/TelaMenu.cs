@@ -65,9 +65,9 @@ namespace OficinaMec
         {
             if (label2.Text == "Administrador")
             {
-                TelaAgendamento telaAgendamento = new TelaAgendamento();
+                TelaCadastro telaCadastro = new TelaCadastro();
                 this.Hide();
-                telaAgendamento.ShowDialog();
+                telaCadastro.ShowDialog();
             }
             else if (label2.Text == "Secretaria")
             {
@@ -85,15 +85,15 @@ namespace OficinaMec
         {
             if (label2.Text == "Administrador")
             {
-                TelaAgendamento telaAgendamento = new TelaAgendamento();
+                TelaEstoque telaEstoque = new TelaEstoque();
                 this.Hide();
-                telaAgendamento.ShowDialog();
+                telaEstoque.ShowDialog();
             }
             else if (label2.Text == "Estoquista")
             {
                 TelaEstoque telaEstoque = new TelaEstoque();
-            this.Hide();
-            telaEstoque.ShowDialog();
+                this.Hide();
+                telaEstoque.ShowDialog();
             }
             else
             {

@@ -15,18 +15,6 @@ namespace OficinaMec
         Conexao con = new Conexao();
         SqlDataReader dr;
 
-        public String Permicao(String Login)
-        {
-            cmd.CommandText = "SELECT PERMIS_FUNC FROM Funcionario WHERE COD_FUNC =@Login";
-            cmd.Parameters.AddWithValue("@Login", Login);
-            con.conectar();
-                   while (dr.Read())
-                {
-                mensagem = dr.GetString(0);
-                return mensagem;
-                }
-            return null;
-        }
 
         public bool verificarLogin(String Login, String Senha,String Per)
         {

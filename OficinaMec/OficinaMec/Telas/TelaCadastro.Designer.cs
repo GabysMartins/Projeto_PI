@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCadastro));
-            this.TCadEmail = new System.Windows.Forms.TextBox();
+            this.textbox4 = new System.Windows.Forms.TextBox();
             this.Email = new System.Windows.Forms.Label();
             this.BCadAdicionar = new System.Windows.Forms.Button();
-            this.TCadEndereco = new System.Windows.Forms.TextBox();
+            this.textbox5 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.TcadRG = new System.Windows.Forms.TextBox();
+            this.textbox3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.TCadTelefone = new System.Windows.Forms.TextBox();
-            this.TCadCPF = new System.Windows.Forms.TextBox();
-            this.TCadNome = new System.Windows.Forms.TextBox();
+            this.textbox6 = new System.Windows.Forms.TextBox();
+            this.textbox1 = new System.Windows.Forms.TextBox();
+            this.textbox2 = new System.Windows.Forms.TextBox();
             this.Telefone = new System.Windows.Forms.Label();
             this.CPF = new System.Windows.Forms.Label();
             this.Nome = new System.Windows.Forms.Label();
@@ -47,14 +47,14 @@
             this.BCadLimpar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // TCadEmail
+            // textbox4
             // 
-            this.TCadEmail.BackColor = System.Drawing.Color.Moccasin;
-            this.TCadEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TCadEmail.Location = new System.Drawing.Point(387, 275);
-            this.TCadEmail.Name = "TCadEmail";
-            this.TCadEmail.Size = new System.Drawing.Size(148, 20);
-            this.TCadEmail.TabIndex = 55;
+            this.textbox4.BackColor = System.Drawing.Color.Moccasin;
+            this.textbox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textbox4.Location = new System.Drawing.Point(387, 275);
+            this.textbox4.Name = "textbox4";
+            this.textbox4.Size = new System.Drawing.Size(148, 20);
+            this.textbox4.TabIndex = 55;
             // 
             // Email
             // 
@@ -81,14 +81,14 @@
             this.BCadAdicionar.UseVisualStyleBackColor = false;
             this.BCadAdicionar.Click += new System.EventHandler(this.BCadAdicionar_Click);
             // 
-            // TCadEndereco
+            // textbox5
             // 
-            this.TCadEndereco.BackColor = System.Drawing.Color.Moccasin;
-            this.TCadEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TCadEndereco.Location = new System.Drawing.Point(387, 235);
-            this.TCadEndereco.Name = "TCadEndereco";
-            this.TCadEndereco.Size = new System.Drawing.Size(148, 20);
-            this.TCadEndereco.TabIndex = 52;
+            this.textbox5.BackColor = System.Drawing.Color.Moccasin;
+            this.textbox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textbox5.Location = new System.Drawing.Point(387, 235);
+            this.textbox5.Name = "textbox5";
+            this.textbox5.Size = new System.Drawing.Size(148, 20);
+            this.textbox5.TabIndex = 52;
             // 
             // label2
             // 
@@ -102,14 +102,14 @@
             this.label2.TabIndex = 51;
             this.label2.Text = "ENDEREÇO: ";
             // 
-            // TcadRG
+            // textbox3
             // 
-            this.TcadRG.BackColor = System.Drawing.Color.Moccasin;
-            this.TcadRG.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TcadRG.Location = new System.Drawing.Point(102, 272);
-            this.TcadRG.Name = "TcadRG";
-            this.TcadRG.Size = new System.Drawing.Size(148, 20);
-            this.TcadRG.TabIndex = 50;
+            this.textbox3.BackColor = System.Drawing.Color.Moccasin;
+            this.textbox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textbox3.Location = new System.Drawing.Point(102, 272);
+            this.textbox3.Name = "textbox3";
+            this.textbox3.Size = new System.Drawing.Size(148, 20);
+            this.textbox3.TabIndex = 50;
             // 
             // label1
             // 
@@ -123,32 +123,32 @@
             this.label1.TabIndex = 49;
             this.label1.Text = "RG:";
             // 
-            // TCadTelefone
+            // textbox6
             // 
-            this.TCadTelefone.BackColor = System.Drawing.Color.Moccasin;
-            this.TCadTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TCadTelefone.Location = new System.Drawing.Point(387, 202);
-            this.TCadTelefone.Name = "TCadTelefone";
-            this.TCadTelefone.Size = new System.Drawing.Size(148, 20);
-            this.TCadTelefone.TabIndex = 48;
+            this.textbox6.BackColor = System.Drawing.Color.Moccasin;
+            this.textbox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textbox6.Location = new System.Drawing.Point(387, 202);
+            this.textbox6.Name = "textbox6";
+            this.textbox6.Size = new System.Drawing.Size(148, 20);
+            this.textbox6.TabIndex = 48;
             // 
-            // TCadCPF
+            // textbox1
             // 
-            this.TCadCPF.BackColor = System.Drawing.Color.Moccasin;
-            this.TCadCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TCadCPF.Location = new System.Drawing.Point(102, 199);
-            this.TCadCPF.Name = "TCadCPF";
-            this.TCadCPF.Size = new System.Drawing.Size(148, 20);
-            this.TCadCPF.TabIndex = 47;
+            this.textbox1.BackColor = System.Drawing.Color.Moccasin;
+            this.textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textbox1.Location = new System.Drawing.Point(102, 199);
+            this.textbox1.Name = "textbox1";
+            this.textbox1.Size = new System.Drawing.Size(148, 20);
+            this.textbox1.TabIndex = 47;
             // 
-            // TCadNome
+            // textbox2
             // 
-            this.TCadNome.BackColor = System.Drawing.Color.Moccasin;
-            this.TCadNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TCadNome.Location = new System.Drawing.Point(102, 235);
-            this.TCadNome.Name = "TCadNome";
-            this.TCadNome.Size = new System.Drawing.Size(148, 20);
-            this.TCadNome.TabIndex = 46;
+            this.textbox2.BackColor = System.Drawing.Color.Moccasin;
+            this.textbox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textbox2.Location = new System.Drawing.Point(102, 235);
+            this.textbox2.Name = "textbox2";
+            this.textbox2.Size = new System.Drawing.Size(148, 20);
+            this.textbox2.TabIndex = 46;
             // 
             // Telefone
             // 
@@ -223,24 +223,26 @@
             this.BCadLimpar.TabIndex = 56;
             this.BCadLimpar.Text = "LIMPAR";
             this.BCadLimpar.UseVisualStyleBackColor = false;
+            this.BCadLimpar.Click += new System.EventHandler(this.BCadLimpar_Click);
             // 
             // TelaCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BCadLimpar);
-            this.Controls.Add(this.TCadEmail);
+            this.Controls.Add(this.textbox4);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.BCadAdicionar);
-            this.Controls.Add(this.TCadEndereco);
+            this.Controls.Add(this.textbox5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TcadRG);
+            this.Controls.Add(this.textbox3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.TCadTelefone);
-            this.Controls.Add(this.TCadCPF);
-            this.Controls.Add(this.TCadNome);
+            this.Controls.Add(this.textbox6);
+            this.Controls.Add(this.textbox1);
+            this.Controls.Add(this.textbox2);
             this.Controls.Add(this.Telefone);
             this.Controls.Add(this.CPF);
             this.Controls.Add(this.Nome);
@@ -255,16 +257,16 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TCadEmail;
+        private System.Windows.Forms.TextBox textbox4;
         private System.Windows.Forms.Label Email;
         private System.Windows.Forms.Button BCadAdicionar;
-        private System.Windows.Forms.TextBox TCadEndereco;
+        private System.Windows.Forms.TextBox textbox5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TcadRG;
+        private System.Windows.Forms.TextBox textbox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TCadTelefone;
-        private System.Windows.Forms.TextBox TCadCPF;
-        private System.Windows.Forms.TextBox TCadNome;
+        private System.Windows.Forms.TextBox textbox6;
+        private System.Windows.Forms.TextBox textbox1;
+        private System.Windows.Forms.TextBox textbox2;
         private System.Windows.Forms.Label Telefone;
         private System.Windows.Forms.Label CPF;
         private System.Windows.Forms.Label Nome;
