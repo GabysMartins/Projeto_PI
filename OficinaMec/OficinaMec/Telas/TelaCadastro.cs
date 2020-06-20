@@ -33,7 +33,7 @@ namespace OficinaMec
 
         private void BCadSalvar_Click(object sender, EventArgs e)
         {
-            AddCarro ac = new AddCarro(textbox2.Text,textbox1.Text,textbox3.Text,textbox4.Text,textbox5.Text,textbox6.Text);
+            AddCli ac = new AddCli(textbox2.Text,textbox1.Text,textbox3.Text,textbox4.Text,textbox5.Text,textbox6.Text);
             MessageBox.Show(ac.mensagem);
         }
 
@@ -45,6 +45,11 @@ namespace OficinaMec
             textbox4.Text = "";
             textbox5.Text = "";
             textbox6.Text = "";
+        }
+
+        private void TelaCadastro_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -250,6 +250,7 @@
             this.Controls.Add(this.BCadSair);
             this.Name = "TelaCadastro";
             this.Text = "Tela Cadastro";
+            this.Load += new System.EventHandler(this.TelaCadastro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

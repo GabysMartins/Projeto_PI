@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaOrcamento));
             this.TOKM = new System.Windows.Forms.TextBox();
             this.Km = new System.Windows.Forms.Label();
@@ -57,13 +58,23 @@
             this.ValorMao = new System.Windows.Forms.Label();
             this.TOPecas = new System.Windows.Forms.TextBox();
             this.ValorTotal = new System.Windows.Forms.Label();
+            this.oficinaMecDataSet = new OficinaMec.OficinaMecDataSet();
+            this.orcamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orcamentoTableAdapter = new OficinaMec.OficinaMecDataSetTableAdapters.OrcamentoTableAdapter();
+            this.tableAdapterManager = new OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager();
+            this.button1 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // TOKM
             // 
             this.TOKM.BackColor = System.Drawing.Color.Moccasin;
             this.TOKM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOKM.Location = new System.Drawing.Point(94, 348);
+            this.TOKM.Location = new System.Drawing.Point(95, 344);
             this.TOKM.Name = "TOKM";
             this.TOKM.Size = new System.Drawing.Size(148, 20);
             this.TOKM.TabIndex = 59;
@@ -74,7 +85,7 @@
             this.Km.BackColor = System.Drawing.Color.Transparent;
             this.Km.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Km.ForeColor = System.Drawing.Color.Moccasin;
-            this.Km.Location = new System.Drawing.Point(28, 346);
+            this.Km.Location = new System.Drawing.Point(29, 342);
             this.Km.Name = "Km";
             this.Km.Size = new System.Drawing.Size(39, 21);
             this.Km.TabIndex = 58;
@@ -85,7 +96,7 @@
             this.BOSair.BackColor = System.Drawing.Color.Moccasin;
             this.BOSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BOSair.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOSair.Location = new System.Drawing.Point(601, 381);
+            this.BOSair.Location = new System.Drawing.Point(666, 396);
             this.BOSair.Name = "BOSair";
             this.BOSair.Size = new System.Drawing.Size(122, 57);
             this.BOSair.TabIndex = 57;
@@ -98,7 +109,7 @@
             this.BOCancelar.BackColor = System.Drawing.Color.Moccasin;
             this.BOCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BOCancelar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOCancelar.Location = new System.Drawing.Point(473, 381);
+            this.BOCancelar.Location = new System.Drawing.Point(538, 396);
             this.BOCancelar.Name = "BOCancelar";
             this.BOCancelar.Size = new System.Drawing.Size(122, 57);
             this.BOCancelar.TabIndex = 56;
@@ -110,7 +121,7 @@
             this.BOAbrir.BackColor = System.Drawing.Color.Moccasin;
             this.BOAbrir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BOAbrir.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOAbrir.Location = new System.Drawing.Point(345, 381);
+            this.BOAbrir.Location = new System.Drawing.Point(410, 396);
             this.BOAbrir.Name = "BOAbrir";
             this.BOAbrir.Size = new System.Drawing.Size(122, 57);
             this.BOAbrir.TabIndex = 55;
@@ -123,7 +134,7 @@
             this.BOEliminar.BackColor = System.Drawing.Color.Moccasin;
             this.BOEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BOEliminar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOEliminar.Location = new System.Drawing.Point(217, 381);
+            this.BOEliminar.Location = new System.Drawing.Point(282, 396);
             this.BOEliminar.Name = "BOEliminar";
             this.BOEliminar.Size = new System.Drawing.Size(122, 57);
             this.BOEliminar.TabIndex = 54;
@@ -135,12 +146,13 @@
             this.BOAcrescentar.BackColor = System.Drawing.Color.Moccasin;
             this.BOAcrescentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BOAcrescentar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOAcrescentar.Location = new System.Drawing.Point(89, 381);
+            this.BOAcrescentar.Location = new System.Drawing.Point(154, 396);
             this.BOAcrescentar.Name = "BOAcrescentar";
             this.BOAcrescentar.Size = new System.Drawing.Size(122, 57);
             this.BOAcrescentar.TabIndex = 53;
             this.BOAcrescentar.Text = "ACRESCENTAR ITENS";
             this.BOAcrescentar.UseVisualStyleBackColor = false;
+            this.BOAcrescentar.Click += new System.EventHandler(this.BOAcrescentar_Click);
             // 
             // TODescritivo
             // 
@@ -168,7 +180,7 @@
             // 
             this.TOTelefone.BackColor = System.Drawing.Color.Moccasin;
             this.TOTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOTelefone.Location = new System.Drawing.Point(111, 322);
+            this.TOTelefone.Location = new System.Drawing.Point(112, 268);
             this.TOTelefone.Name = "TOTelefone";
             this.TOTelefone.Size = new System.Drawing.Size(131, 20);
             this.TOTelefone.TabIndex = 51;
@@ -177,7 +189,7 @@
             // 
             this.TOModelo.BackColor = System.Drawing.Color.Moccasin;
             this.TOModelo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOModelo.Location = new System.Drawing.Point(111, 296);
+            this.TOModelo.Location = new System.Drawing.Point(112, 319);
             this.TOModelo.Name = "TOModelo";
             this.TOModelo.Size = new System.Drawing.Size(131, 20);
             this.TOModelo.TabIndex = 49;
@@ -186,7 +198,7 @@
             // 
             this.TOANO.BackColor = System.Drawing.Color.Moccasin;
             this.TOANO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOANO.Location = new System.Drawing.Point(111, 270);
+            this.TOANO.Location = new System.Drawing.Point(112, 294);
             this.TOANO.Name = "TOANO";
             this.TOANO.Size = new System.Drawing.Size(131, 20);
             this.TOANO.TabIndex = 48;
@@ -195,25 +207,27 @@
             // 
             this.TOCPF.BackColor = System.Drawing.Color.Moccasin;
             this.TOCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOCPF.Location = new System.Drawing.Point(94, 244);
+            this.TOCPF.Location = new System.Drawing.Point(95, 197);
             this.TOCPF.Name = "TOCPF";
             this.TOCPF.Size = new System.Drawing.Size(148, 20);
             this.TOCPF.TabIndex = 47;
+            this.TOCPF.TextChanged += new System.EventHandler(this.TOCPF_TextChanged);
             // 
             // TONome
             // 
             this.TONome.BackColor = System.Drawing.Color.Moccasin;
             this.TONome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TONome.Location = new System.Drawing.Point(94, 218);
+            this.TONome.Location = new System.Drawing.Point(95, 244);
             this.TONome.Name = "TONome";
             this.TONome.Size = new System.Drawing.Size(148, 20);
             this.TONome.TabIndex = 46;
+            this.TONome.TextChanged += new System.EventHandler(this.TONome_TextChanged);
             // 
             // TOPlaca
             // 
             this.TOPlaca.BackColor = System.Drawing.Color.Moccasin;
             this.TOPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOPlaca.Location = new System.Drawing.Point(94, 192);
+            this.TOPlaca.Location = new System.Drawing.Point(95, 221);
             this.TOPlaca.Name = "TOPlaca";
             this.TOPlaca.Size = new System.Drawing.Size(148, 20);
             this.TOPlaca.TabIndex = 45;
@@ -224,7 +238,7 @@
             this.Telefone.BackColor = System.Drawing.Color.Transparent;
             this.Telefone.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Telefone.ForeColor = System.Drawing.Color.Moccasin;
-            this.Telefone.Location = new System.Drawing.Point(28, 320);
+            this.Telefone.Location = new System.Drawing.Point(29, 266);
             this.Telefone.Name = "Telefone";
             this.Telefone.Size = new System.Drawing.Size(84, 21);
             this.Telefone.TabIndex = 44;
@@ -236,7 +250,7 @@
             this.CPF.BackColor = System.Drawing.Color.Transparent;
             this.CPF.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPF.ForeColor = System.Drawing.Color.Moccasin;
-            this.CPF.Location = new System.Drawing.Point(28, 244);
+            this.CPF.Location = new System.Drawing.Point(29, 197);
             this.CPF.Name = "CPF";
             this.CPF.Size = new System.Drawing.Size(41, 21);
             this.CPF.TabIndex = 43;
@@ -248,7 +262,7 @@
             this.Nome.BackColor = System.Drawing.Color.Transparent;
             this.Nome.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nome.ForeColor = System.Drawing.Color.Moccasin;
-            this.Nome.Location = new System.Drawing.Point(28, 216);
+            this.Nome.Location = new System.Drawing.Point(29, 242);
             this.Nome.Name = "Nome";
             this.Nome.Size = new System.Drawing.Size(60, 21);
             this.Nome.TabIndex = 42;
@@ -260,7 +274,7 @@
             this.AnoFabricacao.BackColor = System.Drawing.Color.Transparent;
             this.AnoFabricacao.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AnoFabricacao.ForeColor = System.Drawing.Color.Moccasin;
-            this.AnoFabricacao.Location = new System.Drawing.Point(28, 268);
+            this.AnoFabricacao.Location = new System.Drawing.Point(29, 292);
             this.AnoFabricacao.Name = "AnoFabricacao";
             this.AnoFabricacao.Size = new System.Drawing.Size(81, 21);
             this.AnoFabricacao.TabIndex = 41;
@@ -272,7 +286,7 @@
             this.Modelo.BackColor = System.Drawing.Color.Transparent;
             this.Modelo.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Modelo.ForeColor = System.Drawing.Color.Moccasin;
-            this.Modelo.Location = new System.Drawing.Point(28, 294);
+            this.Modelo.Location = new System.Drawing.Point(29, 317);
             this.Modelo.Name = "Modelo";
             this.Modelo.Size = new System.Drawing.Size(77, 21);
             this.Modelo.TabIndex = 40;
@@ -284,7 +298,7 @@
             this.placa.BackColor = System.Drawing.Color.Transparent;
             this.placa.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.placa.ForeColor = System.Drawing.Color.Moccasin;
-            this.placa.Location = new System.Drawing.Point(28, 191);
+            this.placa.Location = new System.Drawing.Point(29, 221);
             this.placa.Name = "placa";
             this.placa.Size = new System.Drawing.Size(60, 21);
             this.placa.TabIndex = 39;
@@ -365,13 +379,88 @@
             this.ValorTotal.TabIndex = 64;
             this.ValorTotal.Text = "VALOR TOTAL DAS PEÇAS:";
             // 
+            // oficinaMecDataSet
+            // 
+            this.oficinaMecDataSet.DataSetName = "OficinaMecDataSet";
+            this.oficinaMecDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // orcamentoBindingSource
+            // 
+            this.orcamentoBindingSource.DataMember = "Orcamento";
+            this.orcamentoBindingSource.DataSource = this.oficinaMecDataSet;
+            // 
+            // orcamentoTableAdapter
+            // 
+            this.orcamentoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AgendamentoTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CarroTableAdapter = null;
+            this.tableAdapterManager.ClienteTableAdapter = null;
+            this.tableAdapterManager.Consulta_BancoTableAdapter = null;
+            this.tableAdapterManager.FuncionarioTableAdapter = null;
+            this.tableAdapterManager.OrcamentoTableAdapter = this.orcamentoTableAdapter;
+            this.tableAdapterManager.Pecas_estoqueTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Moccasin;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 12F);
+            this.button1.Location = new System.Drawing.Point(26, 396);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 57);
+            this.button1.TabIndex = 71;
+            this.button1.Text = "PREENCHER INFORAÇÕES";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.Moccasin;
+            this.listBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 19;
+            this.listBox1.Location = new System.Drawing.Point(304, 161);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(259, 194);
+            this.listBox1.TabIndex = 72;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Moccasin;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(170, 370);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(72, 20);
+            this.textBox1.TabIndex = 74;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Moccasin;
+            this.label1.Location = new System.Drawing.Point(29, 372);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 21);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "CODIGO DA PECA:";
+            // 
             // TelaOrcamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(807, 458);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.TOServico);
             this.Controls.Add(this.ValorServico);
             this.Controls.Add(this.TOMao);
@@ -402,6 +491,9 @@
             this.Controls.Add(this.Informacoes);
             this.Name = "TelaOrcamento";
             this.Text = "TelaOrcamento";
+            this.Load += new System.EventHandler(this.TelaOrcamento_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,5 +529,13 @@
         private System.Windows.Forms.Label ValorMao;
         private System.Windows.Forms.TextBox TOPecas;
         private System.Windows.Forms.Label ValorTotal;
+        private OficinaMecDataSet oficinaMecDataSet;
+        private System.Windows.Forms.BindingSource orcamentoBindingSource;
+        private OficinaMecDataSetTableAdapters.OrcamentoTableAdapter orcamentoTableAdapter;
+        private OficinaMecDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

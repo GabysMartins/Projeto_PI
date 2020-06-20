@@ -35,6 +35,9 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,11 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arquivos\AddCarro.cs" />
-    <Compile Include="Arquivos\AddCli.cs" />
+    <Compile Include="Arquivos\AdicionarPecaOrcamento.cs" />
+    <Compile Include="Arquivos\CadastroCli.cs" />
     <Compile Include="Arquivos\BaixaPecas.cs" />
     <Compile Include="Arquivos\Estoque.cs" />
     <Compile Include="Arquivos\ExcluiCarro.cs" />
     <Compile Include="Arquivos\ExcluiPeca.cs" />
+    <Compile Include="Arquivos\ExibirCarro.cs" />
+    <Compile Include="Arquivos\ExibirCliente.cs" />
     <Compile Include="Arquivos\RemoveUsu.cs" />
     <Compile Include="Arquivos\CadastroUsu.cs" />
     <Compile Include="Arquivos\Conexao.cs" />
@@ -62,7 +68,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OficinaMecDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Arquivos\Permissao.cs" />
     <Compile Include="Telas\BaixaEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,12 +129,6 @@
     </Compile>
     <Compile Include="Telas\TelaCarro.Designer.cs">
       <DependentUpon>TelaCarro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\TelaConsulta.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\TelaConsulta.Designer.cs">
-      <DependentUpon>TelaConsulta.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\TelaEstoque.cs">
       <SubType>Form</SubType>
@@ -201,15 +200,13 @@
     <EmbeddedResource Include="Telas\TelaCarro.resx">
       <DependentUpon>TelaCarro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\TelaConsulta.resx">
-      <DependentUpon>TelaConsulta.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Telas\TelaEstoque.resx">
       <DependentUpon>TelaEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Telas\TelaMenu.resx">
       <DependentUpon>TelaMenu.cs</DependentUpon>
     </None>
@@ -253,4 +250,11 @@
     <Content Include="Resources\Editado3.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

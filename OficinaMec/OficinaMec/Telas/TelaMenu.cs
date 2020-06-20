@@ -45,9 +45,9 @@ namespace OficinaMec
         {
             if (label2.Text == "Administrador")
             {
-                TelaAgendamento telaAgendamento = new TelaAgendamento();
+                TelaOrcamento telaOrcamento = new TelaOrcamento();
                 this.Hide();
-                telaAgendamento.ShowDialog();
+                telaOrcamento.ShowDialog();
             }
             else if (label2.Text == "Mecanico")
             {
@@ -166,6 +166,11 @@ namespace OficinaMec
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
         {
 
         }
