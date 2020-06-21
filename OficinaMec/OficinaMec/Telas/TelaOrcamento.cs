@@ -27,21 +27,31 @@ namespace OficinaMec
 
         private void BOAbrir_Click(object sender, EventArgs e)
         {
-            if(TOKM.Text=="")
+            if (TOKM.Text == "")
             {
                 MessageBox.Show("Existem campos que precisam ser preenchidos!");
+
             }
-            else 
+            else
             {
-                TelaOrdemServico telaOrdemServico = new TelaOrdemServico();
-                this.Hide();
-                telaOrdemServico.ShowDialog();
+                if (label3.Text != "0")
+                {
+                    Salva_OS so = new Salva_OS(label3.Text, TODescritivo.Text, TOCPF.Text, TOPlaca.Text, TONome.Text, TOTelefone.Text, TOANO.Text, TOModelo.Text, TOKM.Text, label2.Text, TOMao.Text, ValorServico.Text);
+                    MessageBox.Show("Ordem de Serviço gerada!");
+                    TelaOrdemServico telaOrdemServico = new TelaOrdemServico();
+                    this.Hide();
+                    telaOrdemServico.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Gere um número de Ordem de serviço primeiro!");
+                }
             }
         }
 
         private void TONome_TextChanged(object sender, EventArgs e)
         {
-           
+
 
         }
 
@@ -55,6 +65,8 @@ namespace OficinaMec
         {
             // TODO: esta linha de código carrega dados na tabela 'oficinaMecDataSet.Orcamento'. Você pode movê-la ou removê-la conforme necessário.
             //this.orcamentoTableAdapter.Fill(this.oficinaMecDataSet.Orcamento);
+
+
 
         }
 
@@ -71,21 +83,77 @@ namespace OficinaMec
 
 
         }
+        float TotalProdutos, TotalTudo;
 
-       void somar(int x, int y) {
-            TOPecas.Text = Convert.ToString(x + y);
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TotalTudo = (float.Parse(label2.Text) + float.Parse(TOMao.Text));
+            ValorServico.Text = Convert.ToString(TotalTudo);
         }
+
+        private void BOEliminar_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "")
+            {
+                if (label3.Text != "0")
+                {
+                    AdicionarPecaOrcamento apo = new AdicionarPecaOrcamento(textBox1.Text);
+                    RemOS_Peca remos = new RemOS_Peca(apo.ExibeDescricao);
+                    listBox1.Items.Remove("Item: " + apo.ExibeDescricao + " - Preço:" + apo.ExibePreco + ".");
+                    TotalProdutos -= float.Parse(apo.ExibePreco);
+                    label2.Text = Convert.ToString(TotalProdutos);
+                }
+                else
+                {
+                    MessageBox.Show("Gere um numero de OS primeiro!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Insira o código do produto primeiro!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            }
         
-        
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Random aleatorio = new Random();
+            int OS = aleatorio.Next(1, 1000000);
+            label3.Text = Convert.ToString(OS);
+        }
+
+        private void BOCancelar_Click(object sender, EventArgs e)
+        {
+            TelaOrdemServico telaOrdemServico = new TelaOrdemServico();
+            this.Hide();
+            telaOrdemServico.ShowDialog();
+        }
+
         private void BOAcrescentar_Click(object sender, EventArgs e)
         {
-            AdicionarPecaOrcamento apo = new AdicionarPecaOrcamento(textBox1.Text);
-            listBox1.Items.Add(""+apo.ExibeDescricao+" - Preço:"+apo.ExibePreco+"."); 
-            int a = Convert.ToInt16(apo.ExibePreco);
-            int b = Convert.ToInt32(TOPecas.Text);
-            somar(a, b);
+            if (textBox1.Text != "")
+            {
+                if (label3.Text != "0")
+                {
+                    AdicionarPecaOrcamento apo = new AdicionarPecaOrcamento(textBox1.Text);
+                    AddOS_Peca aop = new AddOS_Peca(apo.ExibeDescricao, label3.Text, apo.ExibePreco);
+                    listBox1.Items.Add("Item: " + apo.ExibeDescricao + " - Preço:" + apo.ExibePreco + ".");
+                    TotalProdutos += float.Parse(apo.ExibePreco);
+                    label2.Text = Convert.ToString(TotalProdutos);
 
-
+                }
+                else
+                {
+                    MessageBox.Show("Gere um numero de OS primeiro!");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Insira o código do produto primeiro!");
+            }
+            }
         }
     }
-}
+
+

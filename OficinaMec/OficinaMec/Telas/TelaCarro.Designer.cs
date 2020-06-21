@@ -211,6 +211,7 @@
             this.Controls.Add(this.BCCSair);
             this.Name = "TelaCarro";
             this.Text = "TelaCarro";
+            this.Load += new System.EventHandler(this.TelaCarro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

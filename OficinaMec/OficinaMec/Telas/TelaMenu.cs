@@ -116,25 +116,6 @@ namespace OficinaMec
 
             }
 
-        private void BMConsulta_Click(object sender, EventArgs e)
-        {
-            if (label2.Text == "Administrador")
-            {
-                TelaAgendamento telaAgendamento = new TelaAgendamento();
-                this.Hide();
-                telaAgendamento.ShowDialog();
-            }
-            else if (label2.Text == "Secretaria")
-            {
-                TelaConsulta telaConsulta = new TelaConsulta();
-            this.Hide();
-            telaConsulta.ShowDialog();
-            }
-            else
-            {
-                MessageBox.Show("Você não tem permissão para esta ferramenta", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         private void BMSair_Click(object sender, EventArgs e)
         {

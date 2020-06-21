@@ -38,7 +38,7 @@ namespace OficinaMec
                 {
                     ExibeDescricao = leitor[0].ToString();
                     ExibeQuantidade = leitor[1].ToString();
-                    ExibePreco = leitor[1].ToString();
+                    ExibePreco = leitor[2].ToString();
                 }
                 conexao.desconectar();
             }

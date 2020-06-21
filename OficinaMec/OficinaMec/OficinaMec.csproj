@@ -50,19 +50,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arquivos\AddCarro.cs" />
+    <Compile Include="Arquivos\AddOS_Peca.cs" />
     <Compile Include="Arquivos\AdicionarPecaOrcamento.cs" />
     <Compile Include="Arquivos\CadastroCli.cs" />
     <Compile Include="Arquivos\BaixaPecas.cs" />
+    <Compile Include="Arquivos\ConsultaOS.cs" />
     <Compile Include="Arquivos\Estoque.cs" />
     <Compile Include="Arquivos\ExcluiCarro.cs" />
     <Compile Include="Arquivos\ExcluiPeca.cs" />
+    <Compile Include="Arquivos\ExibeOS.cs" />
+    <Compile Include="Arquivos\ExibePecasOS.cs" />
     <Compile Include="Arquivos\ExibirCarro.cs" />
     <Compile Include="Arquivos\ExibirCliente.cs" />
+    <Compile Include="Arquivos\RemOS_Peca.cs" />
     <Compile Include="Arquivos\RemoveUsu.cs" />
     <Compile Include="Arquivos\CadastroUsu.cs" />
     <Compile Include="Arquivos\Conexao.cs" />
     <Compile Include="Arquivos\Controle.cs" />
     <Compile Include="Arquivos\LoginDaoComandos.cs" />
+    <Compile Include="Arquivos\Salva_OS.cs" />
     <Compile Include="OficinaMecDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

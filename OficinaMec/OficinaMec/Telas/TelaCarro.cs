@@ -39,5 +39,10 @@ namespace OficinaMec
             this.Hide();
             ex.Show();
         }
+
+        private void TelaCarro_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

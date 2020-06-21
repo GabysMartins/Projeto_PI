@@ -52,11 +52,9 @@
             this.Modelo = new System.Windows.Forms.Label();
             this.placa = new System.Windows.Forms.Label();
             this.Informacoes = new System.Windows.Forms.Label();
-            this.TOServico = new System.Windows.Forms.TextBox();
             this.ValorServico = new System.Windows.Forms.Label();
             this.TOMao = new System.Windows.Forms.TextBox();
             this.ValorMao = new System.Windows.Forms.Label();
-            this.TOPecas = new System.Windows.Forms.TextBox();
             this.ValorTotal = new System.Windows.Forms.Label();
             this.oficinaMecDataSet = new OficinaMec.OficinaMecDataSet();
             this.orcamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -66,6 +64,11 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -113,8 +116,9 @@
             this.BOCancelar.Name = "BOCancelar";
             this.BOCancelar.Size = new System.Drawing.Size(122, 57);
             this.BOCancelar.TabIndex = 56;
-            this.BOCancelar.Text = "CANCELAR";
+            this.BOCancelar.Text = "CONSULTAR ORDEM";
             this.BOCancelar.UseVisualStyleBackColor = false;
+            this.BOCancelar.Click += new System.EventHandler(this.BOCancelar_Click);
             // 
             // BOAbrir
             // 
@@ -125,7 +129,7 @@
             this.BOAbrir.Name = "BOAbrir";
             this.BOAbrir.Size = new System.Drawing.Size(122, 57);
             this.BOAbrir.TabIndex = 55;
-            this.BOAbrir.Text = "ABRIR ORDEM ";
+            this.BOAbrir.Text = "GERAR ORDEM ";
             this.BOAbrir.UseVisualStyleBackColor = false;
             this.BOAbrir.Click += new System.EventHandler(this.BOAbrir_Click);
             // 
@@ -140,6 +144,7 @@
             this.BOEliminar.TabIndex = 54;
             this.BOEliminar.Text = "ELIMINAR ITENS";
             this.BOEliminar.UseVisualStyleBackColor = false;
+            this.BOEliminar.Click += new System.EventHandler(this.BOEliminar_Click);
             // 
             // BOAcrescentar
             // 
@@ -316,22 +321,13 @@
             this.Informacoes.TabIndex = 38;
             this.Informacoes.Text = "INFORMAÇÕES CLIENTES";
             // 
-            // TOServico
-            // 
-            this.TOServico.BackColor = System.Drawing.Color.Moccasin;
-            this.TOServico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOServico.Location = new System.Drawing.Point(595, 296);
-            this.TOServico.Name = "TOServico";
-            this.TOServico.Size = new System.Drawing.Size(184, 20);
-            this.TOServico.TabIndex = 69;
-            // 
             // ValorServico
             // 
             this.ValorServico.AutoSize = true;
             this.ValorServico.BackColor = System.Drawing.Color.Transparent;
             this.ValorServico.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValorServico.ForeColor = System.Drawing.Color.Moccasin;
-            this.ValorServico.Location = new System.Drawing.Point(591, 272);
+            this.ValorServico.Location = new System.Drawing.Point(599, 316);
             this.ValorServico.Name = "ValorServico";
             this.ValorServico.Size = new System.Drawing.Size(196, 21);
             this.ValorServico.TabIndex = 68;
@@ -345,6 +341,7 @@
             this.TOMao.Name = "TOMao";
             this.TOMao.Size = new System.Drawing.Size(184, 20);
             this.TOMao.TabIndex = 67;
+            this.TOMao.Text = "0";
             // 
             // ValorMao
             // 
@@ -357,15 +354,6 @@
             this.ValorMao.Size = new System.Drawing.Size(190, 21);
             this.ValorMao.TabIndex = 66;
             this.ValorMao.Text = "VALOR DA MÃO DE OBRA:";
-            // 
-            // TOPecas
-            // 
-            this.TOPecas.BackColor = System.Drawing.Color.Moccasin;
-            this.TOPecas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOPecas.Location = new System.Drawing.Point(595, 190);
-            this.TOPecas.Name = "TOPecas";
-            this.TOPecas.Size = new System.Drawing.Size(184, 20);
-            this.TOPecas.TabIndex = 65;
             // 
             // ValorTotal
             // 
@@ -450,6 +438,68 @@
             this.label1.TabIndex = 73;
             this.label1.Text = "CODIGO DA PECA:";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Moccasin;
+            this.label2.Location = new System.Drawing.Point(591, 187);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(19, 21);
+            this.label2.TabIndex = 75;
+            this.label2.Text = "0";
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Moccasin;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 8F);
+            this.button2.Location = new System.Drawing.Point(626, 279);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(120, 25);
+            this.button2.TabIndex = 77;
+            this.button2.Text = "TOTAL";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Moccasin;
+            this.label3.Location = new System.Drawing.Point(716, 34);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(19, 21);
+            this.label3.TabIndex = 79;
+            this.label3.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Moccasin;
+            this.label4.Location = new System.Drawing.Point(599, 33);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(107, 21);
+            this.label4.TabIndex = 78;
+            this.label4.Text = "NUMERO O.S:";
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Moccasin;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Calibri", 8F);
+            this.button3.Location = new System.Drawing.Point(603, 57);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(120, 25);
+            this.button3.TabIndex = 80;
+            this.button3.Text = "GERAR NUMERO DE OS";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // TelaOrcamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,15 +507,18 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(807, 458);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.TOServico);
             this.Controls.Add(this.ValorServico);
             this.Controls.Add(this.TOMao);
             this.Controls.Add(this.ValorMao);
-            this.Controls.Add(this.TOPecas);
             this.Controls.Add(this.ValorTotal);
             this.Controls.Add(this.TOKM);
             this.Controls.Add(this.Km);
@@ -523,11 +576,9 @@
         private System.Windows.Forms.Label Modelo;
         private System.Windows.Forms.Label placa;
         private System.Windows.Forms.Label Informacoes;
-        private System.Windows.Forms.TextBox TOServico;
         private System.Windows.Forms.Label ValorServico;
         private System.Windows.Forms.TextBox TOMao;
         private System.Windows.Forms.Label ValorMao;
-        private System.Windows.Forms.TextBox TOPecas;
         private System.Windows.Forms.Label ValorTotal;
         private OficinaMecDataSet oficinaMecDataSet;
         private System.Windows.Forms.BindingSource orcamentoBindingSource;
@@ -537,5 +588,10 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button3;
     }
 }
