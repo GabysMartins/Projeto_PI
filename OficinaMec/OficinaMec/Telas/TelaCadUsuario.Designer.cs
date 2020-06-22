@@ -36,7 +36,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.TCUSenha = new System.Windows.Forms.TextBox();
-            this.TCUCPF = new System.Windows.Forms.TextBox();
             this.TCUEmail = new System.Windows.Forms.TextBox();
             this.Telefone = new System.Windows.Forms.Label();
             this.CPF = new System.Windows.Forms.Label();
@@ -54,6 +53,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.TCUCPF = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
             this.SuspendLayout();
@@ -122,15 +122,6 @@
             this.TCUSenha.PasswordChar = '*';
             this.TCUSenha.Size = new System.Drawing.Size(148, 20);
             this.TCUSenha.TabIndex = 72;
-            // 
-            // TCUCPF
-            // 
-            this.TCUCPF.BackColor = System.Drawing.Color.Moccasin;
-            this.TCUCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TCUCPF.Location = new System.Drawing.Point(206, 220);
-            this.TCUCPF.Name = "TCUCPF";
-            this.TCUCPF.Size = new System.Drawing.Size(148, 20);
-            this.TCUCPF.TabIndex = 71;
             // 
             // TCUEmail
             // 
@@ -326,6 +317,15 @@
             this.radioButton4.UseVisualStyleBackColor = false;
             this.radioButton4.CheckedChanged += new System.EventHandler(this.radioButton4_CheckedChanged);
             // 
+            // TCUCPF
+            // 
+            this.TCUCPF.BackColor = System.Drawing.Color.Moccasin;
+            this.TCUCPF.Location = new System.Drawing.Point(206, 220);
+            this.TCUCPF.Mask = "000,000,000-00";
+            this.TCUCPF.Name = "TCUCPF";
+            this.TCUCPF.Size = new System.Drawing.Size(148, 20);
+            this.TCUCPF.TabIndex = 86;
+            // 
             // TelaCadUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -333,6 +333,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.TCUCPF);
             this.Controls.Add(this.radioButton4);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);
@@ -345,7 +346,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TCUSenha);
-            this.Controls.Add(this.TCUCPF);
             this.Controls.Add(this.TCUEmail);
             this.Controls.Add(this.Telefone);
             this.Controls.Add(this.CPF);
@@ -371,7 +371,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TCUSenha;
-        private System.Windows.Forms.TextBox TCUCPF;
         private System.Windows.Forms.TextBox TCUEmail;
         private System.Windows.Forms.Label Telefone;
         private System.Windows.Forms.Label CPF;
@@ -389,5 +388,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.MaskedTextBox TCUCPF;
     }
 }

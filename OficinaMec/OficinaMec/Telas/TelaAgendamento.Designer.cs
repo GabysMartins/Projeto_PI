@@ -51,20 +51,20 @@
             this.BALimpar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.TAHorario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
-            this.TAData = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.oficinaMecDataSet = new OficinaMec.OficinaMecDataSet();
             this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.agendamentoTableAdapter = new OficinaMec.OficinaMecDataSetTableAdapters.AgendamentoTableAdapter();
             this.tableAdapterManager = new OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.TAData = new System.Windows.Forms.MaskedTextBox();
+            this.textbox2 = new System.Windows.Forms.MaskedTextBox();
+            this.TAHorario = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -297,15 +297,6 @@
             this.label1.TabIndex = 37;
             this.label1.Text = "NUMERO OS:";
             // 
-            // TAHorario
-            // 
-            this.TAHorario.BackColor = System.Drawing.Color.Moccasin;
-            this.TAHorario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TAHorario.Location = new System.Drawing.Point(665, 272);
-            this.TAHorario.Name = "TAHorario";
-            this.TAHorario.Size = new System.Drawing.Size(131, 20);
-            this.TAHorario.TabIndex = 40;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -331,15 +322,6 @@
             this.button3.Text = "Consultar OS";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // TAData
-            // 
-            this.TAData.BackColor = System.Drawing.Color.Moccasin;
-            this.TAData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TAData.Location = new System.Drawing.Point(12, 244);
-            this.TAData.Name = "TAData";
-            this.TAData.Size = new System.Drawing.Size(164, 20);
-            this.TAData.TabIndex = 121;
             // 
             // label3
             // 
@@ -378,15 +360,6 @@
             this.tableAdapterManager.OrcamentoTableAdapter = null;
             this.tableAdapterManager.Pecas_estoqueTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.Moccasin;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(12, 309);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(164, 20);
-            this.textBox2.TabIndex = 124;
             // 
             // label4
             // 
@@ -435,6 +408,36 @@
             this.listBox1.Size = new System.Drawing.Size(323, 290);
             this.listBox1.TabIndex = 127;
             // 
+            // TAData
+            // 
+            this.TAData.BackColor = System.Drawing.Color.Moccasin;
+            this.TAData.Location = new System.Drawing.Point(12, 245);
+            this.TAData.Mask = "00/00/0000";
+            this.TAData.Name = "TAData";
+            this.TAData.Size = new System.Drawing.Size(164, 20);
+            this.TAData.TabIndex = 128;
+            this.TAData.ValidatingType = typeof(System.DateTime);
+            // 
+            // textbox2
+            // 
+            this.textbox2.BackColor = System.Drawing.Color.Moccasin;
+            this.textbox2.Location = new System.Drawing.Point(12, 309);
+            this.textbox2.Mask = "00/00/0000";
+            this.textbox2.Name = "textbox2";
+            this.textbox2.Size = new System.Drawing.Size(164, 20);
+            this.textbox2.TabIndex = 129;
+            this.textbox2.ValidatingType = typeof(System.DateTime);
+            // 
+            // TAHorario
+            // 
+            this.TAHorario.BackColor = System.Drawing.Color.Moccasin;
+            this.TAHorario.Location = new System.Drawing.Point(665, 271);
+            this.TAHorario.Mask = "00:00";
+            this.TAHorario.Name = "TAHorario";
+            this.TAHorario.Size = new System.Drawing.Size(131, 20);
+            this.TAHorario.TabIndex = 130;
+            this.TAHorario.ValidatingType = typeof(System.DateTime);
+            // 
             // TelaAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -442,15 +445,15 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(839, 460);
+            this.Controls.Add(this.TAHorario);
+            this.Controls.Add(this.textbox2);
+            this.Controls.Add(this.TAData);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.TAData);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.TAHorario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
@@ -506,20 +509,20 @@
         private System.Windows.Forms.Button BALimpar;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox TAHorario;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox TAData;
         private System.Windows.Forms.Label label3;
         private OficinaMecDataSet oficinaMecDataSet;
         private System.Windows.Forms.BindingSource agendamentoBindingSource;
         private OficinaMecDataSetTableAdapters.AgendamentoTableAdapter agendamentoTableAdapter;
         private OficinaMecDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.MaskedTextBox TAData;
+        private System.Windows.Forms.MaskedTextBox textbox2;
+        private System.Windows.Forms.MaskedTextBox TAHorario;
     }
 }
 

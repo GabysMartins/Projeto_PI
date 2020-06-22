@@ -34,7 +34,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textbox6 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textbox5 = new System.Windows.Forms.TextBox();
             this.textbox3 = new System.Windows.Forms.TextBox();
             this.textbox4 = new System.Windows.Forms.TextBox();
             this.Telefone = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.Nome = new System.Windows.Forms.Label();
             this.BCUSalvar = new System.Windows.Forms.Button();
             this.BCUSair = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // textbox1
@@ -107,15 +107,6 @@
             this.label2.Size = new System.Drawing.Size(69, 21);
             this.label2.TabIndex = 87;
             this.label2.Text = "Modelo:";
-            // 
-            // textbox5
-            // 
-            this.textbox5.BackColor = System.Drawing.Color.Moccasin;
-            this.textbox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textbox5.Location = new System.Drawing.Point(201, 245);
-            this.textbox5.Name = "textbox5";
-            this.textbox5.Size = new System.Drawing.Size(148, 20);
-            this.textbox5.TabIndex = 86;
             // 
             // textbox3
             // 
@@ -197,6 +188,14 @@
             this.BCUSair.UseVisualStyleBackColor = false;
             this.BCUSair.Click += new System.EventHandler(this.BCUSair_Click);
             // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.Moccasin;
+            this.textBox5.Location = new System.Drawing.Point(201, 246);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(148, 20);
+            this.textBox5.TabIndex = 95;
+            // 
             // InserirPeca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,6 +203,7 @@
             this.BackgroundImage = global::OficinaMec.Properties.Resources.Editado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(438, 398);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.BCUSalvar);
             this.Controls.Add(this.BCUSair);
             this.Controls.Add(this.textbox1);
@@ -212,7 +212,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textbox6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textbox5);
             this.Controls.Add(this.textbox3);
             this.Controls.Add(this.textbox4);
             this.Controls.Add(this.Telefone);
@@ -220,6 +219,7 @@
             this.Controls.Add(this.Nome);
             this.Name = "InserirPeca";
             this.Text = "InserirPeca";
+            this.Load += new System.EventHandler(this.InserirPeca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -233,7 +233,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textbox6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textbox5;
         private System.Windows.Forms.TextBox textbox3;
         private System.Windows.Forms.TextBox textbox4;
         private System.Windows.Forms.Label Telefone;
@@ -241,5 +240,6 @@
         private System.Windows.Forms.Label Nome;
         private System.Windows.Forms.Button BCUSalvar;
         private System.Windows.Forms.Button BCUSair;
+        private System.Windows.Forms.MaskedTextBox textBox5;
     }
 }

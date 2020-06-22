@@ -34,10 +34,7 @@
             this.BCadAdicionar = new System.Windows.Forms.Button();
             this.textbox5 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textbox3 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textbox6 = new System.Windows.Forms.TextBox();
-            this.textbox1 = new System.Windows.Forms.TextBox();
             this.textbox2 = new System.Windows.Forms.TextBox();
             this.Telefone = new System.Windows.Forms.Label();
             this.CPF = new System.Windows.Forms.Label();
@@ -45,6 +42,9 @@
             this.BCadSalvar = new System.Windows.Forms.Button();
             this.BCadSair = new System.Windows.Forms.Button();
             this.BCadLimpar = new System.Windows.Forms.Button();
+            this.textbox1 = new System.Windows.Forms.MaskedTextBox();
+            this.textbox3 = new System.Windows.Forms.MaskedTextBox();
+            this.textbox6 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // textbox4
@@ -102,15 +102,6 @@
             this.label2.TabIndex = 51;
             this.label2.Text = "ENDEREÇO: ";
             // 
-            // textbox3
-            // 
-            this.textbox3.BackColor = System.Drawing.Color.Moccasin;
-            this.textbox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textbox3.Location = new System.Drawing.Point(102, 272);
-            this.textbox3.Name = "textbox3";
-            this.textbox3.Size = new System.Drawing.Size(148, 20);
-            this.textbox3.TabIndex = 50;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -122,24 +113,6 @@
             this.label1.Size = new System.Drawing.Size(35, 21);
             this.label1.TabIndex = 49;
             this.label1.Text = "RG:";
-            // 
-            // textbox6
-            // 
-            this.textbox6.BackColor = System.Drawing.Color.Moccasin;
-            this.textbox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textbox6.Location = new System.Drawing.Point(387, 202);
-            this.textbox6.Name = "textbox6";
-            this.textbox6.Size = new System.Drawing.Size(148, 20);
-            this.textbox6.TabIndex = 48;
-            // 
-            // textbox1
-            // 
-            this.textbox1.BackColor = System.Drawing.Color.Moccasin;
-            this.textbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textbox1.Location = new System.Drawing.Point(102, 199);
-            this.textbox1.Name = "textbox1";
-            this.textbox1.Size = new System.Drawing.Size(148, 20);
-            this.textbox1.TabIndex = 47;
             // 
             // textbox2
             // 
@@ -225,6 +198,33 @@
             this.BCadLimpar.UseVisualStyleBackColor = false;
             this.BCadLimpar.Click += new System.EventHandler(this.BCadLimpar_Click);
             // 
+            // textbox1
+            // 
+            this.textbox1.BackColor = System.Drawing.Color.Moccasin;
+            this.textbox1.Location = new System.Drawing.Point(102, 199);
+            this.textbox1.Mask = "000,000,000-00";
+            this.textbox1.Name = "textbox1";
+            this.textbox1.Size = new System.Drawing.Size(148, 20);
+            this.textbox1.TabIndex = 57;
+            // 
+            // textbox3
+            // 
+            this.textbox3.BackColor = System.Drawing.Color.Moccasin;
+            this.textbox3.Location = new System.Drawing.Point(102, 275);
+            this.textbox3.Mask = "00,000,000-0";
+            this.textbox3.Name = "textbox3";
+            this.textbox3.Size = new System.Drawing.Size(148, 20);
+            this.textbox3.TabIndex = 58;
+            // 
+            // textbox6
+            // 
+            this.textbox6.BackColor = System.Drawing.Color.Moccasin;
+            this.textbox6.Location = new System.Drawing.Point(387, 202);
+            this.textbox6.Mask = "(99) 000-0000";
+            this.textbox6.Name = "textbox6";
+            this.textbox6.Size = new System.Drawing.Size(148, 20);
+            this.textbox6.TabIndex = 59;
+            // 
             // TelaCadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,16 +232,16 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textbox6);
+            this.Controls.Add(this.textbox3);
+            this.Controls.Add(this.textbox1);
             this.Controls.Add(this.BCadLimpar);
             this.Controls.Add(this.textbox4);
             this.Controls.Add(this.Email);
             this.Controls.Add(this.BCadAdicionar);
             this.Controls.Add(this.textbox5);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textbox3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textbox6);
-            this.Controls.Add(this.textbox1);
             this.Controls.Add(this.textbox2);
             this.Controls.Add(this.Telefone);
             this.Controls.Add(this.CPF);
@@ -263,10 +263,7 @@
         private System.Windows.Forms.Button BCadAdicionar;
         private System.Windows.Forms.TextBox textbox5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textbox3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textbox6;
-        private System.Windows.Forms.TextBox textbox1;
         private System.Windows.Forms.TextBox textbox2;
         private System.Windows.Forms.Label Telefone;
         private System.Windows.Forms.Label CPF;
@@ -274,5 +271,8 @@
         private System.Windows.Forms.Button BCadSalvar;
         private System.Windows.Forms.Button BCadSair;
         private System.Windows.Forms.Button BCadLimpar;
+        private System.Windows.Forms.MaskedTextBox textbox1;
+        private System.Windows.Forms.MaskedTextBox textbox3;
+        private System.Windows.Forms.MaskedTextBox textbox6;
     }
 }

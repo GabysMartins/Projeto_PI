@@ -144,6 +144,8 @@
             // 
             // pecas_estoqueDataGridView
             // 
+            this.pecas_estoqueDataGridView.AllowUserToAddRows = false;
+            this.pecas_estoqueDataGridView.AllowUserToDeleteRows = false;
             this.pecas_estoqueDataGridView.AutoGenerateColumns = false;
             this.pecas_estoqueDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.pecas_estoqueDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -156,6 +158,7 @@
             this.pecas_estoqueDataGridView.DataSource = this.pecas_estoqueBindingSource;
             this.pecas_estoqueDataGridView.Location = new System.Drawing.Point(82, 64);
             this.pecas_estoqueDataGridView.Name = "pecas_estoqueDataGridView";
+            this.pecas_estoqueDataGridView.ReadOnly = true;
             this.pecas_estoqueDataGridView.Size = new System.Drawing.Size(643, 281);
             this.pecas_estoqueDataGridView.TabIndex = 46;
             // 
@@ -164,36 +167,42 @@
             this.dataGridViewTextBoxColumn1.DataPropertyName = "QTTD_PECA";
             this.dataGridViewTextBoxColumn1.HeaderText = "QTTD_PECA";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "DESCR_PECA";
             this.dataGridViewTextBoxColumn2.HeaderText = "DESCR_PECA";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "FABRIC_PECA";
             this.dataGridViewTextBoxColumn3.HeaderText = "FABRIC_PECA";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "PRECO_PECA";
             this.dataGridViewTextBoxColumn4.HeaderText = "PRECO_PECA";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "MODELO_PECA";
             this.dataGridViewTextBoxColumn5.HeaderText = "MODELO_PECA";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "COD_PECA";
             this.dataGridViewTextBoxColumn6.HeaderText = "COD_PECA";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
             // 
             // TelaEstoque
             // 

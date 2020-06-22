@@ -85,7 +85,7 @@ namespace OficinaMec
         private void button1_Click(object sender, EventArgs e)
         {
 
-            string sql = $"SELECT DATA_AG, HORA_AG,NUM_ORC FROM Agendamento where DATA_AG='{textBox2.Text}' Order by HORA_AG ASC";
+            string sql = $"SELECT DATA_AG, HORA_AG,NUM_ORC FROM Agendamento where DATA_AG='{textbox2.Text}' Order by HORA_AG ASC";
 
             SqlCommand cmd = new SqlCommand(sql, conexao.conectar());
             SqlDataReader leitor = cmd.ExecuteReader();
@@ -106,6 +106,10 @@ namespace OficinaMec
 
         }
 
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

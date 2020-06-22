@@ -42,7 +42,6 @@
             this.TOTelefone = new System.Windows.Forms.TextBox();
             this.TOModelo = new System.Windows.Forms.TextBox();
             this.TOANO = new System.Windows.Forms.TextBox();
-            this.TOCPF = new System.Windows.Forms.TextBox();
             this.TONome = new System.Windows.Forms.TextBox();
             this.TOPlaca = new System.Windows.Forms.TextBox();
             this.Telefone = new System.Windows.Forms.Label();
@@ -52,7 +51,7 @@
             this.Modelo = new System.Windows.Forms.Label();
             this.placa = new System.Windows.Forms.Label();
             this.Informacoes = new System.Windows.Forms.Label();
-            this.ValorServico = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
             this.TOMao = new System.Windows.Forms.TextBox();
             this.ValorMao = new System.Windows.Forms.Label();
             this.ValorTotal = new System.Windows.Forms.Label();
@@ -69,6 +68,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.TOCPF = new System.Windows.Forms.MaskedTextBox();
+            this.ValorServico = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -208,16 +209,6 @@
             this.TOANO.Size = new System.Drawing.Size(131, 20);
             this.TOANO.TabIndex = 48;
             // 
-            // TOCPF
-            // 
-            this.TOCPF.BackColor = System.Drawing.Color.Moccasin;
-            this.TOCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOCPF.Location = new System.Drawing.Point(95, 197);
-            this.TOCPF.Name = "TOCPF";
-            this.TOCPF.Size = new System.Drawing.Size(148, 20);
-            this.TOCPF.TabIndex = 47;
-            this.TOCPF.TextChanged += new System.EventHandler(this.TOCPF_TextChanged);
-            // 
             // TONome
             // 
             this.TONome.BackColor = System.Drawing.Color.Moccasin;
@@ -321,17 +312,17 @@
             this.Informacoes.TabIndex = 38;
             this.Informacoes.Text = "INFORMAÇÕES CLIENTES";
             // 
-            // ValorServico
+            // label37
             // 
-            this.ValorServico.AutoSize = true;
-            this.ValorServico.BackColor = System.Drawing.Color.Transparent;
-            this.ValorServico.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ValorServico.ForeColor = System.Drawing.Color.Moccasin;
-            this.ValorServico.Location = new System.Drawing.Point(599, 316);
-            this.ValorServico.Name = "ValorServico";
-            this.ValorServico.Size = new System.Drawing.Size(196, 21);
-            this.ValorServico.TabIndex = 68;
-            this.ValorServico.Text = "VALOR TOTAL DO SERVIÇO:";
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.Moccasin;
+            this.label37.Location = new System.Drawing.Point(593, 316);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(196, 21);
+            this.label37.TabIndex = 68;
+            this.label37.Text = "VALOR TOTAL DO SERVIÇO:";
             // 
             // TOMao
             // 
@@ -500,6 +491,25 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // TOCPF
+            // 
+            this.TOCPF.BackColor = System.Drawing.Color.Moccasin;
+            this.TOCPF.Location = new System.Drawing.Point(76, 195);
+            this.TOCPF.Mask = "000,000,000-00";
+            this.TOCPF.Name = "TOCPF";
+            this.TOCPF.Size = new System.Drawing.Size(167, 20);
+            this.TOCPF.TabIndex = 81;
+            // 
+            // ValorServico
+            // 
+            this.ValorServico.BackColor = System.Drawing.Color.Moccasin;
+            this.ValorServico.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ValorServico.Location = new System.Drawing.Point(595, 340);
+            this.ValorServico.Name = "ValorServico";
+            this.ValorServico.Size = new System.Drawing.Size(184, 20);
+            this.ValorServico.TabIndex = 82;
+            this.ValorServico.Text = "0";
+            // 
             // TelaOrcamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -507,6 +517,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(807, 458);
+            this.Controls.Add(this.ValorServico);
+            this.Controls.Add(this.TOCPF);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -516,7 +528,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.ValorServico);
+            this.Controls.Add(this.label37);
             this.Controls.Add(this.TOMao);
             this.Controls.Add(this.ValorMao);
             this.Controls.Add(this.ValorTotal);
@@ -532,7 +544,6 @@
             this.Controls.Add(this.TOTelefone);
             this.Controls.Add(this.TOModelo);
             this.Controls.Add(this.TOANO);
-            this.Controls.Add(this.TOCPF);
             this.Controls.Add(this.TONome);
             this.Controls.Add(this.TOPlaca);
             this.Controls.Add(this.Telefone);
@@ -566,7 +577,6 @@
         private System.Windows.Forms.TextBox TOTelefone;
         private System.Windows.Forms.TextBox TOModelo;
         private System.Windows.Forms.TextBox TOANO;
-        private System.Windows.Forms.TextBox TOCPF;
         private System.Windows.Forms.TextBox TONome;
         private System.Windows.Forms.TextBox TOPlaca;
         private System.Windows.Forms.Label Telefone;
@@ -576,7 +586,7 @@
         private System.Windows.Forms.Label Modelo;
         private System.Windows.Forms.Label placa;
         private System.Windows.Forms.Label Informacoes;
-        private System.Windows.Forms.Label ValorServico;
+        private System.Windows.Forms.Label label37;
         private System.Windows.Forms.TextBox TOMao;
         private System.Windows.Forms.Label ValorMao;
         private System.Windows.Forms.Label ValorTotal;
@@ -593,5 +603,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.MaskedTextBox TOCPF;
+        private System.Windows.Forms.TextBox ValorServico;
     }
 }
