@@ -54,6 +54,7 @@
     <Compile Include="Arquivos\AdicionarPecaOrcamento.cs" />
     <Compile Include="Arquivos\CadastroCli.cs" />
     <Compile Include="Arquivos\BaixaPecas.cs" />
+    <Compile Include="Arquivos\ConsultaAgendamento.cs" />
     <Compile Include="Arquivos\ConsultaOS.cs" />
     <Compile Include="Arquivos\Estoque.cs" />
     <Compile Include="Arquivos\ExcluiCarro.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Arquivos\ExibePecasOS.cs" />
     <Compile Include="Arquivos\ExibirCarro.cs" />
     <Compile Include="Arquivos\ExibirCliente.cs" />
+    <Compile Include="Arquivos\InsereAgendamento.cs" />
     <Compile Include="Arquivos\RemOS_Peca.cs" />
     <Compile Include="Arquivos\RemoveUsu.cs" />
     <Compile Include="Arquivos\CadastroUsu.cs" />

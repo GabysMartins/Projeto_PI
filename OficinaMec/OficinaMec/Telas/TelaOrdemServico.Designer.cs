@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaOrdemServico));
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -58,21 +57,19 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.oficinaMecDataSet = new OficinaMec.OficinaMecDataSet();
-            this.consultaBancoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.consulta_BancoTableAdapter = new OficinaMec.OficinaMecDataSetTableAdapters.Consulta_BancoTableAdapter();
-            this.consultaBancoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.tableAdapterManager = new OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultaBancoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultaBancoBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -85,23 +82,27 @@
             // 
             // button1
             // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.button1.BackColor = System.Drawing.Color.Moccasin;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 14F);
-            this.button1.Location = new System.Drawing.Point(307, 381);
+            this.button1.Location = new System.Drawing.Point(362, 672);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 57);
             this.button1.TabIndex = 107;
             this.button1.Text = "IMPRIMIR";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ValorServico
             // 
+            this.ValorServico.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ValorServico.AutoSize = true;
             this.ValorServico.BackColor = System.Drawing.Color.Transparent;
             this.ValorServico.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValorServico.ForeColor = System.Drawing.Color.Moccasin;
-            this.ValorServico.Location = new System.Drawing.Point(583, 275);
+            this.ValorServico.Location = new System.Drawing.Point(581, 442);
             this.ValorServico.Name = "ValorServico";
             this.ValorServico.Size = new System.Drawing.Size(196, 21);
             this.ValorServico.TabIndex = 106;
@@ -109,9 +110,12 @@
             // 
             // TOMao
             // 
+            this.TOMao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TOMao.BackColor = System.Drawing.Color.Moccasin;
             this.TOMao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOMao.Location = new System.Drawing.Point(587, 236);
+            this.TOMao.Enabled = false;
+            this.TOMao.Location = new System.Drawing.Point(585, 377);
             this.TOMao.Name = "TOMao";
             this.TOMao.Size = new System.Drawing.Size(184, 20);
             this.TOMao.TabIndex = 105;
@@ -120,11 +124,13 @@
             // 
             // ValorMao
             // 
+            this.ValorMao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ValorMao.AutoSize = true;
             this.ValorMao.BackColor = System.Drawing.Color.Transparent;
             this.ValorMao.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValorMao.ForeColor = System.Drawing.Color.Moccasin;
-            this.ValorMao.Location = new System.Drawing.Point(585, 212);
+            this.ValorMao.Location = new System.Drawing.Point(583, 353);
             this.ValorMao.Name = "ValorMao";
             this.ValorMao.Size = new System.Drawing.Size(190, 21);
             this.ValorMao.TabIndex = 104;
@@ -132,11 +138,13 @@
             // 
             // ValorTotal
             // 
+            this.ValorTotal.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ValorTotal.AutoSize = true;
             this.ValorTotal.BackColor = System.Drawing.Color.Transparent;
             this.ValorTotal.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ValorTotal.ForeColor = System.Drawing.Color.Moccasin;
-            this.ValorTotal.Location = new System.Drawing.Point(583, 160);
+            this.ValorTotal.Location = new System.Drawing.Point(581, 254);
             this.ValorTotal.Name = "ValorTotal";
             this.ValorTotal.Size = new System.Drawing.Size(188, 21);
             this.ValorTotal.TabIndex = 103;
@@ -144,9 +152,12 @@
             // 
             // TOKM
             // 
+            this.TOKM.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.TOKM.BackColor = System.Drawing.Color.Moccasin;
             this.TOKM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOKM.Location = new System.Drawing.Point(87, 338);
+            this.TOKM.Enabled = false;
+            this.TOKM.Location = new System.Drawing.Point(98, 534);
             this.TOKM.Name = "TOKM";
             this.TOKM.Size = new System.Drawing.Size(148, 20);
             this.TOKM.TabIndex = 102;
@@ -154,11 +165,13 @@
             // 
             // Km
             // 
+            this.Km.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Km.AutoSize = true;
             this.Km.BackColor = System.Drawing.Color.Transparent;
             this.Km.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Km.ForeColor = System.Drawing.Color.Moccasin;
-            this.Km.Location = new System.Drawing.Point(21, 336);
+            this.Km.Location = new System.Drawing.Point(32, 532);
             this.Km.Name = "Km";
             this.Km.Size = new System.Drawing.Size(39, 21);
             this.Km.TabIndex = 101;
@@ -166,15 +179,17 @@
             // 
             // BOSair
             // 
+            this.BOSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.BOSair.BackColor = System.Drawing.Color.Moccasin;
             this.BOSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BOSair.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BOSair.Location = new System.Drawing.Point(452, 381);
+            this.BOSair.Location = new System.Drawing.Point(666, 672);
             this.BOSair.Name = "BOSair";
             this.BOSair.Size = new System.Drawing.Size(122, 57);
             this.BOSair.TabIndex = 100;
             this.BOSair.Text = "SAIR";
             this.BOSair.UseVisualStyleBackColor = false;
+            this.BOSair.Click += new System.EventHandler(this.BOSair_Click);
             // 
             // TODescritivo
             // 
@@ -186,6 +201,7 @@
             this.TODescritivo.Name = "TODescritivo";
             this.TODescritivo.Size = new System.Drawing.Size(227, 112);
             this.TODescritivo.TabIndex = 95;
+            this.TODescritivo.TextChanged += new System.EventHandler(this.TODescritivo_TextChanged);
             // 
             // Descritivo
             // 
@@ -201,9 +217,12 @@
             // 
             // TOTelefone
             // 
+            this.TOTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.TOTelefone.BackColor = System.Drawing.Color.Moccasin;
             this.TOTelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOTelefone.Location = new System.Drawing.Point(104, 262);
+            this.TOTelefone.Enabled = false;
+            this.TOTelefone.Location = new System.Drawing.Point(116, 383);
             this.TOTelefone.Name = "TOTelefone";
             this.TOTelefone.Size = new System.Drawing.Size(131, 20);
             this.TOTelefone.TabIndex = 94;
@@ -211,9 +230,12 @@
             // 
             // TOModelo
             // 
+            this.TOModelo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.TOModelo.BackColor = System.Drawing.Color.Moccasin;
             this.TOModelo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOModelo.Location = new System.Drawing.Point(104, 313);
+            this.TOModelo.Enabled = false;
+            this.TOModelo.Location = new System.Drawing.Point(116, 478);
             this.TOModelo.Name = "TOModelo";
             this.TOModelo.Size = new System.Drawing.Size(131, 20);
             this.TOModelo.TabIndex = 92;
@@ -221,9 +243,12 @@
             // 
             // TOANO
             // 
+            this.TOANO.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.TOANO.BackColor = System.Drawing.Color.Moccasin;
             this.TOANO.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOANO.Location = new System.Drawing.Point(104, 288);
+            this.TOANO.Enabled = false;
+            this.TOANO.Location = new System.Drawing.Point(115, 429);
             this.TOANO.Name = "TOANO";
             this.TOANO.Size = new System.Drawing.Size(131, 20);
             this.TOANO.TabIndex = 91;
@@ -231,9 +256,12 @@
             // 
             // TOCPF
             // 
+            this.TOCPF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.TOCPF.BackColor = System.Drawing.Color.Moccasin;
             this.TOCPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOCPF.Location = new System.Drawing.Point(87, 191);
+            this.TOCPF.Enabled = false;
+            this.TOCPF.Location = new System.Drawing.Point(100, 257);
             this.TOCPF.Name = "TOCPF";
             this.TOCPF.Size = new System.Drawing.Size(148, 20);
             this.TOCPF.TabIndex = 90;
@@ -241,9 +269,12 @@
             // 
             // TONome
             // 
+            this.TONome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.TONome.BackColor = System.Drawing.Color.Moccasin;
             this.TONome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TONome.Location = new System.Drawing.Point(87, 238);
+            this.TONome.Enabled = false;
+            this.TONome.Location = new System.Drawing.Point(99, 340);
             this.TONome.Name = "TONome";
             this.TONome.Size = new System.Drawing.Size(148, 20);
             this.TONome.TabIndex = 89;
@@ -251,9 +282,12 @@
             // 
             // TOPlaca
             // 
+            this.TOPlaca.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.TOPlaca.BackColor = System.Drawing.Color.Moccasin;
             this.TOPlaca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TOPlaca.Location = new System.Drawing.Point(87, 215);
+            this.TOPlaca.Enabled = false;
+            this.TOPlaca.Location = new System.Drawing.Point(99, 301);
             this.TOPlaca.Name = "TOPlaca";
             this.TOPlaca.Size = new System.Drawing.Size(148, 20);
             this.TOPlaca.TabIndex = 88;
@@ -261,11 +295,13 @@
             // 
             // Telefone
             // 
+            this.Telefone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Telefone.AutoSize = true;
             this.Telefone.BackColor = System.Drawing.Color.Transparent;
             this.Telefone.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Telefone.ForeColor = System.Drawing.Color.Moccasin;
-            this.Telefone.Location = new System.Drawing.Point(21, 260);
+            this.Telefone.Location = new System.Drawing.Point(33, 381);
             this.Telefone.Name = "Telefone";
             this.Telefone.Size = new System.Drawing.Size(84, 21);
             this.Telefone.TabIndex = 87;
@@ -273,11 +309,13 @@
             // 
             // CPF
             // 
+            this.CPF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.CPF.AutoSize = true;
             this.CPF.BackColor = System.Drawing.Color.Transparent;
             this.CPF.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPF.ForeColor = System.Drawing.Color.Moccasin;
-            this.CPF.Location = new System.Drawing.Point(21, 191);
+            this.CPF.Location = new System.Drawing.Point(34, 257);
             this.CPF.Name = "CPF";
             this.CPF.Size = new System.Drawing.Size(41, 21);
             this.CPF.TabIndex = 86;
@@ -285,11 +323,13 @@
             // 
             // Nome
             // 
+            this.Nome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Nome.AutoSize = true;
             this.Nome.BackColor = System.Drawing.Color.Transparent;
             this.Nome.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nome.ForeColor = System.Drawing.Color.Moccasin;
-            this.Nome.Location = new System.Drawing.Point(21, 236);
+            this.Nome.Location = new System.Drawing.Point(33, 338);
             this.Nome.Name = "Nome";
             this.Nome.Size = new System.Drawing.Size(60, 21);
             this.Nome.TabIndex = 85;
@@ -297,11 +337,13 @@
             // 
             // AnoFabricacao
             // 
+            this.AnoFabricacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.AnoFabricacao.AutoSize = true;
             this.AnoFabricacao.BackColor = System.Drawing.Color.Transparent;
             this.AnoFabricacao.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AnoFabricacao.ForeColor = System.Drawing.Color.Moccasin;
-            this.AnoFabricacao.Location = new System.Drawing.Point(21, 286);
+            this.AnoFabricacao.Location = new System.Drawing.Point(32, 427);
             this.AnoFabricacao.Name = "AnoFabricacao";
             this.AnoFabricacao.Size = new System.Drawing.Size(81, 21);
             this.AnoFabricacao.TabIndex = 84;
@@ -309,11 +351,13 @@
             // 
             // Modelo
             // 
+            this.Modelo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Modelo.AutoSize = true;
             this.Modelo.BackColor = System.Drawing.Color.Transparent;
             this.Modelo.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Modelo.ForeColor = System.Drawing.Color.Moccasin;
-            this.Modelo.Location = new System.Drawing.Point(21, 311);
+            this.Modelo.Location = new System.Drawing.Point(33, 476);
             this.Modelo.Name = "Modelo";
             this.Modelo.Size = new System.Drawing.Size(77, 21);
             this.Modelo.TabIndex = 83;
@@ -321,11 +365,13 @@
             // 
             // placa
             // 
+            this.placa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.placa.AutoSize = true;
             this.placa.BackColor = System.Drawing.Color.Transparent;
             this.placa.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.placa.ForeColor = System.Drawing.Color.Moccasin;
-            this.placa.Location = new System.Drawing.Point(21, 215);
+            this.placa.Location = new System.Drawing.Point(33, 301);
             this.placa.Name = "placa";
             this.placa.Size = new System.Drawing.Size(60, 21);
             this.placa.TabIndex = 82;
@@ -333,11 +379,13 @@
             // 
             // Informacoes
             // 
+            this.Informacoes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Informacoes.AutoSize = true;
             this.Informacoes.BackColor = System.Drawing.Color.Transparent;
             this.Informacoes.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Informacoes.ForeColor = System.Drawing.Color.Moccasin;
-            this.Informacoes.Location = new System.Drawing.Point(20, 155);
+            this.Informacoes.Location = new System.Drawing.Point(33, 221);
             this.Informacoes.Name = "Informacoes";
             this.Informacoes.Size = new System.Drawing.Size(214, 24);
             this.Informacoes.TabIndex = 81;
@@ -346,9 +394,12 @@
             // 
             // textBox2
             // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.BackColor = System.Drawing.Color.Moccasin;
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Location = new System.Drawing.Point(587, 184);
+            this.textBox2.Enabled = false;
+            this.textBox2.Location = new System.Drawing.Point(585, 278);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(184, 20);
             this.textBox2.TabIndex = 115;
@@ -357,6 +408,7 @@
             // 
             // textBox3
             // 
+            this.textBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox3.BackColor = System.Drawing.Color.Moccasin;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox3.Location = new System.Drawing.Point(685, 27);
@@ -368,9 +420,12 @@
             // 
             // textBox4
             // 
+            this.textBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox4.BackColor = System.Drawing.Color.Moccasin;
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Location = new System.Drawing.Point(587, 299);
+            this.textBox4.Enabled = false;
+            this.textBox4.Location = new System.Drawing.Point(585, 466);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(184, 20);
             this.textBox4.TabIndex = 117;
@@ -379,6 +434,7 @@
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.BackColor = System.Drawing.Color.Moccasin;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Calibri", 8F);
@@ -390,90 +446,85 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.Moccasin;
-            this.listBox1.DataSource = this.consultaBancoBindingSource;
-            this.listBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 19;
-            this.listBox1.Location = new System.Drawing.Point(296, 136);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(167, 213);
-            this.listBox1.TabIndex = 108;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
             // oficinaMecDataSet
             // 
             this.oficinaMecDataSet.DataSetName = "OficinaMecDataSet";
             this.oficinaMecDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // consultaBancoBindingSource
-            // 
-            this.consultaBancoBindingSource.DataMember = "Consulta_Banco";
-            this.consultaBancoBindingSource.DataSource = this.oficinaMecDataSet;
-            // 
             // consulta_BancoTableAdapter
             // 
             this.consulta_BancoTableAdapter.ClearBeforeFill = true;
             // 
-            // consultaBancoBindingSource1
+            // tableAdapterManager
             // 
-            this.consultaBancoBindingSource1.DataMember = "Consulta_Banco";
-            this.consultaBancoBindingSource1.DataSource = this.oficinaMecDataSet;
+            this.tableAdapterManager.AgendamentoTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CarroTableAdapter = null;
+            this.tableAdapterManager.ClienteTableAdapter = null;
+            this.tableAdapterManager.Consulta_BancoTableAdapter = this.consulta_BancoTableAdapter;
+            this.tableAdapterManager.FuncionarioTableAdapter = null;
+            this.tableAdapterManager.OrcamentoTableAdapter = null;
+            this.tableAdapterManager.Pecas_estoqueTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // listBox2
+            // textBox1
             // 
-            this.listBox2.BackColor = System.Drawing.Color.Moccasin;
-            this.listBox2.DataSource = this.consultaBancoBindingSource;
-            this.listBox2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 19;
-            this.listBox2.Location = new System.Drawing.Point(469, 136);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(112, 213);
-            this.listBox2.TabIndex = 119;
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBox1.BackColor = System.Drawing.Color.Moccasin;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(279, 155);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(281, 493);
+            this.textBox1.TabIndex = 122;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label1
+            // button2
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Moccasin;
-            this.label1.Location = new System.Drawing.Point(365, 112);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 21);
-            this.label1.TabIndex = 120;
-            this.label1.Text = "ITEM:";
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button2.BackColor = System.Drawing.Color.Moccasin;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 14F);
+            this.button2.Location = new System.Drawing.Point(25, 672);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(122, 57);
+            this.button2.TabIndex = 123;
+            this.button2.Text = "EDITAR";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label2
+            // printDocument1
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Moccasin;
-            this.label2.Location = new System.Drawing.Point(498, 112);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 21);
-            this.label2.TabIndex = 121;
-            this.label2.Text = "PRECO:";
+            this.printDocument1.OriginAtMargins = true;
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PrintPage);
+            // 
+            // printPreviewDialog1
+            // 
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
             // 
             // TelaOrdemServico
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox2);
+            this.ClientSize = new System.Drawing.Size(800, 749);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ValorServico);
             this.Controls.Add(this.TOMao);
@@ -498,11 +549,10 @@
             this.Controls.Add(this.placa);
             this.Controls.Add(this.Informacoes);
             this.Name = "TelaOrdemServico";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "TelaOrdemServico";
             this.Load += new System.EventHandler(this.TelaOrdemServico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultaBancoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.consultaBancoBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,13 +587,12 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ListBox listBox1;
         private OficinaMecDataSet oficinaMecDataSet;
-        private System.Windows.Forms.BindingSource consultaBancoBindingSource;
         private OficinaMecDataSetTableAdapters.Consulta_BancoTableAdapter consulta_BancoTableAdapter;
-        private System.Windows.Forms.BindingSource consultaBancoBindingSource1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private OficinaMecDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
     }
 }

@@ -5,37 +5,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OficinaMec.Arquivos
+namespace OficinaMec
 {
     public class ExibePecasOS
+
     {
+        public string ExibeDesc { get; set; }
+        public string ExibePreco { get; set; }
+       
+
         Conexao conexao = new Conexao();
+        SqlCommand cmd = new SqlCommand();
         public String mensagem = "";
-
-        public String desc { get; set; }
-        public String quant { get; set; }
-
-        public ExibePecasOS(String OS)
+        public ExibePecasOS(String num)
         {
-
-            string sql = $"select QTTD_PECA,COD_PECA from Consulta_Banco where NUM_ORC='{OS}'";
-            SqlCommand cmd = new SqlCommand(sql, conexao.conectar());
-            SqlDataReader leitor = cmd.ExecuteReader();
-
+            string sql = $"select * from Consulta_Banco where NUM_ORC={num}";
             try
             {
+                SqlCommand cmd = new SqlCommand(sql, conexao.conectar());
+                SqlDataReader leitor = cmd.ExecuteReader();
+
                 while (leitor.Read())
                 {
-                    desc = (leitor[0].ToString());
-                    quant = (leitor[1].ToString());
+                    ExibeDesc = leitor[0].ToString();
+                    ExibePreco = leitor[2].ToString();
+                   
                 }
                 conexao.desconectar();
             }
-            catch (SqlException)
+            catch (SqlException e)
             {
-                this.mensagem = "Erro ao Cadastrar!!";
+                this.mensagem = "Erro ao Buscar Itens!!";
                 // Console.WriteLine(e);
             }
+
         }
     }
 }

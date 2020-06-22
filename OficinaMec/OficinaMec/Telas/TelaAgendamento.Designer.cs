@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaAgendamento));
             this.BASair = new System.Windows.Forms.Button();
             this.BAAgendar = new System.Windows.Forms.Button();
@@ -48,6 +49,24 @@
             this.placa = new System.Windows.Forms.Label();
             this.Informacoes = new System.Windows.Forms.Label();
             this.BALimpar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TAHorario = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.TAData = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.oficinaMecDataSet = new OficinaMec.OficinaMecDataSet();
+            this.agendamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.agendamentoTableAdapter = new OficinaMec.OficinaMecDataSetTableAdapters.AgendamentoTableAdapter();
+            this.tableAdapterManager = new OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // BASair
@@ -55,9 +74,9 @@
             this.BASair.BackColor = System.Drawing.Color.Moccasin;
             this.BASair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BASair.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BASair.Location = new System.Drawing.Point(12, 383);
+            this.BASair.Location = new System.Drawing.Point(24, 383);
             this.BASair.Name = "BASair";
-            this.BASair.Size = new System.Drawing.Size(151, 57);
+            this.BASair.Size = new System.Drawing.Size(119, 57);
             this.BASair.TabIndex = 35;
             this.BASair.Text = "SAIR";
             this.BASair.UseVisualStyleBackColor = false;
@@ -68,9 +87,9 @@
             this.BAAgendar.BackColor = System.Drawing.Color.Moccasin;
             this.BAAgendar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BAAgendar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BAAgendar.Location = new System.Drawing.Point(180, 383);
+            this.BAAgendar.Location = new System.Drawing.Point(165, 383);
             this.BAAgendar.Name = "BAAgendar";
-            this.BAAgendar.Size = new System.Drawing.Size(151, 57);
+            this.BAAgendar.Size = new System.Drawing.Size(119, 57);
             this.BAAgendar.TabIndex = 34;
             this.BAAgendar.Text = "AGENDAR";
             this.BAAgendar.UseVisualStyleBackColor = false;
@@ -80,7 +99,7 @@
             // 
             this.TADescritivo.BackColor = System.Drawing.Color.Moccasin;
             this.TADescritivo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TADescritivo.Location = new System.Drawing.Point(586, 313);
+            this.TADescritivo.Location = new System.Drawing.Point(586, 328);
             this.TADescritivo.Multiline = true;
             this.TADescritivo.Name = "TADescritivo";
             this.TADescritivo.Size = new System.Drawing.Size(227, 112);
@@ -92,7 +111,7 @@
             this.Descritivo.BackColor = System.Drawing.Color.Transparent;
             this.Descritivo.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Descritivo.ForeColor = System.Drawing.Color.Moccasin;
-            this.Descritivo.Location = new System.Drawing.Point(580, 287);
+            this.Descritivo.Location = new System.Drawing.Point(580, 302);
             this.Descritivo.Name = "Descritivo";
             this.Descritivo.Size = new System.Drawing.Size(239, 24);
             this.Descritivo.TabIndex = 31;
@@ -100,9 +119,11 @@
             // 
             // monthCalendar1
             // 
+            this.monthCalendar1.BackColor = System.Drawing.Color.Moccasin;
             this.monthCalendar1.Location = new System.Drawing.Point(12, 26);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 32;
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // TATelefone
             // 
@@ -236,7 +257,7 @@
             this.Informacoes.BackColor = System.Drawing.Color.Transparent;
             this.Informacoes.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Informacoes.ForeColor = System.Drawing.Color.Moccasin;
-            this.Informacoes.Location = new System.Drawing.Point(582, 85);
+            this.Informacoes.Location = new System.Drawing.Point(582, 22);
             this.Informacoes.Name = "Informacoes";
             this.Informacoes.Size = new System.Drawing.Size(214, 24);
             this.Informacoes.TabIndex = 18;
@@ -247,13 +268,172 @@
             this.BALimpar.BackColor = System.Drawing.Color.Moccasin;
             this.BALimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BALimpar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BALimpar.Location = new System.Drawing.Point(350, 383);
+            this.BALimpar.Location = new System.Drawing.Point(461, 383);
             this.BALimpar.Name = "BALimpar";
-            this.BALimpar.Size = new System.Drawing.Size(151, 57);
+            this.BALimpar.Size = new System.Drawing.Size(119, 57);
             this.BALimpar.TabIndex = 36;
             this.BALimpar.Text = "LIMPAR";
             this.BALimpar.UseVisualStyleBackColor = false;
             this.BALimpar.Click += new System.EventHandler(this.BALimpar_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Moccasin;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(683, 54);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(113, 20);
+            this.textBox1.TabIndex = 38;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Moccasin;
+            this.label1.Location = new System.Drawing.Point(582, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(103, 21);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "NUMERO OS:";
+            // 
+            // TAHorario
+            // 
+            this.TAHorario.BackColor = System.Drawing.Color.Moccasin;
+            this.TAHorario.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TAHorario.Location = new System.Drawing.Point(665, 272);
+            this.TAHorario.Name = "TAHorario";
+            this.TAHorario.Size = new System.Drawing.Size(131, 20);
+            this.TAHorario.TabIndex = 40;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Moccasin;
+            this.label2.Location = new System.Drawing.Point(582, 270);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 21);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "HORARIO:";
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.Color.Moccasin;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Calibri", 8F);
+            this.button3.Location = new System.Drawing.Point(592, 77);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(210, 25);
+            this.button3.TabIndex = 119;
+            this.button3.Text = "Consultar OS";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // TAData
+            // 
+            this.TAData.BackColor = System.Drawing.Color.Moccasin;
+            this.TAData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TAData.Location = new System.Drawing.Point(12, 244);
+            this.TAData.Name = "TAData";
+            this.TAData.Size = new System.Drawing.Size(164, 20);
+            this.TAData.TabIndex = 121;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Moccasin;
+            this.label3.Location = new System.Drawing.Point(8, 217);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 21);
+            this.label3.TabIndex = 120;
+            this.label3.Text = "DATA AGENDAMENTO:";
+            // 
+            // oficinaMecDataSet
+            // 
+            this.oficinaMecDataSet.DataSetName = "OficinaMecDataSet";
+            this.oficinaMecDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // agendamentoBindingSource
+            // 
+            this.agendamentoBindingSource.DataMember = "Agendamento";
+            this.agendamentoBindingSource.DataSource = this.oficinaMecDataSet;
+            // 
+            // agendamentoTableAdapter
+            // 
+            this.agendamentoTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.AgendamentoTableAdapter = this.agendamentoTableAdapter;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.CarroTableAdapter = null;
+            this.tableAdapterManager.ClienteTableAdapter = null;
+            this.tableAdapterManager.Consulta_BancoTableAdapter = null;
+            this.tableAdapterManager.FuncionarioTableAdapter = null;
+            this.tableAdapterManager.OrcamentoTableAdapter = null;
+            this.tableAdapterManager.Pecas_estoqueTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.Moccasin;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Location = new System.Drawing.Point(12, 309);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(164, 20);
+            this.textBox2.TabIndex = 124;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Moccasin;
+            this.label4.Location = new System.Drawing.Point(8, 282);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(128, 21);
+            this.label4.TabIndex = 123;
+            this.label4.Text = "DATA CONSULTA:";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Moccasin;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 8F);
+            this.button1.Location = new System.Drawing.Point(12, 335);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(92, 25);
+            this.button1.TabIndex = 125;
+            this.button1.Text = "Consultar Data";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Moccasin;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(317, 383);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(119, 57);
+            this.button2.TabIndex = 126;
+            this.button2.Text = "LIMPAR";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.Moccasin;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(251, 77);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(323, 290);
+            this.listBox1.TabIndex = 127;
             // 
             // TelaAgendamento
             // 
@@ -261,7 +441,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(833, 450);
+            this.ClientSize = new System.Drawing.Size(839, 460);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.TAData);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.TAHorario);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BALimpar);
             this.Controls.Add(this.BASair);
             this.Controls.Add(this.BAAgendar);
@@ -283,6 +475,9 @@
             this.Controls.Add(this.Informacoes);
             this.Name = "TelaAgendamento";
             this.Text = "Tela Agendamento";
+            this.Load += new System.EventHandler(this.TelaAgendamento_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -309,6 +504,22 @@
         private System.Windows.Forms.Label placa;
         private System.Windows.Forms.Label Informacoes;
         private System.Windows.Forms.Button BALimpar;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox TAHorario;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox TAData;
+        private System.Windows.Forms.Label label3;
+        private OficinaMecDataSet oficinaMecDataSet;
+        private System.Windows.Forms.BindingSource agendamentoBindingSource;
+        private OficinaMecDataSetTableAdapters.AgendamentoTableAdapter agendamentoTableAdapter;
+        private OficinaMecDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
 
