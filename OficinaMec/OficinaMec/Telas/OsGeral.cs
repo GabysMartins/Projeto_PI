@@ -66,5 +66,10 @@ namespace OficinaMec.Telas
             }
             i = int.Parse(label2.Text);
         }
+
+        private void TAData_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

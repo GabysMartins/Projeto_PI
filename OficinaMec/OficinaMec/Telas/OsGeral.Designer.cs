@@ -105,6 +105,7 @@
             this.TAData.Size = new System.Drawing.Size(164, 20);
             this.TAData.TabIndex = 133;
             this.TAData.ValidatingType = typeof(System.DateTime);
+            this.TAData.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.TAData_MaskInputRejected);
             // 
             // button1
             // 
