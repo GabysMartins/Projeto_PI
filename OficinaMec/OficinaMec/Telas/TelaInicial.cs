@@ -47,7 +47,7 @@ namespace OficinaMec
                 
             }
             else {
-                MessageBox.Show("Login ou senha incorreto!","Erro!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Login, senha ou permissão incorreta!","Erro!",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
         }
 

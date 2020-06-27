@@ -50,6 +50,7 @@
             this.btVoltar.TabIndex = 92;
             this.btVoltar.Text = "VOLTAR";
             this.btVoltar.UseVisualStyleBackColor = false;
+            this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
             // 
             // btRemover
             // 
@@ -93,6 +94,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(148, 20);
             this.textBox2.TabIndex = 94;
+            this.textBox2.Visible = false;
             // 
             // label1
             // 
@@ -161,6 +163,7 @@
             this.Controls.Add(this.label3);
             this.Name = "TelaBaixa";
             this.Text = "TelaBaixa";
+            this.Load += new System.EventHandler(this.TelaBaixa_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

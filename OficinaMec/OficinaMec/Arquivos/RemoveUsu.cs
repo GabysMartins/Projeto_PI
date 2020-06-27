@@ -53,7 +53,7 @@ Conexao conexao = new Conexao();
                     }
                     else
                     {
-                        this.mensagem = ("Funcionario(a) não existe!");
+                        this.mensagem = ("Funcionario(a) não cadastrado!");
 
                     }
                 }

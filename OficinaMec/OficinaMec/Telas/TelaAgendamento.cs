@@ -34,6 +34,7 @@ namespace OficinaMec
             TATelefone.Text = "";
             TAANO.Text = "";
             TAModelo.Text = "";
+            listBox1.Text = "";
         }
 
         private void BAAgendar_Click(object sender, EventArgs e)

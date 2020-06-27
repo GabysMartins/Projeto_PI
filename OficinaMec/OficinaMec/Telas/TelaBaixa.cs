@@ -28,6 +28,22 @@ namespace OficinaMec.Telas
         {
             ExibeQttdPeca eos = new ExibeQttdPeca(textBox1.Text);
             eos.ExibeDesc = label2.Text;
+            if (label2.Text!="00")
+            {
+                textBox2.Visible = true;
+            }
+        }
+
+        private void btVoltar_Click(object sender, EventArgs e)
+        {
+            TelaInicial ti = new TelaInicial();
+            this.Hide();
+            ti.Show();
+        }
+
+        private void TelaBaixa_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

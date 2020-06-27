@@ -27,7 +27,7 @@ namespace OficinaMec.Telas
 
         private void btVoltar_Click(object sender, EventArgs e)
         {
-            TelaCarro tc = new TelaCarro();
+            TelaCadastro tc = new TelaCadastro();
             this.Hide();
             tc.Show();
         }

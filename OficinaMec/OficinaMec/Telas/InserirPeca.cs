@@ -25,7 +25,7 @@ namespace OficinaMec.Telas
 
         private void BCUSair_Click(object sender, EventArgs e)
         {
-            TelaEstoque telaEstoque = new TelaEstoque();
+            TelaInicial telaEstoque = new TelaInicial();
             this.Hide();
             telaEstoque.ShowDialog();
         }
