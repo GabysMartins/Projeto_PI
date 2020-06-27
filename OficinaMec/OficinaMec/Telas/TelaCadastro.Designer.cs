@@ -39,12 +39,12 @@
             this.Telefone = new System.Windows.Forms.Label();
             this.CPF = new System.Windows.Forms.Label();
             this.Nome = new System.Windows.Forms.Label();
-            this.BCadSalvar = new System.Windows.Forms.Button();
             this.BCadSair = new System.Windows.Forms.Button();
             this.BCadLimpar = new System.Windows.Forms.Button();
             this.textbox1 = new System.Windows.Forms.MaskedTextBox();
             this.textbox3 = new System.Windows.Forms.MaskedTextBox();
             this.textbox6 = new System.Windows.Forms.MaskedTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textbox4
@@ -159,25 +159,12 @@
             this.Nome.TabIndex = 43;
             this.Nome.Text = "NOME:";
             // 
-            // BCadSalvar
-            // 
-            this.BCadSalvar.BackColor = System.Drawing.Color.Moccasin;
-            this.BCadSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BCadSalvar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BCadSalvar.Location = new System.Drawing.Point(327, 381);
-            this.BCadSalvar.Name = "BCadSalvar";
-            this.BCadSalvar.Size = new System.Drawing.Size(151, 57);
-            this.BCadSalvar.TabIndex = 42;
-            this.BCadSalvar.Text = "SALVAR";
-            this.BCadSalvar.UseVisualStyleBackColor = false;
-            this.BCadSalvar.Click += new System.EventHandler(this.BCadSalvar_Click);
-            // 
             // BCadSair
             // 
             this.BCadSair.BackColor = System.Drawing.Color.Moccasin;
             this.BCadSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BCadSair.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BCadSair.Location = new System.Drawing.Point(512, 381);
+            this.BCadSair.Location = new System.Drawing.Point(466, 381);
             this.BCadSair.Name = "BCadSair";
             this.BCadSair.Size = new System.Drawing.Size(151, 57);
             this.BCadSair.TabIndex = 41;
@@ -190,7 +177,7 @@
             this.BCadLimpar.BackColor = System.Drawing.Color.Moccasin;
             this.BCadLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BCadLimpar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BCadLimpar.Location = new System.Drawing.Point(145, 381);
+            this.BCadLimpar.Location = new System.Drawing.Point(102, 381);
             this.BCadLimpar.Name = "BCadLimpar";
             this.BCadLimpar.Size = new System.Drawing.Size(151, 57);
             this.BCadLimpar.TabIndex = 56;
@@ -211,7 +198,6 @@
             // 
             this.textbox3.BackColor = System.Drawing.Color.Moccasin;
             this.textbox3.Location = new System.Drawing.Point(102, 275);
-            this.textbox3.Mask = "00,000,000-0";
             this.textbox3.Name = "textbox3";
             this.textbox3.Size = new System.Drawing.Size(148, 20);
             this.textbox3.TabIndex = 58;
@@ -220,10 +206,23 @@
             // 
             this.textbox6.BackColor = System.Drawing.Color.Moccasin;
             this.textbox6.Location = new System.Drawing.Point(387, 202);
-            this.textbox6.Mask = "(99) 000-0000";
+            this.textbox6.Mask = "(99) 00000-0000";
             this.textbox6.Name = "textbox6";
             this.textbox6.Size = new System.Drawing.Size(148, 20);
             this.textbox6.TabIndex = 59;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Moccasin;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(282, 381);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(151, 57);
+            this.button1.TabIndex = 60;
+            this.button1.Text = "EXCLUIR";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TelaCadastro
             // 
@@ -232,6 +231,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.textbox6);
             this.Controls.Add(this.textbox3);
             this.Controls.Add(this.textbox1);
@@ -246,7 +246,6 @@
             this.Controls.Add(this.Telefone);
             this.Controls.Add(this.CPF);
             this.Controls.Add(this.Nome);
-            this.Controls.Add(this.BCadSalvar);
             this.Controls.Add(this.BCadSair);
             this.Name = "TelaCadastro";
             this.Text = "Tela Cadastro";
@@ -268,11 +267,11 @@
         private System.Windows.Forms.Label Telefone;
         private System.Windows.Forms.Label CPF;
         private System.Windows.Forms.Label Nome;
-        private System.Windows.Forms.Button BCadSalvar;
         private System.Windows.Forms.Button BCadSair;
         private System.Windows.Forms.Button BCadLimpar;
         private System.Windows.Forms.MaskedTextBox textbox1;
         private System.Windows.Forms.MaskedTextBox textbox3;
         private System.Windows.Forms.MaskedTextBox textbox6;
+        private System.Windows.Forms.Button button1;
     }
 }

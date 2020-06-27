@@ -28,7 +28,7 @@ namespace OficinaMec.Telas
         private void btRemover_Click(object sender, EventArgs e)
         {
             BaixaPecas bp = new BaixaPecas(textBox1.Text, Convert.ToInt32(textBox2.Text));
-            MessageBox.Show(bp.mensagem);
+            MessageBox.Show(bp.mensagem, "" ,MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

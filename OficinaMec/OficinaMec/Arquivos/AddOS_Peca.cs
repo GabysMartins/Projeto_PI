@@ -29,7 +29,7 @@ namespace OficinaMec.Arquivos
             }
             catch (SqlException e)
             {
-                this.mensagem = "Erro ao Cadastrar!!";
+                this.mensagem = "Carro ja cadastrado!!";
                 // Console.WriteLine(e);
             }
         }

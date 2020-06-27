@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 namespace OficinaMec
 {
     public class Conexao
-    {
+    { 
 
         SqlConnection con = new SqlConnection();
 
         public Conexao()
         {
-            con.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\bruno\Source\Repos\GabysMartins\Projeto_PI\OficinaMec\OficinaMec\OficinaMec.mdf;Integrated Security=True;Connect Timeout=30";
+            con.ConnectionString  = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\bruno\OneDrive\Documentos\OficinaMec.mdf;Integrated Security=True;Connect Timeout=30";
+       
         }
         public SqlConnection conectar()
         {

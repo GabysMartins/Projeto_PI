@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OficinaMec.Telas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -137,11 +138,10 @@ namespace OficinaMec
         }
         private void TelaMenu_Load(object sender, EventArgs e)
         {
-           // if (!this.Propriedade.Equals(""))
-            //{
+
                 label2.Text = this.Propriedade;
                 label4.Text = this.PropriedadeUsu;
-            //}
+
             
 
         }
@@ -154,6 +154,20 @@ namespace OficinaMec
         private void label2_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (label2.Text == "Administrador")
+            {
+                OsGeral os = new OsGeral();
+                this.Hide();
+                os.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Você não tem permissão para esta ferramenta", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

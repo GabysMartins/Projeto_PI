@@ -41,7 +41,7 @@ namespace OficinaMec
             }
             catch (SqlException e)
             {
-                this.mensagem = "Erro ao Cadastrar!!";
+                this.mensagem = "Orcamento não Cadastrado!!";
                 // Console.WriteLine(e);
             }
 

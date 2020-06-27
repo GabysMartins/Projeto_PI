@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OficinaMec.Arquivos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,16 @@ namespace OficinaMec.Telas
 
         private void btRemover_Click(object sender, EventArgs e)
         {
+            ExcluiCarro ec = new ExcluiCarro(textBox1.Text);
+            MessageBox.Show(ec.mensagem, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+        }
 
+        private void btVoltar_Click(object sender, EventArgs e)
+        {
+            TelaCarro tc = new TelaCarro();
+            this.Hide();
+            tc.Show();
         }
     }
 }

@@ -64,6 +64,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.button4 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -86,7 +87,7 @@
             this.button1.BackColor = System.Drawing.Color.Moccasin;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 14F);
-            this.button1.Location = new System.Drawing.Point(362, 672);
+            this.button1.Location = new System.Drawing.Point(279, 672);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 57);
             this.button1.TabIndex = 107;
@@ -511,6 +512,19 @@
             this.printPreviewDialog1.Name = "printPreviewDialog1";
             this.printPreviewDialog1.Visible = false;
             // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button4.BackColor = System.Drawing.Color.Moccasin;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Calibri", 14F);
+            this.button4.Location = new System.Drawing.Point(469, 672);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(122, 57);
+            this.button4.TabIndex = 124;
+            this.button4.Text = "ORDENS DE SERVIÇO ";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
             // TelaOrdemServico
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -518,6 +532,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 749);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button3);
@@ -594,5 +609,6 @@
         private System.Windows.Forms.Button button2;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
+        private System.Windows.Forms.Button button4;
     }
 }

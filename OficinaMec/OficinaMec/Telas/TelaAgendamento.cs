@@ -40,7 +40,7 @@ namespace OficinaMec
         {
             
             InsereAgendamento ia = new InsereAgendamento(textBox1.Text, textBox1.Text, TADescritivo.Text, TACPF.Text, TAPlaca.Text, TANome.Text, TATelefone.Text, TAANO.Text, TAModelo.Text, TAData.Text, TAHorario.Text);
-            MessageBox.Show(ia.mensagem);
+            MessageBox.Show(ia.mensagem, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 
@@ -107,6 +107,11 @@ namespace OficinaMec
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

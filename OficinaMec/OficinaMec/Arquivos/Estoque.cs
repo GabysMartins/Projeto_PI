@@ -13,7 +13,7 @@ namespace OficinaMec.Arquivos
         Conexao conexao = new Conexao();
         SqlCommand cmd = new SqlCommand();
         public String mensagem = "";
-        public Estoque(String COD_PECA, int QTTD_PECA, String DESCR_PECA, String FABRIC_PECA, String PRECO_PECA, String MODELO_PECA)
+        public Estoque(String COD_PECA, int QTTD_PECA, String DESCR_PECA, String FABRIC_PECA,String PRECO_PECA, String MODELO_PECA)
         {
 
             cmd.CommandText = "insert into Pecas_estoque (COD_PECA,QTTD_PECA,DESCR_PECA,FABRIC_PECA,PRECO_PECA,MODELO_PECA) values (@COD_PECA,@QTTD_PECA,@DESCR_PECA,@FABRIC_PECA,@PRECO_PECA,@MODELO_PECA)";
@@ -33,7 +33,7 @@ namespace OficinaMec.Arquivos
             catch (SqlException e)
             {
                 this.mensagem = "Erro ao Cadastrar!!";
-                // Console.WriteLine(e);
+                Console.WriteLine(e);
             }
 
         }

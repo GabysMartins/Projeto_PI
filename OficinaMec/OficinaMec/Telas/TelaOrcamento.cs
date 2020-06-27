@@ -37,14 +37,14 @@ namespace OficinaMec
                 if (label3.Text != "0")
                 {
                     Salva_OS so = new Salva_OS(label3.Text, TODescritivo.Text, TOCPF.Text, TOPlaca.Text, TONome.Text, TOTelefone.Text, TOANO.Text, TOModelo.Text, TOKM.Text, label2.Text, TOMao.Text, ValorTotal.Text);
-                    MessageBox.Show("Ordem de Serviço gerada!");
+                    MessageBox.Show("Ordem de Serviço gerada!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     TelaOrdemServico telaOrdemServico = new TelaOrdemServico();
                     this.Hide();
                     telaOrdemServico.ShowDialog();
                 }
                 else
                 {
-                    MessageBox.Show("Gere um número de Ordem de serviço primeiro!");
+                    MessageBox.Show("Gere um número de Ordem de serviço primeiro!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -88,7 +88,7 @@ namespace OficinaMec
         private void button2_Click(object sender, EventArgs e)
         {
             TotalTudo = (float.Parse(label2.Text) + float.Parse(TOMao.Text));
-            ValorTotal.Text = Convert.ToString(TotalTudo);
+            ValorServico.Text = Convert.ToString(TotalTudo);
         }
 
         private void BOEliminar_Click(object sender, EventArgs e)

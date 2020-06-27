@@ -13,22 +13,55 @@ namespace OficinaMec.Arquivos
         SqlCommand cmd = new SqlCommand();
         public String mensagem = "";
 
-        public RemOS_Peca(String DESC_PECA)
+        public RemOS_Peca(String QTTD_PECA)
         {
-            cmd.CommandText = "delete from Orcamento_Pecas where DESC_PECA = @DESC_PECA";
-            cmd.Parameters.AddWithValue("@DESC_PECA", DESC_PECA);
-
-            try
+            if (QTTD_PECA == "")
             {
-                cmd.Connection = conexao.conectar();
-                cmd.ExecuteNonQuery();
-                conexao.desconectar();
-                this.mensagem = "Cadastrado do carro efetuado com sucesso!!";
+                this.mensagem = "Insira uma peça!";
             }
-            catch (SqlException e)
+            else
             {
-                this.mensagem = "Erro ao Cadastrar!!";
-                // Console.WriteLine(e);
+                string sql = $"select DESC_PECA from Consulta_Banco where QTTD_PECA={QTTD_PECA}";
+                try
+                {
+                    SqlCommand cmd1 = new SqlCommand(sql, conexao.conectar());
+                    SqlDataReader leitor = cmd1.ExecuteReader();
+
+
+                    if (leitor.Read())
+                    {
+                        String ExibeDesc = leitor[0].ToString();
+
+                        cmd.CommandText = "delete from Consulta_Banco where QTTD_PECA = @QTTD_PECA ";
+                        cmd.Parameters.AddWithValue("@QTTD_PECA", QTTD_PECA);
+
+                        try
+                        {
+                            cmd.Connection = conexao.conectar();
+                            cmd.ExecuteNonQuery();
+
+                            this.mensagem = ("Peça excluída com sucesso!");
+                            conexao.desconectar();
+
+                        }
+                        catch (SqlException ex)
+                        {
+                            this.mensagem = ("Peça não existe!! ");
+                        }
+
+
+                    }
+                    else
+                    {
+                        this.mensagem = ("Peça não existe!! ");
+
+                    }
+                }
+                catch (SqlException e)
+                {
+                    this.mensagem = ("Peça não existe!! ");
+                    Console.WriteLine(e);
+                }
             }
         }
 

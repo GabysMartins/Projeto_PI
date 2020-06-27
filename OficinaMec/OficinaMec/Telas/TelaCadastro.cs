@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OficinaMec.Telas;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,6 +20,9 @@ namespace OficinaMec
 
         private void BCadAdicionar_Click(object sender, EventArgs e)
         {
+
+            AddCli ac = new AddCli(textbox2.Text, textbox1.Text, textbox3.Text, textbox4.Text, textbox5.Text, textbox6.Text);
+            MessageBox.Show(ac.mensagem, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             TelaCarro telaCarro = new TelaCarro();
             this.Hide();
             telaCarro.ShowDialog();
@@ -33,8 +37,7 @@ namespace OficinaMec
 
         private void BCadSalvar_Click(object sender, EventArgs e)
         {
-            AddCli ac = new AddCli(textbox2.Text,textbox1.Text,textbox3.Text,textbox4.Text,textbox5.Text,textbox6.Text);
-            MessageBox.Show(ac.mensagem);
+            
         }
 
         private void BCadLimpar_Click(object sender, EventArgs e)
@@ -50,6 +53,13 @@ namespace OficinaMec
         private void TelaCadastro_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ExcluirCarro ex = new ExcluirCarro();
+            this.Hide();
+            ex.Show();
         }
     }
 }
