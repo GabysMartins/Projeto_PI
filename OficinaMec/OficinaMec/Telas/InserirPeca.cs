@@ -25,15 +25,15 @@ namespace OficinaMec.Telas
 
         private void BCUSair_Click(object sender, EventArgs e)
         {
-            TelaEstoque telaEstoque = new TelaEstoque();
+            TelaInicial telaEstoque = new TelaInicial();
             this.Hide();
             telaEstoque.ShowDialog();
         }
 
         private void BCUSalvar_Click(object sender, EventArgs e)
         {
-            Estoque est = new Estoque(textbox1.Text, Convert.ToInt32(textbox2.Text), textbox3.Text, textbox4.Text, textBox5.Text, textbox6.Text);
-            MessageBox.Show(est.mensagem);
+            Estoque est = new Estoque(textbox1.Text, Convert.ToInt32(textbox2.Text), textbox3.Text, textbox4.Text, (textBox5.Text), textbox6.Text);
+            MessageBox.Show(est.mensagem, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void textbox5_TextChanged(object sender, EventArgs e)

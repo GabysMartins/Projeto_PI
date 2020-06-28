@@ -15,21 +15,55 @@ Conexao conexao = new Conexao();
         public RemoveUsu(String COD_FUNC)
         {
 
-            cmd.CommandText = "delete from Funcionario where COD_FUNC = @COD_FUNC";
-            cmd.Parameters.AddWithValue("@COD_FUNC", COD_FUNC);
-            
-            try
+            if (COD_FUNC == "")
             {
-                cmd.Connection = conexao.conectar();
-                cmd.ExecuteNonQuery();
-                conexao.desconectar();
-                this.mensagem = "Removido com sucesso!!";
+                this.mensagem = "Insira um usuario!";
             }
-            catch (SqlException e)
+            else
             {
-                this.mensagem = "Erro ao remover!!";
-                 Console.WriteLine(e);
+                string sql = $"select COD_FUNC from Funcionario where COD_FUNC={COD_FUNC}";
+                try
+                {
+                    SqlCommand cmd1 = new SqlCommand(sql, conexao.conectar());
+                    SqlDataReader leitor = cmd1.ExecuteReader();
+
+
+                    if (leitor.Read())
+                    {
+                        String ExibeDesc = leitor[0].ToString();
+
+                        cmd.CommandText = "delete from Funcionario where COD_FUNC = @COD_FUNC ";
+                        cmd.Parameters.AddWithValue("@COD_FUNC", COD_FUNC);
+
+                        try
+                        {
+                            cmd.Connection = conexao.conectar();
+                            cmd.ExecuteNonQuery();
+
+                            this.mensagem = ("Funcionario(a) excluído(a) com sucesso!");
+                            conexao.desconectar();
+
+                        }
+                        catch (SqlException ex)
+                        {
+                            this.mensagem = ("Funcionario(a) não existe! ");
+                        }
+
+
+                    }
+                    else
+                    {
+                        this.mensagem = ("Funcionario(a) não cadastrado!");
+
+                    }
+                }
+                catch (SqlException e)
+                {
+                    this.mensagem = ("Funcionario(a) não existe! ");
+                    //Console.WriteLine(e);
+                }
             }
+
 
         }
     }

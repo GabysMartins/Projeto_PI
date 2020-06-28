@@ -184,7 +184,7 @@
             this.BCUSair.Name = "BCUSair";
             this.BCUSair.Size = new System.Drawing.Size(136, 57);
             this.BCUSair.TabIndex = 93;
-            this.BCUSair.Text = "SAIR";
+            this.BCUSair.Text = "VOLTAR";
             this.BCUSair.UseVisualStyleBackColor = false;
             this.BCUSair.Click += new System.EventHandler(this.BCUSair_Click);
             // 
@@ -192,9 +192,10 @@
             // 
             this.textBox5.BackColor = System.Drawing.Color.Moccasin;
             this.textBox5.Location = new System.Drawing.Point(201, 246);
+            this.textBox5.Mask = "$000.00";
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(148, 20);
-            this.textBox5.TabIndex = 95;
+            this.textBox5.Size = new System.Drawing.Size(147, 20);
+            this.textBox5.TabIndex = 96;
             // 
             // InserirPeca
             // 

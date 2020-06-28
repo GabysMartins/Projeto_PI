@@ -45,6 +45,7 @@
             this.btVoltar.TabIndex = 92;
             this.btVoltar.Text = "VOLTAR";
             this.btVoltar.UseVisualStyleBackColor = false;
+            this.btVoltar.Click += new System.EventHandler(this.btVoltar_Click);
             // 
             // btRemover
             // 

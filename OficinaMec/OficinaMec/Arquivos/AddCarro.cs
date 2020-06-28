@@ -30,7 +30,7 @@ namespace OficinaMec
             }
             catch (SqlException e)
             {
-                this.mensagem = "Erro ao Cadastrar!!";
+                this.mensagem = "Carro já cadastrado!!";
                 // Console.WriteLine(e);
             }
 

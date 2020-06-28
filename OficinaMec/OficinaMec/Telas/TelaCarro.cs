@@ -29,7 +29,7 @@ namespace OficinaMec
         private void BCCSalvar_Click(object sender, EventArgs e)
         {
             AddCarro ad = new AddCarro(textbox1.Text, textbox2.Text, textbox3.Text, textbox4.Text, textbox5.Text);
-            MessageBox.Show(ad.mensagem);
+            MessageBox.Show(ad.mensagem, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 

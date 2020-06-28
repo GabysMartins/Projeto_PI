@@ -28,7 +28,7 @@ namespace OficinaMec.Telas
         private void btRemover_Click(object sender, EventArgs e)
         {
             RemoveUsu removeUsu = new RemoveUsu(textBox1.Text);
-            MessageBox.Show(removeUsu.mensagem);
+            MessageBox.Show(removeUsu.mensagem, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaEstoque));
-            this.BESolicitacao = new System.Windows.Forms.Button();
             this.BEBaixa = new System.Windows.Forms.Button();
             this.BEExcluir = new System.Windows.Forms.Button();
             this.BEAcrescentar = new System.Windows.Forms.Button();
@@ -40,36 +39,23 @@
             this.pecas_estoqueTableAdapter = new OficinaMec.OficinaMecDataSetTableAdapters.Pecas_estoqueTableAdapter();
             this.tableAdapterManager = new OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager();
             this.pecas_estoqueDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pecas_estoqueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pecas_estoqueDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // BESolicitacao
-            // 
-            this.BESolicitacao.BackColor = System.Drawing.Color.Moccasin;
-            this.BESolicitacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BESolicitacao.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BESolicitacao.Location = new System.Drawing.Point(603, 381);
-            this.BESolicitacao.Name = "BESolicitacao";
-            this.BESolicitacao.Size = new System.Drawing.Size(122, 57);
-            this.BESolicitacao.TabIndex = 44;
-            this.BESolicitacao.Text = "SOLIC. DE COMPRA";
-            this.BESolicitacao.UseVisualStyleBackColor = false;
-            this.BESolicitacao.Click += new System.EventHandler(this.BESolicitacao_Click);
             // 
             // BEBaixa
             // 
             this.BEBaixa.BackColor = System.Drawing.Color.Moccasin;
             this.BEBaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BEBaixa.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BEBaixa.Location = new System.Drawing.Point(475, 381);
+            this.BEBaixa.Location = new System.Drawing.Point(544, 373);
             this.BEBaixa.Name = "BEBaixa";
             this.BEBaixa.Size = new System.Drawing.Size(122, 57);
             this.BEBaixa.TabIndex = 43;
@@ -82,7 +68,7 @@
             this.BEExcluir.BackColor = System.Drawing.Color.Moccasin;
             this.BEExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BEExcluir.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BEExcluir.Location = new System.Drawing.Point(347, 381);
+            this.BEExcluir.Location = new System.Drawing.Point(416, 373);
             this.BEExcluir.Name = "BEExcluir";
             this.BEExcluir.Size = new System.Drawing.Size(122, 57);
             this.BEExcluir.TabIndex = 42;
@@ -95,7 +81,7 @@
             this.BEAcrescentar.BackColor = System.Drawing.Color.Moccasin;
             this.BEAcrescentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BEAcrescentar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BEAcrescentar.Location = new System.Drawing.Point(219, 381);
+            this.BEAcrescentar.Location = new System.Drawing.Point(288, 373);
             this.BEAcrescentar.Name = "BEAcrescentar";
             this.BEAcrescentar.Size = new System.Drawing.Size(122, 57);
             this.BEAcrescentar.TabIndex = 41;
@@ -108,7 +94,7 @@
             this.BESair.BackColor = System.Drawing.Color.Moccasin;
             this.BESair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BESair.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BESair.Location = new System.Drawing.Point(91, 380);
+            this.BESair.Location = new System.Drawing.Point(160, 372);
             this.BESair.Name = "BESair";
             this.BESair.Size = new System.Drawing.Size(122, 57);
             this.BESair.TabIndex = 46;
@@ -144,65 +130,57 @@
             // 
             // pecas_estoqueDataGridView
             // 
-            this.pecas_estoqueDataGridView.AllowUserToAddRows = false;
-            this.pecas_estoqueDataGridView.AllowUserToDeleteRows = false;
+            this.pecas_estoqueDataGridView.AllowUserToOrderColumns = true;
             this.pecas_estoqueDataGridView.AutoGenerateColumns = false;
             this.pecas_estoqueDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.pecas_estoqueDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
+            this.dataGridViewTextBoxColumn5});
             this.pecas_estoqueDataGridView.DataSource = this.pecas_estoqueBindingSource;
             this.pecas_estoqueDataGridView.Location = new System.Drawing.Point(82, 64);
             this.pecas_estoqueDataGridView.Name = "pecas_estoqueDataGridView";
-            this.pecas_estoqueDataGridView.ReadOnly = true;
             this.pecas_estoqueDataGridView.Size = new System.Drawing.Size(643, 281);
             this.pecas_estoqueDataGridView.TabIndex = 46;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "QTTD_PECA";
-            this.dataGridViewTextBoxColumn1.HeaderText = "QTTD_PECA";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "DESCR_PECA";
-            this.dataGridViewTextBoxColumn2.HeaderText = "DESCR_PECA";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "FABRIC_PECA";
-            this.dataGridViewTextBoxColumn3.HeaderText = "FABRIC_PECA";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "PRECO_PECA";
-            this.dataGridViewTextBoxColumn4.HeaderText = "PRECO_PECA";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "MODELO_PECA";
-            this.dataGridViewTextBoxColumn5.HeaderText = "MODELO_PECA";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
             // dataGridViewTextBoxColumn6
             // 
             this.dataGridViewTextBoxColumn6.DataPropertyName = "COD_PECA";
             this.dataGridViewTextBoxColumn6.HeaderText = "COD_PECA";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "QTTD_PECA";
+            this.dataGridViewTextBoxColumn1.HeaderText = "QTTD_PECA";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "DESCR_PECA";
+            this.dataGridViewTextBoxColumn2.HeaderText = "DESCR_PECA";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "FABRIC_PECA";
+            this.dataGridViewTextBoxColumn3.HeaderText = "FABRIC_PECA";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "PRECO_PECA";
+            this.dataGridViewTextBoxColumn4.HeaderText = "PRECO_PECA";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "MODELO_PECA";
+            this.dataGridViewTextBoxColumn5.HeaderText = "MODELO_PECA";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // TelaEstoque
             // 
@@ -213,7 +191,6 @@
             this.ClientSize = new System.Drawing.Size(800, 458);
             this.Controls.Add(this.pecas_estoqueDataGridView);
             this.Controls.Add(this.BESair);
-            this.Controls.Add(this.BESolicitacao);
             this.Controls.Add(this.BEBaixa);
             this.Controls.Add(this.BEExcluir);
             this.Controls.Add(this.BEAcrescentar);
@@ -229,7 +206,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button BESolicitacao;
         private System.Windows.Forms.Button BEBaixa;
         private System.Windows.Forms.Button BEExcluir;
         private System.Windows.Forms.Button BEAcrescentar;
@@ -239,11 +215,11 @@
         private OficinaMecDataSetTableAdapters.Pecas_estoqueTableAdapter pecas_estoqueTableAdapter;
         private OficinaMecDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView pecas_estoqueDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }

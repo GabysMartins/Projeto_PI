@@ -20,7 +20,7 @@ namespace OficinaMec.Telas
 
         private void btVoltar_Click(object sender, EventArgs e)
         {
-            TelaEstoque telaEstoque = new TelaEstoque();
+            TelaInicial telaEstoque = new TelaInicial();
             this.Hide();
             telaEstoque.ShowDialog();
         }
@@ -28,7 +28,7 @@ namespace OficinaMec.Telas
         private void btRemover_Click(object sender, EventArgs e)
         {
             ExcluiPeca exp = new ExcluiPeca(textBox1.Text);
-            MessageBox.Show(exp.mensagem);
+            MessageBox.Show(exp.mensagem, "" ,MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
     }

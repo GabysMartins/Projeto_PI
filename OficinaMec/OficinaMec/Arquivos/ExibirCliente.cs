@@ -42,7 +42,7 @@ namespace OficinaMec
             }
             catch (SqlException e)
             {
-                this.mensagem = "Erro ao Cadastrar!!";
+                this.mensagem = "Erro ao exibir!!";
                 // Console.WriteLine(e);
             }
 

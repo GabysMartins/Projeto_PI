@@ -67,6 +67,7 @@
     <Compile Include="Arquivos\AddCarro.cs" />
     <Compile Include="Arquivos\AddOS_Peca.cs" />
     <Compile Include="Arquivos\AdicionarPecaOrcamento.cs" />
+    <Compile Include="Arquivos\AlterarValorPeca.cs" />
     <Compile Include="Arquivos\CadastroCli.cs" />
     <Compile Include="Arquivos\BaixaPecas.cs" />
     <Compile Include="Arquivos\ConsultaAgendamento.cs" />
@@ -76,6 +77,7 @@
     <Compile Include="Arquivos\ExcluiPeca.cs" />
     <Compile Include="Arquivos\ExibeOS.cs" />
     <Compile Include="Arquivos\ExibePecasOS.cs" />
+    <Compile Include="Arquivos\ExibeQttdPeca.cs" />
     <Compile Include="Arquivos\ExibirCarro.cs" />
     <Compile Include="Arquivos\ExibirCliente.cs" />
     <Compile Include="Arquivos\InsereAgendamento.cs" />
@@ -114,6 +116,12 @@
     </Compile>
     <Compile Include="Telas\InserirPeca.Designer.cs">
       <DependentUpon>InserirPeca.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\OsGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\OsGeral.Designer.cs">
+      <DependentUpon>OsGeral.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\TelaBaixa.cs">
       <SubType>Form</SubType>
@@ -194,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\InserirPeca.resx">
       <DependentUpon>InserirPeca.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\OsGeral.resx">
+      <DependentUpon>OsGeral.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\TelaBaixa.resx">
       <DependentUpon>TelaBaixa.cs</DependentUpon>

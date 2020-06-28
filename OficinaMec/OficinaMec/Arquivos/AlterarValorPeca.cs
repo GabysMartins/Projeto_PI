@@ -7,22 +7,22 @@ using System.Threading.Tasks;
 
 namespace OficinaMec.Arquivos
 {
-    class ExcluiCarro
+    class AlterarValorPeca
     {
+
         Conexao conexao = new Conexao();
         SqlCommand cmd = new SqlCommand();
-        public String mensagem = "";
+        public string mensagem = "";
 
-        public ExcluiCarro(String PLACA_CAR)
+        public AlterarValorPeca(int QTTD_PECA,String Codigo)
         {
-
-            if (PLACA_CAR == "")
+            if (Codigo == "")
             {
-                this.mensagem = "Insira uma placa";
+                this.mensagem = "Insira uma peça!";
             }
             else
             {
-                string sql = $"select PLACA_CAR from Carro where PLACA_CAR={PLACA_CAR}";
+                string sql = $"select QTTD_PECA from Pecas_estoque where COD_PECA={Codigo}";
                 try
                 {
                     SqlCommand cmd1 = new SqlCommand(sql, conexao.conectar());
@@ -33,34 +33,35 @@ namespace OficinaMec.Arquivos
                     {
                         String ExibeDesc = leitor[0].ToString();
 
-                        cmd.CommandText = "delete from Carro where PLACA_CAR = @PLACA_CAR ";
-                        cmd.Parameters.AddWithValue("@PLACA_CAR", PLACA_CAR);
+                        cmd.CommandText = "update Pecas_estoque set QTTD_PECA=@QTTD_PECA where COD_PECA = @Codigo ";
+                        cmd.Parameters.AddWithValue("@QTTD_PECA", QTTD_PECA);
+                        cmd.Parameters.AddWithValue("@COD_PECA", Codigo);
 
                         try
                         {
                             cmd.Connection = conexao.conectar();
                             cmd.ExecuteNonQuery();
 
-                            this.mensagem = ("Carro excluído com sucesso!");
+                            this.mensagem = ("Peça alterada com sucesso!");
                             conexao.desconectar();
 
                         }
-                        catch (SqlException ex)
+                        catch (SqlException)
                         {
-                            this.mensagem = ("Carro não existe!! ");
+                            this.mensagem = ("Peça não existe!! ");
                         }
 
 
                     }
                     else
                     {
-                        this.mensagem = ("Carro não existe!! ");
+                        this.mensagem = ("Peça não existe!! ");
 
                     }
                 }
                 catch (SqlException e)
                 {
-                    this.mensagem = ("Carro não existe!! ");
+                    this.mensagem = ("Peça não existe!! ");
                     Console.WriteLine(e);
                 }
             }

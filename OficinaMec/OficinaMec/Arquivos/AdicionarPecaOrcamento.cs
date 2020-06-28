@@ -44,7 +44,7 @@ namespace OficinaMec
             }
             catch (SqlException e)
             {
-                this.mensagem = "Erro ao Cadastrar!!";
+                this.mensagem = "Orcamento não existe!!";
                 Console.WriteLine(e);
             }
 

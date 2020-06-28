@@ -30,22 +30,30 @@ namespace OficinaMec
             if (radioButton1.Checked)
             {
                 CadastroUsu cad = new CadastroUsu(textBox1.Text, TCUCPF.Text, TCUNome.Text, TCUEmail.Text, TCUSenha.Text, "Administrador");
-                MessageBox.Show(cad.mensagem);
+                MessageBox.Show(cad.mensagem, "Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (radioButton2.Checked)
             {
-                CadastroUsu cad = new CadastroUsu(textBox1.Text, TCUCPF.Text, TCUNome.Text, TCUEmail.Text, TCUSenha.Text, "Secretária");
-                MessageBox.Show(cad.mensagem);
+                CadastroUsu cad = new CadastroUsu(textBox1.Text, TCUCPF.Text, TCUNome.Text, TCUEmail.Text, TCUSenha.Text, "Secretaria");
+                MessageBox.Show(cad.mensagem, "Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             else if (radioButton3.Checked)
             {
                 CadastroUsu cad = new CadastroUsu(textBox1.Text, TCUCPF.Text, TCUNome.Text, TCUEmail.Text, TCUSenha.Text, "Mecanico");
-                MessageBox.Show(cad.mensagem);
+                MessageBox.Show(cad.mensagem, "Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             else if (radioButton4.Checked)
             {
                 CadastroUsu cad = new CadastroUsu(textBox1.Text, TCUCPF.Text, TCUNome.Text, TCUEmail.Text, TCUSenha.Text, "Estoquista");
-                MessageBox.Show(cad.mensagem);
+                MessageBox.Show(cad.mensagem, "Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma permissão", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 

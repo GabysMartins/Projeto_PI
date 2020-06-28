@@ -35,10 +35,8 @@
             this.TADescritivo = new System.Windows.Forms.TextBox();
             this.Descritivo = new System.Windows.Forms.Label();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.TATelefone = new System.Windows.Forms.TextBox();
             this.TAModelo = new System.Windows.Forms.TextBox();
             this.TAANO = new System.Windows.Forms.TextBox();
-            this.TACPF = new System.Windows.Forms.TextBox();
             this.TANome = new System.Windows.Forms.TextBox();
             this.TAPlaca = new System.Windows.Forms.TextBox();
             this.Telefone = new System.Windows.Forms.Label();
@@ -60,11 +58,13 @@
             this.tableAdapterManager = new OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.TAData = new System.Windows.Forms.MaskedTextBox();
             this.textbox2 = new System.Windows.Forms.MaskedTextBox();
             this.TAHorario = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TACPF = new System.Windows.Forms.MaskedTextBox();
+            this.TATelefone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.agendamentoBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -125,15 +125,6 @@
             this.monthCalendar1.TabIndex = 32;
             this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
-            // TATelefone
-            // 
-            this.TATelefone.BackColor = System.Drawing.Color.Moccasin;
-            this.TATelefone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TATelefone.Location = new System.Drawing.Point(665, 246);
-            this.TATelefone.Name = "TATelefone";
-            this.TATelefone.Size = new System.Drawing.Size(131, 20);
-            this.TATelefone.TabIndex = 30;
-            // 
             // TAModelo
             // 
             this.TAModelo.BackColor = System.Drawing.Color.Moccasin;
@@ -151,15 +142,6 @@
             this.TAANO.Name = "TAANO";
             this.TAANO.Size = new System.Drawing.Size(131, 20);
             this.TAANO.TabIndex = 28;
-            // 
-            // TACPF
-            // 
-            this.TACPF.BackColor = System.Drawing.Color.Moccasin;
-            this.TACPF.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.TACPF.Location = new System.Drawing.Point(648, 168);
-            this.TACPF.Name = "TACPF";
-            this.TACPF.Size = new System.Drawing.Size(148, 20);
-            this.TACPF.TabIndex = 27;
             // 
             // TANome
             // 
@@ -268,7 +250,7 @@
             this.BALimpar.BackColor = System.Drawing.Color.Moccasin;
             this.BALimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BALimpar.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BALimpar.Location = new System.Drawing.Point(461, 383);
+            this.BALimpar.Location = new System.Drawing.Point(309, 383);
             this.BALimpar.Name = "BALimpar";
             this.BALimpar.Size = new System.Drawing.Size(119, 57);
             this.BALimpar.TabIndex = 36;
@@ -307,7 +289,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 21);
             this.label2.TabIndex = 39;
-            this.label2.Text = "HORARIO:";
+            this.label2.Text = "HORÁRIO:";
             // 
             // button3
             // 
@@ -387,18 +369,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Moccasin;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(317, 383);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 57);
-            this.button2.TabIndex = 126;
-            this.button2.Text = "LIMPAR";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // listBox1
             // 
             this.listBox1.BackColor = System.Drawing.Color.Moccasin;
@@ -438,6 +408,36 @@
             this.TAHorario.TabIndex = 130;
             this.TAHorario.ValidatingType = typeof(System.DateTime);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Moccasin;
+            this.label6.Location = new System.Drawing.Point(297, 48);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(262, 24);
+            this.label6.TabIndex = 132;
+            this.label6.Text = "CONSULTA DE AGENDAMENTO";
+            // 
+            // TACPF
+            // 
+            this.TACPF.BackColor = System.Drawing.Color.Moccasin;
+            this.TACPF.Location = new System.Drawing.Point(648, 168);
+            this.TACPF.Mask = "000,000,000-00";
+            this.TACPF.Name = "TACPF";
+            this.TACPF.Size = new System.Drawing.Size(148, 20);
+            this.TACPF.TabIndex = 133;
+            // 
+            // TATelefone
+            // 
+            this.TATelefone.BackColor = System.Drawing.Color.Moccasin;
+            this.TATelefone.Location = new System.Drawing.Point(665, 246);
+            this.TATelefone.Mask = "(99) 00000-0000";
+            this.TATelefone.Name = "TATelefone";
+            this.TATelefone.Size = new System.Drawing.Size(131, 20);
+            this.TATelefone.TabIndex = 134;
+            // 
             // TelaAgendamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -445,11 +445,13 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(839, 460);
+            this.Controls.Add(this.TATelefone);
+            this.Controls.Add(this.TACPF);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.TAHorario);
             this.Controls.Add(this.textbox2);
             this.Controls.Add(this.TAData);
             this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -463,10 +465,8 @@
             this.Controls.Add(this.TADescritivo);
             this.Controls.Add(this.Descritivo);
             this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.TATelefone);
             this.Controls.Add(this.TAModelo);
             this.Controls.Add(this.TAANO);
-            this.Controls.Add(this.TACPF);
             this.Controls.Add(this.TANome);
             this.Controls.Add(this.TAPlaca);
             this.Controls.Add(this.Telefone);
@@ -493,10 +493,8 @@
         private System.Windows.Forms.TextBox TADescritivo;
         private System.Windows.Forms.Label Descritivo;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.TextBox TATelefone;
         private System.Windows.Forms.TextBox TAModelo;
         private System.Windows.Forms.TextBox TAANO;
-        private System.Windows.Forms.TextBox TACPF;
         private System.Windows.Forms.TextBox TANome;
         private System.Windows.Forms.TextBox TAPlaca;
         private System.Windows.Forms.Label Telefone;
@@ -518,11 +516,13 @@
         private OficinaMecDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.MaskedTextBox TAData;
         private System.Windows.Forms.MaskedTextBox textbox2;
         private System.Windows.Forms.MaskedTextBox TAHorario;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.MaskedTextBox TACPF;
+        private System.Windows.Forms.MaskedTextBox TATelefone;
     }
 }
 

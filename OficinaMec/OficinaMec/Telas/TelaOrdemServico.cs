@@ -1,4 +1,5 @@
 ﻿using OficinaMec.Arquivos;
+using OficinaMec.Telas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -206,6 +207,13 @@ namespace OficinaMec
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OsGeral og = new OsGeral();
+            this.Hide();
+            og.Show();
         }
     }
     }
