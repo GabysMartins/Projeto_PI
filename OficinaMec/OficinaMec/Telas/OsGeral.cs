@@ -21,7 +21,7 @@ namespace OficinaMec.Telas
         private void orcamentoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.orcamentoBindingSource.EndEdit();
+            this.orcamentosBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.oficinaMecDataSet);
 
         }
@@ -29,7 +29,7 @@ namespace OficinaMec.Telas
         private void OsGeral_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'oficinaMecDataSet.Orcamento'. Você pode movê-la ou removê-la conforme necessário.
-            this.orcamentoTableAdapter.Fill(this.oficinaMecDataSet.Orcamento);
+            this.orcamentosTableAdapter.Fill(this.oficinaMecDataSet.Orcamentos);
 
         }
 
@@ -70,6 +70,30 @@ namespace OficinaMec.Telas
         private void TAData_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string sql = $"SELECT NOME_ORC,DESC_ORC,PLACA_ORC,VALOR_TOTAL_ORC FROM Agendamento where CPF_ORC = {maskedTextBox1}";
+
+            SqlCommand cmd = new SqlCommand(sql, conexao.conectar());
+            SqlDataReader leitor = cmd.ExecuteReader();
+
+            try
+            {
+                while (leitor.Read())
+                {
+                    i++;
+                    listBox1.Items.Add(" - Nome: " + leitor[0].ToString() + " - Placa: " + leitor[2].ToString() + " - Valor: " + leitor[3].ToString() + " - Descricao: " + leitor[1].ToString());
+                }
+                conexao.desconectar();
+            }
+            catch (SqlException)
+            {
+                this.mensagem = "Erro ao Cadastrar!!";
+                // Console.WriteLine(e);
+            }
+            i = int.Parse(label2.Text);
         }
     }
 }

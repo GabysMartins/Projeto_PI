@@ -56,8 +56,8 @@
             this.ValorMao = new System.Windows.Forms.Label();
             this.ValorTotal = new System.Windows.Forms.Label();
             this.oficinaMecDataSet = new OficinaMec.OficinaMecDataSet();
-            this.orcamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orcamentoTableAdapter = new OficinaMec.OficinaMecDataSetTableAdapters.OrcamentoTableAdapter();
+            this.orcamentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orcamentosTableAdapter = new OficinaMec.OficinaMecDataSetTableAdapters.OrcamentosTableAdapter();
             this.tableAdapterManager = new OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager();
             this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -71,7 +71,7 @@
             this.TOCPF = new System.Windows.Forms.MaskedTextBox();
             this.ValorServico = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orcamentosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // TOKM
@@ -365,12 +365,12 @@
             // 
             // orcamentoBindingSource
             // 
-            this.orcamentoBindingSource.DataMember = "Orcamento";
-            this.orcamentoBindingSource.DataSource = this.oficinaMecDataSet;
+            this.orcamentosBindingSource.DataMember = "Orcamentos";
+            this.orcamentosBindingSource.DataSource = this.oficinaMecDataSet;
             // 
             // orcamentoTableAdapter
             // 
-            this.orcamentoTableAdapter.ClearBeforeFill = true;
+            this.orcamentosTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -380,7 +380,7 @@
             this.tableAdapterManager.ClienteTableAdapter = null;
             this.tableAdapterManager.Consulta_BancoTableAdapter = null;
             this.tableAdapterManager.FuncionarioTableAdapter = null;
-            this.tableAdapterManager.OrcamentoTableAdapter = this.orcamentoTableAdapter;
+            this.tableAdapterManager.OrcamentosTableAdapter = this.orcamentosTableAdapter;
             this.tableAdapterManager.Pecas_estoqueTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -557,7 +557,7 @@
             this.Text = "TelaOrcamento";
             this.Load += new System.EventHandler(this.TelaOrcamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orcamentosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -591,8 +591,8 @@
         private System.Windows.Forms.Label ValorMao;
         private System.Windows.Forms.Label ValorTotal;
         private OficinaMecDataSet oficinaMecDataSet;
-        private System.Windows.Forms.BindingSource orcamentoBindingSource;
-        private OficinaMecDataSetTableAdapters.OrcamentoTableAdapter orcamentoTableAdapter;
+        private System.Windows.Forms.BindingSource orcamentosBindingSource;
+        private OficinaMecDataSetTableAdapters.OrcamentosTableAdapter orcamentosTableAdapter;
         private OficinaMecDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox1;

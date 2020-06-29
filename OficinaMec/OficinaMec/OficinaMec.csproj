@@ -240,16 +240,6 @@
     <EmbeddedResource Include="Telas\TelaInicial.resx">
       <DependentUpon>TelaInicial.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
-    <None Include="Telas\TelaMenu.resx">
-      <DependentUpon>TelaMenu.cs</DependentUpon>
-    </None>
-    <EmbeddedResource Include="Telas\TelaOrcamento.resx">
-      <DependentUpon>TelaOrcamento.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\TelaOrdemServico.resx">
-      <DependentUpon>TelaOrdemServico.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="OficinaMecDataSet.xsc">
       <DependentUpon>OficinaMecDataSet.xsd</DependentUpon>
     </None>
@@ -261,6 +251,16 @@
     <None Include="OficinaMecDataSet.xss">
       <DependentUpon>OficinaMecDataSet.xsd</DependentUpon>
     </None>
+    <None Include="packages.config" />
+    <None Include="Telas\TelaMenu.resx">
+      <DependentUpon>TelaMenu.cs</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Telas\TelaOrcamento.resx">
+      <DependentUpon>TelaOrcamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\TelaOrdemServico.resx">
+      <DependentUpon>TelaOrdemServico.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\DataSources\OficinaMec.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\OficinaMec.Properties.Settings.datasource" />
     <None Include="Properties\Settings.settings">
@@ -280,13 +280,6 @@
     <None Include="Resources\Editado2.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="OficinaMec.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="OficinaMec_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>OficinaMec.mdf</DependentUpon>
-    </Content>
     <Content Include="Resources\Editado.jpg" />
     <Content Include="Resources\Editado3.jpg" />
   </ItemGroup>

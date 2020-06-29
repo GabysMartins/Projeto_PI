@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaEstoque));
-            this.BEBaixa = new System.Windows.Forms.Button();
             this.BEExcluir = new System.Windows.Forms.Button();
             this.BEAcrescentar = new System.Windows.Forms.Button();
             this.BESair = new System.Windows.Forms.Button();
@@ -50,25 +49,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pecas_estoqueDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // BEBaixa
-            // 
-            this.BEBaixa.BackColor = System.Drawing.Color.Moccasin;
-            this.BEBaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BEBaixa.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BEBaixa.Location = new System.Drawing.Point(544, 373);
-            this.BEBaixa.Name = "BEBaixa";
-            this.BEBaixa.Size = new System.Drawing.Size(122, 57);
-            this.BEBaixa.TabIndex = 43;
-            this.BEBaixa.Text = "BAIXA ESTOQUE";
-            this.BEBaixa.UseVisualStyleBackColor = false;
-            this.BEBaixa.Click += new System.EventHandler(this.BEBaixa_Click);
-            // 
             // BEExcluir
             // 
             this.BEExcluir.BackColor = System.Drawing.Color.Moccasin;
             this.BEExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BEExcluir.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BEExcluir.Location = new System.Drawing.Point(416, 373);
+            this.BEExcluir.Location = new System.Drawing.Point(479, 370);
             this.BEExcluir.Name = "BEExcluir";
             this.BEExcluir.Size = new System.Drawing.Size(122, 57);
             this.BEExcluir.TabIndex = 42;
@@ -81,7 +67,7 @@
             this.BEAcrescentar.BackColor = System.Drawing.Color.Moccasin;
             this.BEAcrescentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BEAcrescentar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BEAcrescentar.Location = new System.Drawing.Point(288, 373);
+            this.BEAcrescentar.Location = new System.Drawing.Point(351, 370);
             this.BEAcrescentar.Name = "BEAcrescentar";
             this.BEAcrescentar.Size = new System.Drawing.Size(122, 57);
             this.BEAcrescentar.TabIndex = 41;
@@ -94,7 +80,7 @@
             this.BESair.BackColor = System.Drawing.Color.Moccasin;
             this.BESair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BESair.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BESair.Location = new System.Drawing.Point(160, 372);
+            this.BESair.Location = new System.Drawing.Point(223, 369);
             this.BESair.Name = "BESair";
             this.BESair.Size = new System.Drawing.Size(122, 57);
             this.BESair.TabIndex = 46;
@@ -124,7 +110,7 @@
             this.tableAdapterManager.ClienteTableAdapter = null;
             this.tableAdapterManager.Consulta_BancoTableAdapter = null;
             this.tableAdapterManager.FuncionarioTableAdapter = null;
-            this.tableAdapterManager.OrcamentoTableAdapter = null;
+            this.tableAdapterManager.OrcamentosTableAdapter = null;
             this.tableAdapterManager.Pecas_estoqueTableAdapter = this.pecas_estoqueTableAdapter;
             this.tableAdapterManager.UpdateOrder = OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -191,7 +177,6 @@
             this.ClientSize = new System.Drawing.Size(800, 458);
             this.Controls.Add(this.pecas_estoqueDataGridView);
             this.Controls.Add(this.BESair);
-            this.Controls.Add(this.BEBaixa);
             this.Controls.Add(this.BEExcluir);
             this.Controls.Add(this.BEAcrescentar);
             this.Name = "TelaEstoque";
@@ -206,7 +191,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button BEBaixa;
         private System.Windows.Forms.Button BEExcluir;
         private System.Windows.Forms.Button BEAcrescentar;
         private System.Windows.Forms.Button BESair;

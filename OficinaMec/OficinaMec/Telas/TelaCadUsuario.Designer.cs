@@ -253,7 +253,7 @@
             this.tableAdapterManager.ClienteTableAdapter = null;
             this.tableAdapterManager.Consulta_BancoTableAdapter = null;
             this.tableAdapterManager.FuncionarioTableAdapter = this.funcionarioTableAdapter;
-            this.tableAdapterManager.OrcamentoTableAdapter = null;
+            this.tableAdapterManager.OrcamentosTableAdapter = null;
             this.tableAdapterManager.Pecas_estoqueTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 

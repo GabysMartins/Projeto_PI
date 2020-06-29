@@ -87,7 +87,7 @@
             this.button1.BackColor = System.Drawing.Color.Moccasin;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 14F);
-            this.button1.Location = new System.Drawing.Point(279, 672);
+            this.button1.Location = new System.Drawing.Point(242, 672);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 57);
             this.button1.TabIndex = 107;
@@ -464,7 +464,7 @@
             this.tableAdapterManager.ClienteTableAdapter = null;
             this.tableAdapterManager.Consulta_BancoTableAdapter = this.consulta_BancoTableAdapter;
             this.tableAdapterManager.FuncionarioTableAdapter = null;
-            this.tableAdapterManager.OrcamentoTableAdapter = null;
+            this.tableAdapterManager.OrcamentosTableAdapter = null;
             this.tableAdapterManager.Pecas_estoqueTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 

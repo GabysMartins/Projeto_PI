@@ -34,11 +34,11 @@ namespace OficinaMec {
         
         private FuncionarioDataTable tableFuncionario;
         
-        private OrcamentoDataTable tableOrcamento;
+        private OrcamentosDataTable tableOrcamentos;
         
         private Pecas_estoqueDataTable tablePecas_estoque;
         
-        private global::System.Data.DataRelation relationFK__Agendamen__CPF_C__2A4B4B5E;
+        private global::System.Data.DataRelation relationFK__Cliente__PLACA_C__3C34F16F;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -83,8 +83,8 @@ namespace OficinaMec {
                 if ((ds.Tables["Funcionario"] != null)) {
                     base.Tables.Add(new FuncionarioDataTable(ds.Tables["Funcionario"]));
                 }
-                if ((ds.Tables["Orcamento"] != null)) {
-                    base.Tables.Add(new OrcamentoDataTable(ds.Tables["Orcamento"]));
+                if ((ds.Tables["Orcamentos"] != null)) {
+                    base.Tables.Add(new OrcamentosDataTable(ds.Tables["Orcamentos"]));
                 }
                 if ((ds.Tables["Pecas_estoque"] != null)) {
                     base.Tables.Add(new Pecas_estoqueDataTable(ds.Tables["Pecas_estoque"]));
@@ -161,9 +161,9 @@ namespace OficinaMec {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public OrcamentoDataTable Orcamento {
+        public OrcamentosDataTable Orcamentos {
             get {
-                return this.tableOrcamento;
+                return this.tableOrcamentos;
             }
         }
         
@@ -259,8 +259,8 @@ namespace OficinaMec {
                 if ((ds.Tables["Funcionario"] != null)) {
                     base.Tables.Add(new FuncionarioDataTable(ds.Tables["Funcionario"]));
                 }
-                if ((ds.Tables["Orcamento"] != null)) {
-                    base.Tables.Add(new OrcamentoDataTable(ds.Tables["Orcamento"]));
+                if ((ds.Tables["Orcamentos"] != null)) {
+                    base.Tables.Add(new OrcamentosDataTable(ds.Tables["Orcamentos"]));
                 }
                 if ((ds.Tables["Pecas_estoque"] != null)) {
                     base.Tables.Add(new Pecas_estoqueDataTable(ds.Tables["Pecas_estoque"]));
@@ -328,10 +328,10 @@ namespace OficinaMec {
                     this.tableFuncionario.InitVars();
                 }
             }
-            this.tableOrcamento = ((OrcamentoDataTable)(base.Tables["Orcamento"]));
+            this.tableOrcamentos = ((OrcamentosDataTable)(base.Tables["Orcamentos"]));
             if ((initTable == true)) {
-                if ((this.tableOrcamento != null)) {
-                    this.tableOrcamento.InitVars();
+                if ((this.tableOrcamentos != null)) {
+                    this.tableOrcamentos.InitVars();
                 }
             }
             this.tablePecas_estoque = ((Pecas_estoqueDataTable)(base.Tables["Pecas_estoque"]));
@@ -340,7 +340,7 @@ namespace OficinaMec {
                     this.tablePecas_estoque.InitVars();
                 }
             }
-            this.relationFK__Agendamen__CPF_C__2A4B4B5E = this.Relations["FK__Agendamen__CPF_C__2A4B4B5E"];
+            this.relationFK__Cliente__PLACA_C__3C34F16F = this.Relations["FK__Cliente__PLACA_C__3C34F16F"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -361,14 +361,14 @@ namespace OficinaMec {
             base.Tables.Add(this.tableConsulta_Banco);
             this.tableFuncionario = new FuncionarioDataTable();
             base.Tables.Add(this.tableFuncionario);
-            this.tableOrcamento = new OrcamentoDataTable();
-            base.Tables.Add(this.tableOrcamento);
+            this.tableOrcamentos = new OrcamentosDataTable();
+            base.Tables.Add(this.tableOrcamentos);
             this.tablePecas_estoque = new Pecas_estoqueDataTable();
             base.Tables.Add(this.tablePecas_estoque);
-            this.relationFK__Agendamen__CPF_C__2A4B4B5E = new global::System.Data.DataRelation("FK__Agendamen__CPF_C__2A4B4B5E", new global::System.Data.DataColumn[] {
-                        this.tableCliente.CPF_CNPJ_CLIColumn}, new global::System.Data.DataColumn[] {
-                        this.tableAgendamento.CPF_CNPJ_CLIColumn}, false);
-            this.Relations.Add(this.relationFK__Agendamen__CPF_C__2A4B4B5E);
+            this.relationFK__Cliente__PLACA_C__3C34F16F = new global::System.Data.DataRelation("FK__Cliente__PLACA_C__3C34F16F", new global::System.Data.DataColumn[] {
+                        this.tableCarro.PLACA_CARColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCliente.PLACA_CARColumn}, false);
+            this.Relations.Add(this.relationFK__Cliente__PLACA_C__3C34F16F);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -403,7 +403,7 @@ namespace OficinaMec {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeOrcamento() {
+        private bool ShouldSerializeOrcamentos() {
             return false;
         }
         
@@ -484,7 +484,7 @@ namespace OficinaMec {
         public delegate void FuncionarioRowChangeEventHandler(object sender, FuncionarioRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void OrcamentoRowChangeEventHandler(object sender, OrcamentoRowChangeEvent e);
+        public delegate void OrcamentosRowChangeEventHandler(object sender, OrcamentosRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void Pecas_estoqueRowChangeEventHandler(object sender, Pecas_estoqueRowChangeEvent e);
@@ -496,15 +496,27 @@ namespace OficinaMec {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class AgendamentoDataTable : global::System.Data.TypedTableBase<AgendamentoRow> {
             
-            private global::System.Data.DataColumn columnCOD_AGEND;
+            private global::System.Data.DataColumn columnNUM_Ag;
             
-            private global::System.Data.DataColumn columnPLACA_CAR;
+            private global::System.Data.DataColumn columnNUM_ORC;
             
-            private global::System.Data.DataColumn columnMODELO_CAR;
+            private global::System.Data.DataColumn columnDESC_ORC;
             
-            private global::System.Data.DataColumn columnNOME_CLI;
+            private global::System.Data.DataColumn columnCPF_ORC;
             
-            private global::System.Data.DataColumn columnCPF_CNPJ_CLI;
+            private global::System.Data.DataColumn columnPLACA_ORC;
+            
+            private global::System.Data.DataColumn columnNOME_ORC;
+            
+            private global::System.Data.DataColumn columnTEL_ORC;
+            
+            private global::System.Data.DataColumn columnANO_FAB_ORC;
+            
+            private global::System.Data.DataColumn columnMOD_ORC;
+            
+            private global::System.Data.DataColumn columnDATA_AG;
+            
+            private global::System.Data.DataColumn columnHORA_AG;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -541,41 +553,89 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn COD_AGENDColumn {
+            public global::System.Data.DataColumn NUM_AgColumn {
                 get {
-                    return this.columnCOD_AGEND;
+                    return this.columnNUM_Ag;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PLACA_CARColumn {
+            public global::System.Data.DataColumn NUM_ORCColumn {
                 get {
-                    return this.columnPLACA_CAR;
+                    return this.columnNUM_ORC;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn MODELO_CARColumn {
+            public global::System.Data.DataColumn DESC_ORCColumn {
                 get {
-                    return this.columnMODELO_CAR;
+                    return this.columnDESC_ORC;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NOME_CLIColumn {
+            public global::System.Data.DataColumn CPF_ORCColumn {
                 get {
-                    return this.columnNOME_CLI;
+                    return this.columnCPF_ORC;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CPF_CNPJ_CLIColumn {
+            public global::System.Data.DataColumn PLACA_ORCColumn {
                 get {
-                    return this.columnCPF_CNPJ_CLI;
+                    return this.columnPLACA_ORC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NOME_ORCColumn {
+                get {
+                    return this.columnNOME_ORC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TEL_ORCColumn {
+                get {
+                    return this.columnTEL_ORC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ANO_FAB_ORCColumn {
+                get {
+                    return this.columnANO_FAB_ORC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MOD_ORCColumn {
+                get {
+                    return this.columnMOD_ORC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DATA_AGColumn {
+                get {
+                    return this.columnDATA_AG;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn HORA_AGColumn {
+                get {
+                    return this.columnHORA_AG;
                 }
             }
             
@@ -616,27 +676,23 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AgendamentoRow AddAgendamentoRow(string COD_AGEND, string PLACA_CAR, string MODELO_CAR, string NOME_CLI, ClienteRow parentClienteRowByFK__Agendamen__CPF_C__2A4B4B5E) {
+            public AgendamentoRow AddAgendamentoRow(string NUM_Ag, string NUM_ORC, string DESC_ORC, string CPF_ORC, string PLACA_ORC, string NOME_ORC, string TEL_ORC, string ANO_FAB_ORC, string MOD_ORC, string DATA_AG, string HORA_AG) {
                 AgendamentoRow rowAgendamentoRow = ((AgendamentoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        COD_AGEND,
-                        PLACA_CAR,
-                        MODELO_CAR,
-                        NOME_CLI,
-                        null};
-                if ((parentClienteRowByFK__Agendamen__CPF_C__2A4B4B5E != null)) {
-                    columnValuesArray[4] = parentClienteRowByFK__Agendamen__CPF_C__2A4B4B5E[1];
-                }
+                        NUM_Ag,
+                        NUM_ORC,
+                        DESC_ORC,
+                        CPF_ORC,
+                        PLACA_ORC,
+                        NOME_ORC,
+                        TEL_ORC,
+                        ANO_FAB_ORC,
+                        MOD_ORC,
+                        DATA_AG,
+                        HORA_AG};
                 rowAgendamentoRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowAgendamentoRow);
                 return rowAgendamentoRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AgendamentoRow FindByCOD_AGEND(string COD_AGEND) {
-                return ((AgendamentoRow)(this.Rows.Find(new object[] {
-                            COD_AGEND})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -656,39 +712,66 @@ namespace OficinaMec {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnCOD_AGEND = base.Columns["COD_AGEND"];
-                this.columnPLACA_CAR = base.Columns["PLACA_CAR"];
-                this.columnMODELO_CAR = base.Columns["MODELO_CAR"];
-                this.columnNOME_CLI = base.Columns["NOME_CLI"];
-                this.columnCPF_CNPJ_CLI = base.Columns["CPF_CNPJ_CLI"];
+                this.columnNUM_Ag = base.Columns["NUM_Ag"];
+                this.columnNUM_ORC = base.Columns["NUM_ORC"];
+                this.columnDESC_ORC = base.Columns["DESC_ORC"];
+                this.columnCPF_ORC = base.Columns["CPF_ORC"];
+                this.columnPLACA_ORC = base.Columns["PLACA_ORC"];
+                this.columnNOME_ORC = base.Columns["NOME_ORC"];
+                this.columnTEL_ORC = base.Columns["TEL_ORC"];
+                this.columnANO_FAB_ORC = base.Columns["ANO_FAB_ORC"];
+                this.columnMOD_ORC = base.Columns["MOD_ORC"];
+                this.columnDATA_AG = base.Columns["DATA_AG"];
+                this.columnHORA_AG = base.Columns["HORA_AG"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnCOD_AGEND = new global::System.Data.DataColumn("COD_AGEND", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCOD_AGEND);
-                this.columnPLACA_CAR = new global::System.Data.DataColumn("PLACA_CAR", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPLACA_CAR);
-                this.columnMODELO_CAR = new global::System.Data.DataColumn("MODELO_CAR", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMODELO_CAR);
-                this.columnNOME_CLI = new global::System.Data.DataColumn("NOME_CLI", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNOME_CLI);
-                this.columnCPF_CNPJ_CLI = new global::System.Data.DataColumn("CPF_CNPJ_CLI", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCPF_CNPJ_CLI);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnCOD_AGEND}, true));
-                this.columnCOD_AGEND.AllowDBNull = false;
-                this.columnCOD_AGEND.Unique = true;
-                this.columnCOD_AGEND.MaxLength = 100;
-                this.columnPLACA_CAR.AllowDBNull = false;
-                this.columnPLACA_CAR.MaxLength = 100;
-                this.columnMODELO_CAR.AllowDBNull = false;
-                this.columnMODELO_CAR.MaxLength = 100;
-                this.columnNOME_CLI.AllowDBNull = false;
-                this.columnNOME_CLI.MaxLength = 100;
-                this.columnCPF_CNPJ_CLI.AllowDBNull = false;
-                this.columnCPF_CNPJ_CLI.MaxLength = 100;
+                this.columnNUM_Ag = new global::System.Data.DataColumn("NUM_Ag", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNUM_Ag);
+                this.columnNUM_ORC = new global::System.Data.DataColumn("NUM_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNUM_ORC);
+                this.columnDESC_ORC = new global::System.Data.DataColumn("DESC_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDESC_ORC);
+                this.columnCPF_ORC = new global::System.Data.DataColumn("CPF_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCPF_ORC);
+                this.columnPLACA_ORC = new global::System.Data.DataColumn("PLACA_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPLACA_ORC);
+                this.columnNOME_ORC = new global::System.Data.DataColumn("NOME_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOME_ORC);
+                this.columnTEL_ORC = new global::System.Data.DataColumn("TEL_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTEL_ORC);
+                this.columnANO_FAB_ORC = new global::System.Data.DataColumn("ANO_FAB_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnANO_FAB_ORC);
+                this.columnMOD_ORC = new global::System.Data.DataColumn("MOD_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMOD_ORC);
+                this.columnDATA_AG = new global::System.Data.DataColumn("DATA_AG", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDATA_AG);
+                this.columnHORA_AG = new global::System.Data.DataColumn("HORA_AG", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHORA_AG);
+                this.columnNUM_Ag.AllowDBNull = false;
+                this.columnNUM_Ag.MaxLength = 100;
+                this.columnNUM_ORC.AllowDBNull = false;
+                this.columnNUM_ORC.MaxLength = 100;
+                this.columnDESC_ORC.AllowDBNull = false;
+                this.columnDESC_ORC.MaxLength = 1000;
+                this.columnCPF_ORC.AllowDBNull = false;
+                this.columnCPF_ORC.MaxLength = 100;
+                this.columnPLACA_ORC.AllowDBNull = false;
+                this.columnPLACA_ORC.MaxLength = 100;
+                this.columnNOME_ORC.AllowDBNull = false;
+                this.columnNOME_ORC.MaxLength = 100;
+                this.columnTEL_ORC.AllowDBNull = false;
+                this.columnTEL_ORC.MaxLength = 100;
+                this.columnANO_FAB_ORC.AllowDBNull = false;
+                this.columnANO_FAB_ORC.MaxLength = 100;
+                this.columnMOD_ORC.AllowDBNull = false;
+                this.columnMOD_ORC.MaxLength = 100;
+                this.columnDATA_AG.AllowDBNull = false;
+                this.columnDATA_AG.MaxLength = 100;
+                this.columnHORA_AG.AllowDBNull = false;
+                this.columnHORA_AG.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1145,9 +1228,11 @@ namespace OficinaMec {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ClienteDataTable : global::System.Data.TypedTableBase<ClienteRow> {
             
-            private global::System.Data.DataColumn columnNOME_CLI;
-            
             private global::System.Data.DataColumn columnCPF_CNPJ_CLI;
+            
+            private global::System.Data.DataColumn columnPLACA_CAR;
+            
+            private global::System.Data.DataColumn columnNOME_CLI;
             
             private global::System.Data.DataColumn columnRG_CLI;
             
@@ -1156,8 +1241,6 @@ namespace OficinaMec {
             private global::System.Data.DataColumn columnENDERECO_CLI;
             
             private global::System.Data.DataColumn columnTELEFONE_CLI;
-            
-            private global::System.Data.DataColumn columnPLACA_CAR;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1194,17 +1277,25 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn NOME_CLIColumn {
+            public global::System.Data.DataColumn CPF_CNPJ_CLIColumn {
                 get {
-                    return this.columnNOME_CLI;
+                    return this.columnCPF_CNPJ_CLI;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn CPF_CNPJ_CLIColumn {
+            public global::System.Data.DataColumn PLACA_CARColumn {
                 get {
-                    return this.columnCPF_CNPJ_CLI;
+                    return this.columnPLACA_CAR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NOME_CLIColumn {
+                get {
+                    return this.columnNOME_CLI;
                 }
             }
             
@@ -1237,14 +1328,6 @@ namespace OficinaMec {
             public global::System.Data.DataColumn TELEFONE_CLIColumn {
                 get {
                     return this.columnTELEFONE_CLI;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PLACA_CARColumn {
-                get {
-                    return this.columnPLACA_CAR;
                 }
             }
             
@@ -1285,16 +1368,19 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ClienteRow AddClienteRow(string NOME_CLI, string CPF_CNPJ_CLI, string RG_CLI, string EMAIL_CLI, string ENDERECO_CLI, string TELEFONE_CLI, string PLACA_CAR) {
+            public ClienteRow AddClienteRow(string CPF_CNPJ_CLI, CarroRow parentCarroRowByFK__Cliente__PLACA_C__3C34F16F, string NOME_CLI, string RG_CLI, string EMAIL_CLI, string ENDERECO_CLI, string TELEFONE_CLI) {
                 ClienteRow rowClienteRow = ((ClienteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        NOME_CLI,
                         CPF_CNPJ_CLI,
+                        null,
+                        NOME_CLI,
                         RG_CLI,
                         EMAIL_CLI,
                         ENDERECO_CLI,
-                        TELEFONE_CLI,
-                        PLACA_CAR};
+                        TELEFONE_CLI};
+                if ((parentCarroRowByFK__Cliente__PLACA_C__3C34F16F != null)) {
+                    columnValuesArray[1] = parentCarroRowByFK__Cliente__PLACA_C__3C34F16F[0];
+                }
                 rowClienteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowClienteRow);
                 return rowClienteRow;
@@ -1324,22 +1410,24 @@ namespace OficinaMec {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnNOME_CLI = base.Columns["NOME_CLI"];
                 this.columnCPF_CNPJ_CLI = base.Columns["CPF_CNPJ_CLI"];
+                this.columnPLACA_CAR = base.Columns["PLACA_CAR"];
+                this.columnNOME_CLI = base.Columns["NOME_CLI"];
                 this.columnRG_CLI = base.Columns["RG_CLI"];
                 this.columnEMAIL_CLI = base.Columns["EMAIL_CLI"];
                 this.columnENDERECO_CLI = base.Columns["ENDERECO_CLI"];
                 this.columnTELEFONE_CLI = base.Columns["TELEFONE_CLI"];
-                this.columnPLACA_CAR = base.Columns["PLACA_CAR"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnNOME_CLI = new global::System.Data.DataColumn("NOME_CLI", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNOME_CLI);
                 this.columnCPF_CNPJ_CLI = new global::System.Data.DataColumn("CPF_CNPJ_CLI", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCPF_CNPJ_CLI);
+                this.columnPLACA_CAR = new global::System.Data.DataColumn("PLACA_CAR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPLACA_CAR);
+                this.columnNOME_CLI = new global::System.Data.DataColumn("NOME_CLI", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOME_CLI);
                 this.columnRG_CLI = new global::System.Data.DataColumn("RG_CLI", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnRG_CLI);
                 this.columnEMAIL_CLI = new global::System.Data.DataColumn("EMAIL_CLI", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1348,15 +1436,14 @@ namespace OficinaMec {
                 base.Columns.Add(this.columnENDERECO_CLI);
                 this.columnTELEFONE_CLI = new global::System.Data.DataColumn("TELEFONE_CLI", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTELEFONE_CLI);
-                this.columnPLACA_CAR = new global::System.Data.DataColumn("PLACA_CAR", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPLACA_CAR);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCPF_CNPJ_CLI}, true));
-                this.columnNOME_CLI.AllowDBNull = false;
-                this.columnNOME_CLI.MaxLength = 100;
                 this.columnCPF_CNPJ_CLI.AllowDBNull = false;
                 this.columnCPF_CNPJ_CLI.Unique = true;
                 this.columnCPF_CNPJ_CLI.MaxLength = 100;
+                this.columnPLACA_CAR.MaxLength = 100;
+                this.columnNOME_CLI.AllowDBNull = false;
+                this.columnNOME_CLI.MaxLength = 100;
                 this.columnRG_CLI.AllowDBNull = false;
                 this.columnRG_CLI.MaxLength = 100;
                 this.columnEMAIL_CLI.AllowDBNull = false;
@@ -1365,8 +1452,6 @@ namespace OficinaMec {
                 this.columnENDERECO_CLI.MaxLength = 100;
                 this.columnTELEFONE_CLI.AllowDBNull = false;
                 this.columnTELEFONE_CLI.MaxLength = 100;
-                this.columnPLACA_CAR.AllowDBNull = false;
-                this.columnPLACA_CAR.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1613,6 +1698,13 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public Consulta_BancoRow FindByNUM_ORC(string NUM_ORC) {
+                return ((Consulta_BancoRow)(this.Rows.Find(new object[] {
+                            NUM_ORC})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 Consulta_BancoDataTable cln = ((Consulta_BancoDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1642,9 +1734,12 @@ namespace OficinaMec {
                 base.Columns.Add(this.columnNUM_ORC);
                 this.columnCOD_PECA = new global::System.Data.DataColumn("COD_PECA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCOD_PECA);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnNUM_ORC}, true));
                 this.columnQTTD_PECA.AllowDBNull = false;
                 this.columnQTTD_PECA.MaxLength = 100;
                 this.columnNUM_ORC.AllowDBNull = false;
+                this.columnNUM_ORC.Unique = true;
                 this.columnNUM_ORC.MaxLength = 100;
                 this.columnCOD_PECA.AllowDBNull = false;
                 this.columnCOD_PECA.MaxLength = 100;
@@ -2118,24 +2213,36 @@ namespace OficinaMec {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class OrcamentoDataTable : global::System.Data.TypedTableBase<OrcamentoRow> {
+        public partial class OrcamentosDataTable : global::System.Data.TypedTableBase<OrcamentosRow> {
             
             private global::System.Data.DataColumn columnNUM_ORC;
             
-            private global::System.Data.DataColumn columnPRECO_ORC;
+            private global::System.Data.DataColumn columnDESC_ORC;
             
-            private global::System.Data.DataColumn columnCOD_ORC;
+            private global::System.Data.DataColumn columnCPF_ORC;
             
-            private global::System.Data.DataColumn columnDESCR_ORC;
+            private global::System.Data.DataColumn columnPLACA_ORC;
             
-            private global::System.Data.DataColumn columnQTTD_ORC;
+            private global::System.Data.DataColumn columnNOME_ORC;
             
-            private global::System.Data.DataColumn columnCOD_AGEND;
+            private global::System.Data.DataColumn columnTEL_ORC;
+            
+            private global::System.Data.DataColumn columnANO_FAB_ORC;
+            
+            private global::System.Data.DataColumn columnMOD_ORC;
+            
+            private global::System.Data.DataColumn columnKM_ORC;
+            
+            private global::System.Data.DataColumn columnVALOR_PECAS_ORC;
+            
+            private global::System.Data.DataColumn columnVALOR_MAO_ORC;
+            
+            private global::System.Data.DataColumn columnVALOR_TOTAL_ORC;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public OrcamentoDataTable() {
-                this.TableName = "Orcamento";
+            public OrcamentosDataTable() {
+                this.TableName = "Orcamentos";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2143,7 +2250,7 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal OrcamentoDataTable(global::System.Data.DataTable table) {
+            internal OrcamentosDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2160,7 +2267,7 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected OrcamentoDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected OrcamentosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2175,41 +2282,89 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn PRECO_ORCColumn {
+            public global::System.Data.DataColumn DESC_ORCColumn {
                 get {
-                    return this.columnPRECO_ORC;
+                    return this.columnDESC_ORC;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn COD_ORCColumn {
+            public global::System.Data.DataColumn CPF_ORCColumn {
                 get {
-                    return this.columnCOD_ORC;
+                    return this.columnCPF_ORC;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn DESCR_ORCColumn {
+            public global::System.Data.DataColumn PLACA_ORCColumn {
                 get {
-                    return this.columnDESCR_ORC;
+                    return this.columnPLACA_ORC;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn QTTD_ORCColumn {
+            public global::System.Data.DataColumn NOME_ORCColumn {
                 get {
-                    return this.columnQTTD_ORC;
+                    return this.columnNOME_ORC;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn COD_AGENDColumn {
+            public global::System.Data.DataColumn TEL_ORCColumn {
                 get {
-                    return this.columnCOD_AGEND;
+                    return this.columnTEL_ORC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn ANO_FAB_ORCColumn {
+                get {
+                    return this.columnANO_FAB_ORC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn MOD_ORCColumn {
+                get {
+                    return this.columnMOD_ORC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn KM_ORCColumn {
+                get {
+                    return this.columnKM_ORC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn VALOR_PECAS_ORCColumn {
+                get {
+                    return this.columnVALOR_PECAS_ORC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn VALOR_MAO_ORCColumn {
+                get {
+                    return this.columnVALOR_MAO_ORC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn VALOR_TOTAL_ORCColumn {
+                get {
+                    return this.columnVALOR_TOTAL_ORC;
                 }
             }
             
@@ -2224,57 +2379,63 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public OrcamentoRow this[int index] {
+            public OrcamentosRow this[int index] {
                 get {
-                    return ((OrcamentoRow)(this.Rows[index]));
+                    return ((OrcamentosRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event OrcamentoRowChangeEventHandler OrcamentoRowChanging;
+            public event OrcamentosRowChangeEventHandler OrcamentosRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event OrcamentoRowChangeEventHandler OrcamentoRowChanged;
+            public event OrcamentosRowChangeEventHandler OrcamentosRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event OrcamentoRowChangeEventHandler OrcamentoRowDeleting;
+            public event OrcamentosRowChangeEventHandler OrcamentosRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event OrcamentoRowChangeEventHandler OrcamentoRowDeleted;
+            public event OrcamentosRowChangeEventHandler OrcamentosRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddOrcamentoRow(OrcamentoRow row) {
+            public void AddOrcamentosRow(OrcamentosRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public OrcamentoRow AddOrcamentoRow(int NUM_ORC, string PRECO_ORC, string COD_ORC, string DESCR_ORC, string QTTD_ORC, string COD_AGEND) {
-                OrcamentoRow rowOrcamentoRow = ((OrcamentoRow)(this.NewRow()));
+            public OrcamentosRow AddOrcamentosRow(string NUM_ORC, string DESC_ORC, string CPF_ORC, string PLACA_ORC, string NOME_ORC, string TEL_ORC, string ANO_FAB_ORC, string MOD_ORC, string KM_ORC, string VALOR_PECAS_ORC, string VALOR_MAO_ORC, string VALOR_TOTAL_ORC) {
+                OrcamentosRow rowOrcamentosRow = ((OrcamentosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NUM_ORC,
-                        PRECO_ORC,
-                        COD_ORC,
-                        DESCR_ORC,
-                        QTTD_ORC,
-                        COD_AGEND};
-                rowOrcamentoRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowOrcamentoRow);
-                return rowOrcamentoRow;
+                        DESC_ORC,
+                        CPF_ORC,
+                        PLACA_ORC,
+                        NOME_ORC,
+                        TEL_ORC,
+                        ANO_FAB_ORC,
+                        MOD_ORC,
+                        KM_ORC,
+                        VALOR_PECAS_ORC,
+                        VALOR_MAO_ORC,
+                        VALOR_TOTAL_ORC};
+                rowOrcamentosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowOrcamentosRow);
+                return rowOrcamentosRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public OrcamentoRow FindByNUM_ORC(int NUM_ORC) {
-                return ((OrcamentoRow)(this.Rows.Find(new object[] {
+            public OrcamentosRow FindByNUM_ORC(string NUM_ORC) {
+                return ((OrcamentosRow)(this.Rows.Find(new object[] {
                             NUM_ORC})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                OrcamentoDataTable cln = ((OrcamentoDataTable)(base.Clone()));
+                OrcamentosDataTable cln = ((OrcamentosDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2282,75 +2443,106 @@ namespace OficinaMec {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new OrcamentoDataTable();
+                return new OrcamentosDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnNUM_ORC = base.Columns["NUM_ORC"];
-                this.columnPRECO_ORC = base.Columns["PRECO_ORC"];
-                this.columnCOD_ORC = base.Columns["COD_ORC"];
-                this.columnDESCR_ORC = base.Columns["DESCR_ORC"];
-                this.columnQTTD_ORC = base.Columns["QTTD_ORC"];
-                this.columnCOD_AGEND = base.Columns["COD_AGEND"];
+                this.columnDESC_ORC = base.Columns["DESC_ORC"];
+                this.columnCPF_ORC = base.Columns["CPF_ORC"];
+                this.columnPLACA_ORC = base.Columns["PLACA_ORC"];
+                this.columnNOME_ORC = base.Columns["NOME_ORC"];
+                this.columnTEL_ORC = base.Columns["TEL_ORC"];
+                this.columnANO_FAB_ORC = base.Columns["ANO_FAB_ORC"];
+                this.columnMOD_ORC = base.Columns["MOD_ORC"];
+                this.columnKM_ORC = base.Columns["KM_ORC"];
+                this.columnVALOR_PECAS_ORC = base.Columns["VALOR_PECAS_ORC"];
+                this.columnVALOR_MAO_ORC = base.Columns["VALOR_MAO_ORC"];
+                this.columnVALOR_TOTAL_ORC = base.Columns["VALOR_TOTAL_ORC"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnNUM_ORC = new global::System.Data.DataColumn("NUM_ORC", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnNUM_ORC = new global::System.Data.DataColumn("NUM_ORC", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNUM_ORC);
-                this.columnPRECO_ORC = new global::System.Data.DataColumn("PRECO_ORC", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPRECO_ORC);
-                this.columnCOD_ORC = new global::System.Data.DataColumn("COD_ORC", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCOD_ORC);
-                this.columnDESCR_ORC = new global::System.Data.DataColumn("DESCR_ORC", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDESCR_ORC);
-                this.columnQTTD_ORC = new global::System.Data.DataColumn("QTTD_ORC", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnQTTD_ORC);
-                this.columnCOD_AGEND = new global::System.Data.DataColumn("COD_AGEND", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCOD_AGEND);
+                this.columnDESC_ORC = new global::System.Data.DataColumn("DESC_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDESC_ORC);
+                this.columnCPF_ORC = new global::System.Data.DataColumn("CPF_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCPF_ORC);
+                this.columnPLACA_ORC = new global::System.Data.DataColumn("PLACA_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPLACA_ORC);
+                this.columnNOME_ORC = new global::System.Data.DataColumn("NOME_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOME_ORC);
+                this.columnTEL_ORC = new global::System.Data.DataColumn("TEL_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTEL_ORC);
+                this.columnANO_FAB_ORC = new global::System.Data.DataColumn("ANO_FAB_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnANO_FAB_ORC);
+                this.columnMOD_ORC = new global::System.Data.DataColumn("MOD_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMOD_ORC);
+                this.columnKM_ORC = new global::System.Data.DataColumn("KM_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnKM_ORC);
+                this.columnVALOR_PECAS_ORC = new global::System.Data.DataColumn("VALOR_PECAS_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVALOR_PECAS_ORC);
+                this.columnVALOR_MAO_ORC = new global::System.Data.DataColumn("VALOR_MAO_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVALOR_MAO_ORC);
+                this.columnVALOR_TOTAL_ORC = new global::System.Data.DataColumn("VALOR_TOTAL_ORC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnVALOR_TOTAL_ORC);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnNUM_ORC}, true));
                 this.columnNUM_ORC.AllowDBNull = false;
                 this.columnNUM_ORC.Unique = true;
-                this.columnPRECO_ORC.AllowDBNull = false;
-                this.columnPRECO_ORC.MaxLength = 100;
-                this.columnCOD_ORC.AllowDBNull = false;
-                this.columnCOD_ORC.MaxLength = 100;
-                this.columnDESCR_ORC.AllowDBNull = false;
-                this.columnDESCR_ORC.MaxLength = 100;
-                this.columnQTTD_ORC.AllowDBNull = false;
-                this.columnQTTD_ORC.MaxLength = 100;
-                this.columnCOD_AGEND.AllowDBNull = false;
-                this.columnCOD_AGEND.MaxLength = 100;
+                this.columnNUM_ORC.MaxLength = 1000;
+                this.columnDESC_ORC.AllowDBNull = false;
+                this.columnDESC_ORC.MaxLength = 1000;
+                this.columnCPF_ORC.AllowDBNull = false;
+                this.columnCPF_ORC.MaxLength = 100;
+                this.columnPLACA_ORC.AllowDBNull = false;
+                this.columnPLACA_ORC.MaxLength = 100;
+                this.columnNOME_ORC.AllowDBNull = false;
+                this.columnNOME_ORC.MaxLength = 100;
+                this.columnTEL_ORC.AllowDBNull = false;
+                this.columnTEL_ORC.MaxLength = 100;
+                this.columnANO_FAB_ORC.AllowDBNull = false;
+                this.columnANO_FAB_ORC.MaxLength = 100;
+                this.columnMOD_ORC.AllowDBNull = false;
+                this.columnMOD_ORC.MaxLength = 100;
+                this.columnKM_ORC.AllowDBNull = false;
+                this.columnKM_ORC.MaxLength = 100;
+                this.columnVALOR_PECAS_ORC.AllowDBNull = false;
+                this.columnVALOR_PECAS_ORC.MaxLength = 100;
+                this.columnVALOR_MAO_ORC.AllowDBNull = false;
+                this.columnVALOR_MAO_ORC.MaxLength = 100;
+                this.columnVALOR_TOTAL_ORC.AllowDBNull = false;
+                this.columnVALOR_TOTAL_ORC.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public OrcamentoRow NewOrcamentoRow() {
-                return ((OrcamentoRow)(this.NewRow()));
+            public OrcamentosRow NewOrcamentosRow() {
+                return ((OrcamentosRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new OrcamentoRow(builder);
+                return new OrcamentosRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(OrcamentoRow);
+                return typeof(OrcamentosRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.OrcamentoRowChanged != null)) {
-                    this.OrcamentoRowChanged(this, new OrcamentoRowChangeEvent(((OrcamentoRow)(e.Row)), e.Action));
+                if ((this.OrcamentosRowChanged != null)) {
+                    this.OrcamentosRowChanged(this, new OrcamentosRowChangeEvent(((OrcamentosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2358,8 +2550,8 @@ namespace OficinaMec {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.OrcamentoRowChanging != null)) {
-                    this.OrcamentoRowChanging(this, new OrcamentoRowChangeEvent(((OrcamentoRow)(e.Row)), e.Action));
+                if ((this.OrcamentosRowChanging != null)) {
+                    this.OrcamentosRowChanging(this, new OrcamentosRowChangeEvent(((OrcamentosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2367,8 +2559,8 @@ namespace OficinaMec {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.OrcamentoRowDeleted != null)) {
-                    this.OrcamentoRowDeleted(this, new OrcamentoRowChangeEvent(((OrcamentoRow)(e.Row)), e.Action));
+                if ((this.OrcamentosRowDeleted != null)) {
+                    this.OrcamentosRowDeleted(this, new OrcamentosRowChangeEvent(((OrcamentosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2376,14 +2568,14 @@ namespace OficinaMec {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.OrcamentoRowDeleting != null)) {
-                    this.OrcamentoRowDeleting(this, new OrcamentoRowChangeEvent(((OrcamentoRow)(e.Row)), e.Action));
+                if ((this.OrcamentosRowDeleting != null)) {
+                    this.OrcamentosRowDeleting(this, new OrcamentosRowChangeEvent(((OrcamentosRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveOrcamentoRow(OrcamentoRow row) {
+            public void RemoveOrcamentosRow(OrcamentosRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2410,7 +2602,7 @@ namespace OficinaMec {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "OrcamentoDataTable";
+                attribute2.FixedValue = "OrcamentosDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2458,6 +2650,8 @@ namespace OficinaMec {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class Pecas_estoqueDataTable : global::System.Data.TypedTableBase<Pecas_estoqueRow> {
             
+            private global::System.Data.DataColumn columnCOD_PECA;
+            
             private global::System.Data.DataColumn columnQTTD_PECA;
             
             private global::System.Data.DataColumn columnDESCR_PECA;
@@ -2467,8 +2661,6 @@ namespace OficinaMec {
             private global::System.Data.DataColumn columnPRECO_PECA;
             
             private global::System.Data.DataColumn columnMODELO_PECA;
-            
-            private global::System.Data.DataColumn columnCOD_PECA;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -2501,6 +2693,14 @@ namespace OficinaMec {
             protected Pecas_estoqueDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn COD_PECAColumn {
+                get {
+                    return this.columnCOD_PECA;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2545,14 +2745,6 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn COD_PECAColumn {
-                get {
-                    return this.columnCOD_PECA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2588,15 +2780,15 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Pecas_estoqueRow AddPecas_estoqueRow(string QTTD_PECA, string DESCR_PECA, string FABRIC_PECA, string PRECO_PECA, string MODELO_PECA, string COD_PECA) {
+            public Pecas_estoqueRow AddPecas_estoqueRow(string COD_PECA, decimal QTTD_PECA, string DESCR_PECA, string FABRIC_PECA, decimal PRECO_PECA, string MODELO_PECA) {
                 Pecas_estoqueRow rowPecas_estoqueRow = ((Pecas_estoqueRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        COD_PECA,
                         QTTD_PECA,
                         DESCR_PECA,
                         FABRIC_PECA,
                         PRECO_PECA,
-                        MODELO_PECA,
-                        COD_PECA};
+                        MODELO_PECA};
                 rowPecas_estoqueRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPecas_estoqueRow);
                 return rowPecas_estoqueRow;
@@ -2626,44 +2818,42 @@ namespace OficinaMec {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnCOD_PECA = base.Columns["COD_PECA"];
                 this.columnQTTD_PECA = base.Columns["QTTD_PECA"];
                 this.columnDESCR_PECA = base.Columns["DESCR_PECA"];
                 this.columnFABRIC_PECA = base.Columns["FABRIC_PECA"];
                 this.columnPRECO_PECA = base.Columns["PRECO_PECA"];
                 this.columnMODELO_PECA = base.Columns["MODELO_PECA"];
-                this.columnCOD_PECA = base.Columns["COD_PECA"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnQTTD_PECA = new global::System.Data.DataColumn("QTTD_PECA", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCOD_PECA = new global::System.Data.DataColumn("COD_PECA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCOD_PECA);
+                this.columnQTTD_PECA = new global::System.Data.DataColumn("QTTD_PECA", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQTTD_PECA);
                 this.columnDESCR_PECA = new global::System.Data.DataColumn("DESCR_PECA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDESCR_PECA);
                 this.columnFABRIC_PECA = new global::System.Data.DataColumn("FABRIC_PECA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFABRIC_PECA);
-                this.columnPRECO_PECA = new global::System.Data.DataColumn("PRECO_PECA", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnPRECO_PECA = new global::System.Data.DataColumn("PRECO_PECA", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPRECO_PECA);
                 this.columnMODELO_PECA = new global::System.Data.DataColumn("MODELO_PECA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMODELO_PECA);
-                this.columnCOD_PECA = new global::System.Data.DataColumn("COD_PECA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCOD_PECA);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCOD_PECA}, true));
+                this.columnCOD_PECA.AllowDBNull = false;
+                this.columnCOD_PECA.Unique = true;
+                this.columnCOD_PECA.MaxLength = 100;
                 this.columnQTTD_PECA.AllowDBNull = false;
-                this.columnQTTD_PECA.MaxLength = 100;
                 this.columnDESCR_PECA.AllowDBNull = false;
                 this.columnDESCR_PECA.MaxLength = 100;
                 this.columnFABRIC_PECA.AllowDBNull = false;
                 this.columnFABRIC_PECA.MaxLength = 100;
                 this.columnPRECO_PECA.AllowDBNull = false;
-                this.columnPRECO_PECA.MaxLength = 100;
                 this.columnMODELO_PECA.AllowDBNull = false;
                 this.columnMODELO_PECA.MaxLength = 100;
-                this.columnCOD_PECA.AllowDBNull = false;
-                this.columnCOD_PECA.Unique = true;
-                this.columnCOD_PECA.MaxLength = 100;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2806,67 +2996,122 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string COD_AGEND {
+            public string NUM_Ag {
                 get {
-                    return ((string)(this[this.tableAgendamento.COD_AGENDColumn]));
+                    return ((string)(this[this.tableAgendamento.NUM_AgColumn]));
                 }
                 set {
-                    this[this.tableAgendamento.COD_AGENDColumn] = value;
+                    this[this.tableAgendamento.NUM_AgColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string PLACA_CAR {
+            public string NUM_ORC {
                 get {
-                    return ((string)(this[this.tableAgendamento.PLACA_CARColumn]));
+                    return ((string)(this[this.tableAgendamento.NUM_ORCColumn]));
                 }
                 set {
-                    this[this.tableAgendamento.PLACA_CARColumn] = value;
+                    this[this.tableAgendamento.NUM_ORCColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string MODELO_CAR {
+            public string DESC_ORC {
                 get {
-                    return ((string)(this[this.tableAgendamento.MODELO_CARColumn]));
+                    return ((string)(this[this.tableAgendamento.DESC_ORCColumn]));
                 }
                 set {
-                    this[this.tableAgendamento.MODELO_CARColumn] = value;
+                    this[this.tableAgendamento.DESC_ORCColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string NOME_CLI {
+            public string CPF_ORC {
                 get {
-                    return ((string)(this[this.tableAgendamento.NOME_CLIColumn]));
+                    return ((string)(this[this.tableAgendamento.CPF_ORCColumn]));
                 }
                 set {
-                    this[this.tableAgendamento.NOME_CLIColumn] = value;
+                    this[this.tableAgendamento.CPF_ORCColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string CPF_CNPJ_CLI {
+            public string PLACA_ORC {
                 get {
-                    return ((string)(this[this.tableAgendamento.CPF_CNPJ_CLIColumn]));
+                    return ((string)(this[this.tableAgendamento.PLACA_ORCColumn]));
                 }
                 set {
-                    this[this.tableAgendamento.CPF_CNPJ_CLIColumn] = value;
+                    this[this.tableAgendamento.PLACA_ORCColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ClienteRow ClienteRow {
+            public string NOME_ORC {
                 get {
-                    return ((ClienteRow)(this.GetParentRow(this.Table.ParentRelations["FK__Agendamen__CPF_C__2A4B4B5E"])));
+                    return ((string)(this[this.tableAgendamento.NOME_ORCColumn]));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK__Agendamen__CPF_C__2A4B4B5E"]);
+                    this[this.tableAgendamento.NOME_ORCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TEL_ORC {
+                get {
+                    return ((string)(this[this.tableAgendamento.TEL_ORCColumn]));
+                }
+                set {
+                    this[this.tableAgendamento.TEL_ORCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ANO_FAB_ORC {
+                get {
+                    return ((string)(this[this.tableAgendamento.ANO_FAB_ORCColumn]));
+                }
+                set {
+                    this[this.tableAgendamento.ANO_FAB_ORCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MOD_ORC {
+                get {
+                    return ((string)(this[this.tableAgendamento.MOD_ORCColumn]));
+                }
+                set {
+                    this[this.tableAgendamento.MOD_ORCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DATA_AG {
+                get {
+                    return ((string)(this[this.tableAgendamento.DATA_AGColumn]));
+                }
+                set {
+                    this[this.tableAgendamento.DATA_AGColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string HORA_AG {
+                get {
+                    return ((string)(this[this.tableAgendamento.HORA_AGColumn]));
+                }
+                set {
+                    this[this.tableAgendamento.HORA_AGColumn] = value;
                 }
             }
         }
@@ -2939,6 +3184,17 @@ namespace OficinaMec {
                     this[this.tableCarro.FABRIC_CARColumn] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ClienteRow[] GetClienteRows() {
+                if ((this.Table.ChildRelations["FK__Cliente__PLACA_C__3C34F16F"] == null)) {
+                    return new ClienteRow[0];
+                }
+                else {
+                    return ((ClienteRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Cliente__PLACA_C__3C34F16F"])));
+                }
+            }
         }
         
         /// <summary>
@@ -2957,23 +3213,39 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string NOME_CLI {
-                get {
-                    return ((string)(this[this.tableCliente.NOME_CLIColumn]));
-                }
-                set {
-                    this[this.tableCliente.NOME_CLIColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string CPF_CNPJ_CLI {
                 get {
                     return ((string)(this[this.tableCliente.CPF_CNPJ_CLIColumn]));
                 }
                 set {
                     this[this.tableCliente.CPF_CNPJ_CLIColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string PLACA_CAR {
+                get {
+                    try {
+                        return ((string)(this[this.tableCliente.PLACA_CARColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("O valor da coluna \'PLACA_CAR\' na tabela \'Cliente\' é DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCliente.PLACA_CARColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string NOME_CLI {
+                get {
+                    return ((string)(this[this.tableCliente.NOME_CLIColumn]));
+                }
+                set {
+                    this[this.tableCliente.NOME_CLIColumn] = value;
                 }
             }
             
@@ -3023,24 +3295,25 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string PLACA_CAR {
+            public CarroRow CarroRow {
                 get {
-                    return ((string)(this[this.tableCliente.PLACA_CARColumn]));
+                    return ((CarroRow)(this.GetParentRow(this.Table.ParentRelations["FK__Cliente__PLACA_C__3C34F16F"])));
                 }
                 set {
-                    this[this.tableCliente.PLACA_CARColumn] = value;
+                    this.SetParentRow(value, this.Table.ParentRelations["FK__Cliente__PLACA_C__3C34F16F"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public AgendamentoRow[] GetAgendamentoRows() {
-                if ((this.Table.ChildRelations["FK__Agendamen__CPF_C__2A4B4B5E"] == null)) {
-                    return new AgendamentoRow[0];
-                }
-                else {
-                    return ((AgendamentoRow[])(base.GetChildRows(this.Table.ChildRelations["FK__Agendamen__CPF_C__2A4B4B5E"])));
-                }
+            public bool IsPLACA_CARNull() {
+                return this.IsNull(this.tableCliente.PLACA_CARColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetPLACA_CARNull() {
+                this[this.tableCliente.PLACA_CARColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -3176,80 +3449,146 @@ namespace OficinaMec {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class OrcamentoRow : global::System.Data.DataRow {
+        public partial class OrcamentosRow : global::System.Data.DataRow {
             
-            private OrcamentoDataTable tableOrcamento;
+            private OrcamentosDataTable tableOrcamentos;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal OrcamentoRow(global::System.Data.DataRowBuilder rb) : 
+            internal OrcamentosRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableOrcamento = ((OrcamentoDataTable)(this.Table));
+                this.tableOrcamentos = ((OrcamentosDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int NUM_ORC {
+            public string NUM_ORC {
                 get {
-                    return ((int)(this[this.tableOrcamento.NUM_ORCColumn]));
+                    return ((string)(this[this.tableOrcamentos.NUM_ORCColumn]));
                 }
                 set {
-                    this[this.tableOrcamento.NUM_ORCColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string PRECO_ORC {
-                get {
-                    return ((string)(this[this.tableOrcamento.PRECO_ORCColumn]));
-                }
-                set {
-                    this[this.tableOrcamento.PRECO_ORCColumn] = value;
+                    this[this.tableOrcamentos.NUM_ORCColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string COD_ORC {
+            public string DESC_ORC {
                 get {
-                    return ((string)(this[this.tableOrcamento.COD_ORCColumn]));
+                    return ((string)(this[this.tableOrcamentos.DESC_ORCColumn]));
                 }
                 set {
-                    this[this.tableOrcamento.COD_ORCColumn] = value;
+                    this[this.tableOrcamentos.DESC_ORCColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string DESCR_ORC {
+            public string CPF_ORC {
                 get {
-                    return ((string)(this[this.tableOrcamento.DESCR_ORCColumn]));
+                    return ((string)(this[this.tableOrcamentos.CPF_ORCColumn]));
                 }
                 set {
-                    this[this.tableOrcamento.DESCR_ORCColumn] = value;
+                    this[this.tableOrcamentos.CPF_ORCColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string QTTD_ORC {
+            public string PLACA_ORC {
                 get {
-                    return ((string)(this[this.tableOrcamento.QTTD_ORCColumn]));
+                    return ((string)(this[this.tableOrcamentos.PLACA_ORCColumn]));
                 }
                 set {
-                    this[this.tableOrcamento.QTTD_ORCColumn] = value;
+                    this[this.tableOrcamentos.PLACA_ORCColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string COD_AGEND {
+            public string NOME_ORC {
                 get {
-                    return ((string)(this[this.tableOrcamento.COD_AGENDColumn]));
+                    return ((string)(this[this.tableOrcamentos.NOME_ORCColumn]));
                 }
                 set {
-                    this[this.tableOrcamento.COD_AGENDColumn] = value;
+                    this[this.tableOrcamentos.NOME_ORCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string TEL_ORC {
+                get {
+                    return ((string)(this[this.tableOrcamentos.TEL_ORCColumn]));
+                }
+                set {
+                    this[this.tableOrcamentos.TEL_ORCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string ANO_FAB_ORC {
+                get {
+                    return ((string)(this[this.tableOrcamentos.ANO_FAB_ORCColumn]));
+                }
+                set {
+                    this[this.tableOrcamentos.ANO_FAB_ORCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string MOD_ORC {
+                get {
+                    return ((string)(this[this.tableOrcamentos.MOD_ORCColumn]));
+                }
+                set {
+                    this[this.tableOrcamentos.MOD_ORCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string KM_ORC {
+                get {
+                    return ((string)(this[this.tableOrcamentos.KM_ORCColumn]));
+                }
+                set {
+                    this[this.tableOrcamentos.KM_ORCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string VALOR_PECAS_ORC {
+                get {
+                    return ((string)(this[this.tableOrcamentos.VALOR_PECAS_ORCColumn]));
+                }
+                set {
+                    this[this.tableOrcamentos.VALOR_PECAS_ORCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string VALOR_MAO_ORC {
+                get {
+                    return ((string)(this[this.tableOrcamentos.VALOR_MAO_ORCColumn]));
+                }
+                set {
+                    this[this.tableOrcamentos.VALOR_MAO_ORCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string VALOR_TOTAL_ORC {
+                get {
+                    return ((string)(this[this.tableOrcamentos.VALOR_TOTAL_ORCColumn]));
+                }
+                set {
+                    this[this.tableOrcamentos.VALOR_TOTAL_ORCColumn] = value;
                 }
             }
         }
@@ -3270,9 +3609,20 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string QTTD_PECA {
+            public string COD_PECA {
                 get {
-                    return ((string)(this[this.tablePecas_estoque.QTTD_PECAColumn]));
+                    return ((string)(this[this.tablePecas_estoque.COD_PECAColumn]));
+                }
+                set {
+                    this[this.tablePecas_estoque.COD_PECAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal QTTD_PECA {
+                get {
+                    return ((decimal)(this[this.tablePecas_estoque.QTTD_PECAColumn]));
                 }
                 set {
                     this[this.tablePecas_estoque.QTTD_PECAColumn] = value;
@@ -3303,9 +3653,9 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string PRECO_PECA {
+            public decimal PRECO_PECA {
                 get {
-                    return ((string)(this[this.tablePecas_estoque.PRECO_PECAColumn]));
+                    return ((decimal)(this[this.tablePecas_estoque.PRECO_PECAColumn]));
                 }
                 set {
                     this[this.tablePecas_estoque.PRECO_PECAColumn] = value;
@@ -3320,17 +3670,6 @@ namespace OficinaMec {
                 }
                 set {
                     this[this.tablePecas_estoque.MODELO_PECAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string COD_PECA {
-                get {
-                    return ((string)(this[this.tablePecas_estoque.COD_PECAColumn]));
-                }
-                set {
-                    this[this.tablePecas_estoque.COD_PECAColumn] = value;
                 }
             }
         }
@@ -3509,22 +3848,22 @@ namespace OficinaMec {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class OrcamentoRowChangeEvent : global::System.EventArgs {
+        public class OrcamentosRowChangeEvent : global::System.EventArgs {
             
-            private OrcamentoRow eventRow;
+            private OrcamentosRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public OrcamentoRowChangeEvent(OrcamentoRow row, global::System.Data.DataRowAction action) {
+            public OrcamentosRowChangeEvent(OrcamentosRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public OrcamentoRow Row {
+            public OrcamentosRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -3698,56 +4037,40 @@ namespace OficinaMec.OficinaMecDataSetTableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Agendamento";
-            tableMapping.ColumnMappings.Add("COD_AGEND", "COD_AGEND");
-            tableMapping.ColumnMappings.Add("PLACA_CAR", "PLACA_CAR");
-            tableMapping.ColumnMappings.Add("MODELO_CAR", "MODELO_CAR");
-            tableMapping.ColumnMappings.Add("NOME_CLI", "NOME_CLI");
-            tableMapping.ColumnMappings.Add("CPF_CNPJ_CLI", "CPF_CNPJ_CLI");
+            tableMapping.ColumnMappings.Add("NUM_Ag", "NUM_Ag");
+            tableMapping.ColumnMappings.Add("NUM_ORC", "NUM_ORC");
+            tableMapping.ColumnMappings.Add("DESC_ORC", "DESC_ORC");
+            tableMapping.ColumnMappings.Add("CPF_ORC", "CPF_ORC");
+            tableMapping.ColumnMappings.Add("PLACA_ORC", "PLACA_ORC");
+            tableMapping.ColumnMappings.Add("NOME_ORC", "NOME_ORC");
+            tableMapping.ColumnMappings.Add("TEL_ORC", "TEL_ORC");
+            tableMapping.ColumnMappings.Add("ANO_FAB_ORC", "ANO_FAB_ORC");
+            tableMapping.ColumnMappings.Add("MOD_ORC", "MOD_ORC");
+            tableMapping.ColumnMappings.Add("DATA_AG", "DATA_AG");
+            tableMapping.ColumnMappings.Add("HORA_AG", "HORA_AG");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Agendamento] WHERE (([COD_AGEND] = @Original_COD_AGEND) AND ([" +
-                "PLACA_CAR] = @Original_PLACA_CAR) AND ([MODELO_CAR] = @Original_MODELO_CAR) AND " +
-                "([NOME_CLI] = @Original_NOME_CLI) AND ([CPF_CNPJ_CLI] = @Original_CPF_CNPJ_CLI))" +
-                "";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COD_AGEND", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_AGEND", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PLACA_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MODELO_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MODELO_CAR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CPF_CNPJ_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF_CNPJ_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Agendamento] ([COD_AGEND], [PLACA_CAR], [MODELO_CAR], [NOME_CLI], [CPF_CNPJ_CLI]) VALUES (@COD_AGEND, @PLACA_CAR, @MODELO_CAR, @NOME_CLI, @CPF_CNPJ_CLI);
-SELECT COD_AGEND, PLACA_CAR, MODELO_CAR, NOME_CLI, CPF_CNPJ_CLI FROM Agendamento WHERE (COD_AGEND = @COD_AGEND)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Agendamento] ([NUM_Ag], [NUM_ORC], [DESC_ORC], [CPF_ORC], [PLACA_ORC], [NOME_ORC], [TEL_ORC], [ANO_FAB_ORC], [MOD_ORC], [DATA_AG], [HORA_AG]) VALUES (@NUM_Ag, @NUM_ORC, @DESC_ORC, @CPF_ORC, @PLACA_ORC, @NOME_ORC, @TEL_ORC, @ANO_FAB_ORC, @MOD_ORC, @DATA_AG, @HORA_AG)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COD_AGEND", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_AGEND", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PLACA_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MODELO_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MODELO_CAR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CPF_CNPJ_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF_CNPJ_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Agendamento] SET [COD_AGEND] = @COD_AGEND, [PLACA_CAR] = @PLACA_CAR, [MODELO_CAR] = @MODELO_CAR, [NOME_CLI] = @NOME_CLI, [CPF_CNPJ_CLI] = @CPF_CNPJ_CLI WHERE (([COD_AGEND] = @Original_COD_AGEND) AND ([PLACA_CAR] = @Original_PLACA_CAR) AND ([MODELO_CAR] = @Original_MODELO_CAR) AND ([NOME_CLI] = @Original_NOME_CLI) AND ([CPF_CNPJ_CLI] = @Original_CPF_CNPJ_CLI));
-SELECT COD_AGEND, PLACA_CAR, MODELO_CAR, NOME_CLI, CPF_CNPJ_CLI FROM Agendamento WHERE (COD_AGEND = @COD_AGEND)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COD_AGEND", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_AGEND", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PLACA_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MODELO_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MODELO_CAR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CPF_CNPJ_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF_CNPJ_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COD_AGEND", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_AGEND", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PLACA_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MODELO_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MODELO_CAR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CPF_CNPJ_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF_CNPJ_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUM_Ag", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_Ag", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUM_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESC_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESC_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CPF_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PLACA_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TEL_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEL_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ANO_FAB_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ANO_FAB_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MOD_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MOD_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DATA_AG", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DATA_AG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HORA_AG", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HORA_AG", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecConnectionString;
+            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3756,8 +4079,8 @@ SELECT COD_AGEND, PLACA_CAR, MODELO_CAR, NOME_CLI, CPF_CNPJ_CLI FROM Agendamento
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT COD_AGEND, PLACA_CAR, MODELO_CAR, NOME_CLI, CPF_CNPJ_CLI FROM dbo.Agendame" +
-                "nto";
+            this._commandCollection[0].CommandText = "SELECT NUM_Ag, NUM_ORC, DESC_ORC, CPF_ORC, PLACA_ORC, NOME_ORC, TEL_ORC, ANO_FAB_" +
+                "ORC, MOD_ORC, DATA_AG, HORA_AG FROM dbo.Agendamento";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3817,88 +4140,73 @@ SELECT COD_AGEND, PLACA_CAR, MODELO_CAR, NOME_CLI, CPF_CNPJ_CLI FROM Agendamento
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_COD_AGEND, string Original_PLACA_CAR, string Original_MODELO_CAR, string Original_NOME_CLI, string Original_CPF_CNPJ_CLI) {
-            if ((Original_COD_AGEND == null)) {
-                throw new global::System.ArgumentNullException("Original_COD_AGEND");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_COD_AGEND));
-            }
-            if ((Original_PLACA_CAR == null)) {
-                throw new global::System.ArgumentNullException("Original_PLACA_CAR");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_PLACA_CAR));
-            }
-            if ((Original_MODELO_CAR == null)) {
-                throw new global::System.ArgumentNullException("Original_MODELO_CAR");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_MODELO_CAR));
-            }
-            if ((Original_NOME_CLI == null)) {
-                throw new global::System.ArgumentNullException("Original_NOME_CLI");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_NOME_CLI));
-            }
-            if ((Original_CPF_CNPJ_CLI == null)) {
-                throw new global::System.ArgumentNullException("Original_CPF_CNPJ_CLI");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_CPF_CNPJ_CLI));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string COD_AGEND, string PLACA_CAR, string MODELO_CAR, string NOME_CLI, string CPF_CNPJ_CLI) {
-            if ((COD_AGEND == null)) {
-                throw new global::System.ArgumentNullException("COD_AGEND");
+        public virtual int Insert(string NUM_Ag, string NUM_ORC, string DESC_ORC, string CPF_ORC, string PLACA_ORC, string NOME_ORC, string TEL_ORC, string ANO_FAB_ORC, string MOD_ORC, string DATA_AG, string HORA_AG) {
+            if ((NUM_Ag == null)) {
+                throw new global::System.ArgumentNullException("NUM_Ag");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(COD_AGEND));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(NUM_Ag));
             }
-            if ((PLACA_CAR == null)) {
-                throw new global::System.ArgumentNullException("PLACA_CAR");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(PLACA_CAR));
-            }
-            if ((MODELO_CAR == null)) {
-                throw new global::System.ArgumentNullException("MODELO_CAR");
+            if ((NUM_ORC == null)) {
+                throw new global::System.ArgumentNullException("NUM_ORC");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(MODELO_CAR));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(NUM_ORC));
             }
-            if ((NOME_CLI == null)) {
-                throw new global::System.ArgumentNullException("NOME_CLI");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(NOME_CLI));
-            }
-            if ((CPF_CNPJ_CLI == null)) {
-                throw new global::System.ArgumentNullException("CPF_CNPJ_CLI");
+            if ((DESC_ORC == null)) {
+                throw new global::System.ArgumentNullException("DESC_ORC");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(CPF_CNPJ_CLI));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(DESC_ORC));
+            }
+            if ((CPF_ORC == null)) {
+                throw new global::System.ArgumentNullException("CPF_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(CPF_ORC));
+            }
+            if ((PLACA_ORC == null)) {
+                throw new global::System.ArgumentNullException("PLACA_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(PLACA_ORC));
+            }
+            if ((NOME_ORC == null)) {
+                throw new global::System.ArgumentNullException("NOME_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(NOME_ORC));
+            }
+            if ((TEL_ORC == null)) {
+                throw new global::System.ArgumentNullException("TEL_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(TEL_ORC));
+            }
+            if ((ANO_FAB_ORC == null)) {
+                throw new global::System.ArgumentNullException("ANO_FAB_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(ANO_FAB_ORC));
+            }
+            if ((MOD_ORC == null)) {
+                throw new global::System.ArgumentNullException("MOD_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(MOD_ORC));
+            }
+            if ((DATA_AG == null)) {
+                throw new global::System.ArgumentNullException("DATA_AG");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(DATA_AG));
+            }
+            if ((HORA_AG == null)) {
+                throw new global::System.ArgumentNullException("HORA_AG");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(HORA_AG));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3914,95 +4222,6 @@ SELECT COD_AGEND, PLACA_CAR, MODELO_CAR, NOME_CLI, CPF_CNPJ_CLI FROM Agendamento
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string COD_AGEND, string PLACA_CAR, string MODELO_CAR, string NOME_CLI, string CPF_CNPJ_CLI, string Original_COD_AGEND, string Original_PLACA_CAR, string Original_MODELO_CAR, string Original_NOME_CLI, string Original_CPF_CNPJ_CLI) {
-            if ((COD_AGEND == null)) {
-                throw new global::System.ArgumentNullException("COD_AGEND");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(COD_AGEND));
-            }
-            if ((PLACA_CAR == null)) {
-                throw new global::System.ArgumentNullException("PLACA_CAR");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(PLACA_CAR));
-            }
-            if ((MODELO_CAR == null)) {
-                throw new global::System.ArgumentNullException("MODELO_CAR");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(MODELO_CAR));
-            }
-            if ((NOME_CLI == null)) {
-                throw new global::System.ArgumentNullException("NOME_CLI");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(NOME_CLI));
-            }
-            if ((CPF_CNPJ_CLI == null)) {
-                throw new global::System.ArgumentNullException("CPF_CNPJ_CLI");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(CPF_CNPJ_CLI));
-            }
-            if ((Original_COD_AGEND == null)) {
-                throw new global::System.ArgumentNullException("Original_COD_AGEND");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_COD_AGEND));
-            }
-            if ((Original_PLACA_CAR == null)) {
-                throw new global::System.ArgumentNullException("Original_PLACA_CAR");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_PLACA_CAR));
-            }
-            if ((Original_MODELO_CAR == null)) {
-                throw new global::System.ArgumentNullException("Original_MODELO_CAR");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_MODELO_CAR));
-            }
-            if ((Original_NOME_CLI == null)) {
-                throw new global::System.ArgumentNullException("Original_NOME_CLI");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_NOME_CLI));
-            }
-            if ((Original_CPF_CNPJ_CLI == null)) {
-                throw new global::System.ArgumentNullException("Original_CPF_CNPJ_CLI");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_CPF_CNPJ_CLI));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string PLACA_CAR, string MODELO_CAR, string NOME_CLI, string CPF_CNPJ_CLI, string Original_COD_AGEND, string Original_PLACA_CAR, string Original_MODELO_CAR, string Original_NOME_CLI, string Original_CPF_CNPJ_CLI) {
-            return this.Update(Original_COD_AGEND, PLACA_CAR, MODELO_CAR, NOME_CLI, CPF_CNPJ_CLI, Original_COD_AGEND, Original_PLACA_CAR, Original_MODELO_CAR, Original_NOME_CLI, Original_CPF_CNPJ_CLI);
         }
     }
     
@@ -4175,7 +4394,7 @@ SELECT PLACA_CAR, COR_CAR, ANO_CAR, MODELO_CAR, FABRIC_CAR FROM Carro WHERE (PLA
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecConnectionString;
+            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4554,63 +4773,65 @@ SELECT PLACA_CAR, COR_CAR, ANO_CAR, MODELO_CAR, FABRIC_CAR FROM Carro WHERE (PLA
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Cliente";
-            tableMapping.ColumnMappings.Add("NOME_CLI", "NOME_CLI");
             tableMapping.ColumnMappings.Add("CPF_CNPJ_CLI", "CPF_CNPJ_CLI");
+            tableMapping.ColumnMappings.Add("PLACA_CAR", "PLACA_CAR");
+            tableMapping.ColumnMappings.Add("NOME_CLI", "NOME_CLI");
             tableMapping.ColumnMappings.Add("RG_CLI", "RG_CLI");
             tableMapping.ColumnMappings.Add("EMAIL_CLI", "EMAIL_CLI");
             tableMapping.ColumnMappings.Add("ENDERECO_CLI", "ENDERECO_CLI");
             tableMapping.ColumnMappings.Add("TELEFONE_CLI", "TELEFONE_CLI");
-            tableMapping.ColumnMappings.Add("PLACA_CAR", "PLACA_CAR");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Cliente] WHERE (([NOME_CLI] = @Original_NOME_CLI) AND ([CPF_CNPJ_CLI] = @Original_CPF_CNPJ_CLI) AND ([RG_CLI] = @Original_RG_CLI) AND ([EMAIL_CLI] = @Original_EMAIL_CLI) AND ([ENDERECO_CLI] = @Original_ENDERECO_CLI) AND ([TELEFONE_CLI] = @Original_TELEFONE_CLI) AND ([PLACA_CAR] = @Original_PLACA_CAR))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Cliente] WHERE (([CPF_CNPJ_CLI] = @Original_CPF_CNPJ_CLI) AND ((@IsNull_PLACA_CAR = 1 AND [PLACA_CAR] IS NULL) OR ([PLACA_CAR] = @Original_PLACA_CAR)) AND ([NOME_CLI] = @Original_NOME_CLI) AND ([RG_CLI] = @Original_RG_CLI) AND ([EMAIL_CLI] = @Original_EMAIL_CLI) AND ([ENDERECO_CLI] = @Original_ENDERECO_CLI) AND ([TELEFONE_CLI] = @Original_TELEFONE_CLI))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CPF_CNPJ_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF_CNPJ_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PLACA_CAR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PLACA_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RG_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RG_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EMAIL_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EMAIL_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ENDERECO_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENDERECO_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TELEFONE_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TELEFONE_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PLACA_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Cliente] ([NOME_CLI], [CPF_CNPJ_CLI], [RG_CLI], [EMAIL_CLI], [ENDERECO_CLI], [TELEFONE_CLI], [PLACA_CAR]) VALUES (@NOME_CLI, @CPF_CNPJ_CLI, @RG_CLI, @EMAIL_CLI, @ENDERECO_CLI, @TELEFONE_CLI, @PLACA_CAR);
-SELECT NOME_CLI, CPF_CNPJ_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI, PLACA_CAR FROM Cliente WHERE (CPF_CNPJ_CLI = @CPF_CNPJ_CLI)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Cliente] ([CPF_CNPJ_CLI], [PLACA_CAR], [NOME_CLI], [RG_CLI], [EMAIL_CLI], [ENDERECO_CLI], [TELEFONE_CLI]) VALUES (@CPF_CNPJ_CLI, @PLACA_CAR, @NOME_CLI, @RG_CLI, @EMAIL_CLI, @ENDERECO_CLI, @TELEFONE_CLI);
+SELECT CPF_CNPJ_CLI, PLACA_CAR, NOME_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI FROM Cliente WHERE (CPF_CNPJ_CLI = @CPF_CNPJ_CLI)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CPF_CNPJ_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF_CNPJ_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PLACA_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RG_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RG_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EMAIL_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EMAIL_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ENDERECO_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENDERECO_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TELEFONE_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TELEFONE_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PLACA_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Cliente] SET [NOME_CLI] = @NOME_CLI, [CPF_CNPJ_CLI] = @CPF_CNPJ_CLI, [RG_CLI] = @RG_CLI, [EMAIL_CLI] = @EMAIL_CLI, [ENDERECO_CLI] = @ENDERECO_CLI, [TELEFONE_CLI] = @TELEFONE_CLI, [PLACA_CAR] = @PLACA_CAR WHERE (([NOME_CLI] = @Original_NOME_CLI) AND ([CPF_CNPJ_CLI] = @Original_CPF_CNPJ_CLI) AND ([RG_CLI] = @Original_RG_CLI) AND ([EMAIL_CLI] = @Original_EMAIL_CLI) AND ([ENDERECO_CLI] = @Original_ENDERECO_CLI) AND ([TELEFONE_CLI] = @Original_TELEFONE_CLI) AND ([PLACA_CAR] = @Original_PLACA_CAR));
-SELECT NOME_CLI, CPF_CNPJ_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI, PLACA_CAR FROM Cliente WHERE (CPF_CNPJ_CLI = @CPF_CNPJ_CLI)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Cliente] SET [CPF_CNPJ_CLI] = @CPF_CNPJ_CLI, [PLACA_CAR] = @PLACA_CAR, [NOME_CLI] = @NOME_CLI, [RG_CLI] = @RG_CLI, [EMAIL_CLI] = @EMAIL_CLI, [ENDERECO_CLI] = @ENDERECO_CLI, [TELEFONE_CLI] = @TELEFONE_CLI WHERE (([CPF_CNPJ_CLI] = @Original_CPF_CNPJ_CLI) AND ((@IsNull_PLACA_CAR = 1 AND [PLACA_CAR] IS NULL) OR ([PLACA_CAR] = @Original_PLACA_CAR)) AND ([NOME_CLI] = @Original_NOME_CLI) AND ([RG_CLI] = @Original_RG_CLI) AND ([EMAIL_CLI] = @Original_EMAIL_CLI) AND ([ENDERECO_CLI] = @Original_ENDERECO_CLI) AND ([TELEFONE_CLI] = @Original_TELEFONE_CLI));
+SELECT CPF_CNPJ_CLI, PLACA_CAR, NOME_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI FROM Cliente WHERE (CPF_CNPJ_CLI = @CPF_CNPJ_CLI)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CPF_CNPJ_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF_CNPJ_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PLACA_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RG_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RG_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@EMAIL_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EMAIL_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ENDERECO_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENDERECO_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TELEFONE_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TELEFONE_CLI", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PLACA_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CPF_CNPJ_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF_CNPJ_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_PLACA_CAR", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PLACA_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RG_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RG_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_EMAIL_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "EMAIL_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ENDERECO_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ENDERECO_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TELEFONE_CLI", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TELEFONE_CLI", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PLACA_CAR", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_CAR", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecConnectionString;
+            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4619,8 +4840,8 @@ SELECT NOME_CLI, CPF_CNPJ_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI, PL
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT NOME_CLI, CPF_CNPJ_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI, PLA" +
-                "CA_CAR FROM dbo.Cliente";
+            this._commandCollection[0].CommandText = "SELECT CPF_CNPJ_CLI, PLACA_CAR, NOME_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFO" +
+                "NE_CLI FROM dbo.Cliente";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4681,48 +4902,50 @@ SELECT NOME_CLI, CPF_CNPJ_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI, PL
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_NOME_CLI, string Original_CPF_CNPJ_CLI, string Original_RG_CLI, string Original_EMAIL_CLI, string Original_ENDERECO_CLI, string Original_TELEFONE_CLI, string Original_PLACA_CAR) {
-            if ((Original_NOME_CLI == null)) {
-                throw new global::System.ArgumentNullException("Original_NOME_CLI");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_NOME_CLI));
-            }
+        public virtual int Delete(string Original_CPF_CNPJ_CLI, string Original_PLACA_CAR, string Original_NOME_CLI, string Original_RG_CLI, string Original_EMAIL_CLI, string Original_ENDERECO_CLI, string Original_TELEFONE_CLI) {
             if ((Original_CPF_CNPJ_CLI == null)) {
                 throw new global::System.ArgumentNullException("Original_CPF_CNPJ_CLI");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_CPF_CNPJ_CLI));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_CPF_CNPJ_CLI));
+            }
+            if ((Original_PLACA_CAR == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_PLACA_CAR));
+            }
+            if ((Original_NOME_CLI == null)) {
+                throw new global::System.ArgumentNullException("Original_NOME_CLI");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_NOME_CLI));
             }
             if ((Original_RG_CLI == null)) {
                 throw new global::System.ArgumentNullException("Original_RG_CLI");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_RG_CLI));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_RG_CLI));
             }
             if ((Original_EMAIL_CLI == null)) {
                 throw new global::System.ArgumentNullException("Original_EMAIL_CLI");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_EMAIL_CLI));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_EMAIL_CLI));
             }
             if ((Original_ENDERECO_CLI == null)) {
                 throw new global::System.ArgumentNullException("Original_ENDERECO_CLI");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_ENDERECO_CLI));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_ENDERECO_CLI));
             }
             if ((Original_TELEFONE_CLI == null)) {
                 throw new global::System.ArgumentNullException("Original_TELEFONE_CLI");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_TELEFONE_CLI));
-            }
-            if ((Original_PLACA_CAR == null)) {
-                throw new global::System.ArgumentNullException("Original_PLACA_CAR");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_PLACA_CAR));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_TELEFONE_CLI));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4744,48 +4967,48 @@ SELECT NOME_CLI, CPF_CNPJ_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI, PL
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string NOME_CLI, string CPF_CNPJ_CLI, string RG_CLI, string EMAIL_CLI, string ENDERECO_CLI, string TELEFONE_CLI, string PLACA_CAR) {
-            if ((NOME_CLI == null)) {
-                throw new global::System.ArgumentNullException("NOME_CLI");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(NOME_CLI));
-            }
+        public virtual int Insert(string CPF_CNPJ_CLI, string PLACA_CAR, string NOME_CLI, string RG_CLI, string EMAIL_CLI, string ENDERECO_CLI, string TELEFONE_CLI) {
             if ((CPF_CNPJ_CLI == null)) {
                 throw new global::System.ArgumentNullException("CPF_CNPJ_CLI");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(CPF_CNPJ_CLI));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(CPF_CNPJ_CLI));
+            }
+            if ((PLACA_CAR == null)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(PLACA_CAR));
+            }
+            if ((NOME_CLI == null)) {
+                throw new global::System.ArgumentNullException("NOME_CLI");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(NOME_CLI));
             }
             if ((RG_CLI == null)) {
                 throw new global::System.ArgumentNullException("RG_CLI");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(RG_CLI));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(RG_CLI));
             }
             if ((EMAIL_CLI == null)) {
                 throw new global::System.ArgumentNullException("EMAIL_CLI");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(EMAIL_CLI));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(EMAIL_CLI));
             }
             if ((ENDERECO_CLI == null)) {
                 throw new global::System.ArgumentNullException("ENDERECO_CLI");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(ENDERECO_CLI));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(ENDERECO_CLI));
             }
             if ((TELEFONE_CLI == null)) {
                 throw new global::System.ArgumentNullException("TELEFONE_CLI");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(TELEFONE_CLI));
-            }
-            if ((PLACA_CAR == null)) {
-                throw new global::System.ArgumentNullException("PLACA_CAR");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(PLACA_CAR));
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(TELEFONE_CLI));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4807,90 +5030,92 @@ SELECT NOME_CLI, CPF_CNPJ_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI, PL
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NOME_CLI, string CPF_CNPJ_CLI, string RG_CLI, string EMAIL_CLI, string ENDERECO_CLI, string TELEFONE_CLI, string PLACA_CAR, string Original_NOME_CLI, string Original_CPF_CNPJ_CLI, string Original_RG_CLI, string Original_EMAIL_CLI, string Original_ENDERECO_CLI, string Original_TELEFONE_CLI, string Original_PLACA_CAR) {
-            if ((NOME_CLI == null)) {
-                throw new global::System.ArgumentNullException("NOME_CLI");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(NOME_CLI));
-            }
+        public virtual int Update(string CPF_CNPJ_CLI, string PLACA_CAR, string NOME_CLI, string RG_CLI, string EMAIL_CLI, string ENDERECO_CLI, string TELEFONE_CLI, string Original_CPF_CNPJ_CLI, string Original_PLACA_CAR, string Original_NOME_CLI, string Original_RG_CLI, string Original_EMAIL_CLI, string Original_ENDERECO_CLI, string Original_TELEFONE_CLI) {
             if ((CPF_CNPJ_CLI == null)) {
                 throw new global::System.ArgumentNullException("CPF_CNPJ_CLI");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(CPF_CNPJ_CLI));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(CPF_CNPJ_CLI));
+            }
+            if ((PLACA_CAR == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(PLACA_CAR));
+            }
+            if ((NOME_CLI == null)) {
+                throw new global::System.ArgumentNullException("NOME_CLI");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(NOME_CLI));
             }
             if ((RG_CLI == null)) {
                 throw new global::System.ArgumentNullException("RG_CLI");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(RG_CLI));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(RG_CLI));
             }
             if ((EMAIL_CLI == null)) {
                 throw new global::System.ArgumentNullException("EMAIL_CLI");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(EMAIL_CLI));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(EMAIL_CLI));
             }
             if ((ENDERECO_CLI == null)) {
                 throw new global::System.ArgumentNullException("ENDERECO_CLI");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(ENDERECO_CLI));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(ENDERECO_CLI));
             }
             if ((TELEFONE_CLI == null)) {
                 throw new global::System.ArgumentNullException("TELEFONE_CLI");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(TELEFONE_CLI));
-            }
-            if ((PLACA_CAR == null)) {
-                throw new global::System.ArgumentNullException("PLACA_CAR");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(PLACA_CAR));
-            }
-            if ((Original_NOME_CLI == null)) {
-                throw new global::System.ArgumentNullException("Original_NOME_CLI");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_NOME_CLI));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(TELEFONE_CLI));
             }
             if ((Original_CPF_CNPJ_CLI == null)) {
                 throw new global::System.ArgumentNullException("Original_CPF_CNPJ_CLI");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_CPF_CNPJ_CLI));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_CPF_CNPJ_CLI));
+            }
+            if ((Original_PLACA_CAR == null)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_PLACA_CAR));
+            }
+            if ((Original_NOME_CLI == null)) {
+                throw new global::System.ArgumentNullException("Original_NOME_CLI");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_NOME_CLI));
             }
             if ((Original_RG_CLI == null)) {
                 throw new global::System.ArgumentNullException("Original_RG_CLI");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_RG_CLI));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_RG_CLI));
             }
             if ((Original_EMAIL_CLI == null)) {
                 throw new global::System.ArgumentNullException("Original_EMAIL_CLI");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_EMAIL_CLI));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_EMAIL_CLI));
             }
             if ((Original_ENDERECO_CLI == null)) {
                 throw new global::System.ArgumentNullException("Original_ENDERECO_CLI");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_ENDERECO_CLI));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_ENDERECO_CLI));
             }
             if ((Original_TELEFONE_CLI == null)) {
                 throw new global::System.ArgumentNullException("Original_TELEFONE_CLI");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_TELEFONE_CLI));
-            }
-            if ((Original_PLACA_CAR == null)) {
-                throw new global::System.ArgumentNullException("Original_PLACA_CAR");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_PLACA_CAR));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_TELEFONE_CLI));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4912,8 +5137,8 @@ SELECT NOME_CLI, CPF_CNPJ_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI, PL
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NOME_CLI, string RG_CLI, string EMAIL_CLI, string ENDERECO_CLI, string TELEFONE_CLI, string PLACA_CAR, string Original_NOME_CLI, string Original_CPF_CNPJ_CLI, string Original_RG_CLI, string Original_EMAIL_CLI, string Original_ENDERECO_CLI, string Original_TELEFONE_CLI, string Original_PLACA_CAR) {
-            return this.Update(NOME_CLI, Original_CPF_CNPJ_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI, PLACA_CAR, Original_NOME_CLI, Original_CPF_CNPJ_CLI, Original_RG_CLI, Original_EMAIL_CLI, Original_ENDERECO_CLI, Original_TELEFONE_CLI, Original_PLACA_CAR);
+        public virtual int Update(string PLACA_CAR, string NOME_CLI, string RG_CLI, string EMAIL_CLI, string ENDERECO_CLI, string TELEFONE_CLI, string Original_CPF_CNPJ_CLI, string Original_PLACA_CAR, string Original_NOME_CLI, string Original_RG_CLI, string Original_EMAIL_CLI, string Original_ENDERECO_CLI, string Original_TELEFONE_CLI) {
+            return this.Update(Original_CPF_CNPJ_CLI, PLACA_CAR, NOME_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI, Original_CPF_CNPJ_CLI, Original_PLACA_CAR, Original_NOME_CLI, Original_RG_CLI, Original_EMAIL_CLI, Original_ENDERECO_CLI, Original_TELEFONE_CLI);
         }
     }
     
@@ -5042,21 +5267,41 @@ SELECT NOME_CLI, CPF_CNPJ_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI, PL
             tableMapping.ColumnMappings.Add("NUM_ORC", "NUM_ORC");
             tableMapping.ColumnMappings.Add("COD_PECA", "COD_PECA");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Consulta_Banco] WHERE (([QTTD_PECA] = @Original_QTTD_PECA) AND" +
+                " ([NUM_ORC] = @Original_NUM_ORC) AND ([COD_PECA] = @Original_COD_PECA))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTTD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTTD_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NUM_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Consulta_Banco] ([QTTD_PECA], [NUM_ORC], [COD_PECA]) VALUES (@" +
-                "QTTD_PECA, @NUM_ORC, @COD_PECA)";
+                "QTTD_PECA, @NUM_ORC, @COD_PECA);\r\nSELECT QTTD_PECA, NUM_ORC, COD_PECA FROM Consu" +
+                "lta_Banco WHERE (NUM_ORC = @NUM_ORC)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTTD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTTD_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUM_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Consulta_Banco] SET [QTTD_PECA] = @QTTD_PECA, [NUM_ORC] = @NUM_ORC, [COD_PECA] = @COD_PECA WHERE (([QTTD_PECA] = @Original_QTTD_PECA) AND ([NUM_ORC] = @Original_NUM_ORC) AND ([COD_PECA] = @Original_COD_PECA));
+SELECT QTTD_PECA, NUM_ORC, COD_PECA FROM Consulta_Banco WHERE (NUM_ORC = @NUM_ORC)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTTD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTTD_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUM_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTTD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTTD_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NUM_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecConnectionString;
+            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5125,6 +5370,45 @@ SELECT NOME_CLI, CPF_CNPJ_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI, PL
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string Original_QTTD_PECA, string Original_NUM_ORC, string Original_COD_PECA) {
+            if ((Original_QTTD_PECA == null)) {
+                throw new global::System.ArgumentNullException("Original_QTTD_PECA");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_QTTD_PECA));
+            }
+            if ((Original_NUM_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_NUM_ORC");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_NUM_ORC));
+            }
+            if ((Original_COD_PECA == null)) {
+                throw new global::System.ArgumentNullException("Original_COD_PECA");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_COD_PECA));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(string QTTD_PECA, string NUM_ORC, string COD_PECA) {
             if ((QTTD_PECA == null)) {
@@ -5159,6 +5443,71 @@ SELECT NOME_CLI, CPF_CNPJ_CLI, RG_CLI, EMAIL_CLI, ENDERECO_CLI, TELEFONE_CLI, PL
                     this.Adapter.InsertCommand.Connection.Close();
                 }
             }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string QTTD_PECA, string NUM_ORC, string COD_PECA, string Original_QTTD_PECA, string Original_NUM_ORC, string Original_COD_PECA) {
+            if ((QTTD_PECA == null)) {
+                throw new global::System.ArgumentNullException("QTTD_PECA");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(QTTD_PECA));
+            }
+            if ((NUM_ORC == null)) {
+                throw new global::System.ArgumentNullException("NUM_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(NUM_ORC));
+            }
+            if ((COD_PECA == null)) {
+                throw new global::System.ArgumentNullException("COD_PECA");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(COD_PECA));
+            }
+            if ((Original_QTTD_PECA == null)) {
+                throw new global::System.ArgumentNullException("Original_QTTD_PECA");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_QTTD_PECA));
+            }
+            if ((Original_NUM_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_NUM_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_NUM_ORC));
+            }
+            if ((Original_COD_PECA == null)) {
+                throw new global::System.ArgumentNullException("Original_COD_PECA");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_COD_PECA));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string QTTD_PECA, string COD_PECA, string Original_QTTD_PECA, string Original_NUM_ORC, string Original_COD_PECA) {
+            return this.Update(QTTD_PECA, Original_NUM_ORC, COD_PECA, Original_QTTD_PECA, Original_NUM_ORC, Original_COD_PECA);
         }
     }
     
@@ -5334,7 +5683,7 @@ SELECT COD_FUNC, CPF_FUNC, NOME_FUNC, EMAIL_FUNC, SENHA_FUNC, PERMIS_FUNC FROM F
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecConnectionString;
+            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5626,7 +5975,7 @@ SELECT COD_FUNC, CPF_FUNC, NOME_FUNC, EMAIL_FUNC, SENHA_FUNC, PERMIS_FUNC FROM F
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class OrcamentoTableAdapter : global::System.ComponentModel.Component {
+    public partial class OrcamentosTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -5640,7 +5989,7 @@ SELECT COD_FUNC, CPF_FUNC, NOME_FUNC, EMAIL_FUNC, SENHA_FUNC, PERMIS_FUNC FROM F
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public OrcamentoTableAdapter() {
+        public OrcamentosTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5737,59 +6086,89 @@ SELECT COD_FUNC, CPF_FUNC, NOME_FUNC, EMAIL_FUNC, SENHA_FUNC, PERMIS_FUNC FROM F
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Orcamento";
+            tableMapping.DataSetTable = "Orcamentos";
             tableMapping.ColumnMappings.Add("NUM_ORC", "NUM_ORC");
-            tableMapping.ColumnMappings.Add("PRECO_ORC", "PRECO_ORC");
-            tableMapping.ColumnMappings.Add("COD_ORC", "COD_ORC");
-            tableMapping.ColumnMappings.Add("DESCR_ORC", "DESCR_ORC");
-            tableMapping.ColumnMappings.Add("QTTD_ORC", "QTTD_ORC");
-            tableMapping.ColumnMappings.Add("COD_AGEND", "COD_AGEND");
+            tableMapping.ColumnMappings.Add("DESC_ORC", "DESC_ORC");
+            tableMapping.ColumnMappings.Add("CPF_ORC", "CPF_ORC");
+            tableMapping.ColumnMappings.Add("PLACA_ORC", "PLACA_ORC");
+            tableMapping.ColumnMappings.Add("NOME_ORC", "NOME_ORC");
+            tableMapping.ColumnMappings.Add("TEL_ORC", "TEL_ORC");
+            tableMapping.ColumnMappings.Add("ANO_FAB_ORC", "ANO_FAB_ORC");
+            tableMapping.ColumnMappings.Add("MOD_ORC", "MOD_ORC");
+            tableMapping.ColumnMappings.Add("KM_ORC", "KM_ORC");
+            tableMapping.ColumnMappings.Add("VALOR_PECAS_ORC", "VALOR_PECAS_ORC");
+            tableMapping.ColumnMappings.Add("VALOR_MAO_ORC", "VALOR_MAO_ORC");
+            tableMapping.ColumnMappings.Add("VALOR_TOTAL_ORC", "VALOR_TOTAL_ORC");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Orcamento] WHERE (([NUM_ORC] = @Original_NUM_ORC) AND ([PRECO_ORC] = @Original_PRECO_ORC) AND ([COD_ORC] = @Original_COD_ORC) AND ([DESCR_ORC] = @Original_DESCR_ORC) AND ([QTTD_ORC] = @Original_QTTD_ORC) AND ([COD_AGEND] = @Original_COD_AGEND))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Orcamentos] WHERE (([NUM_ORC] = @Original_NUM_ORC) AND ([DESC_ORC] = @Original_DESC_ORC) AND ([CPF_ORC] = @Original_CPF_ORC) AND ([PLACA_ORC] = @Original_PLACA_ORC) AND ([NOME_ORC] = @Original_NOME_ORC) AND ([TEL_ORC] = @Original_TEL_ORC) AND ([ANO_FAB_ORC] = @Original_ANO_FAB_ORC) AND ([MOD_ORC] = @Original_MOD_ORC) AND ([KM_ORC] = @Original_KM_ORC) AND ([VALOR_PECAS_ORC] = @Original_VALOR_PECAS_ORC) AND ([VALOR_MAO_ORC] = @Original_VALOR_MAO_ORC) AND ([VALOR_TOTAL_ORC] = @Original_VALOR_TOTAL_ORC))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NUM_ORC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PRECO_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PRECO_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COD_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DESCR_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCR_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTTD_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTTD_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COD_AGEND", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_AGEND", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NUM_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DESC_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESC_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CPF_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PLACA_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TEL_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEL_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ANO_FAB_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ANO_FAB_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MOD_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MOD_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KM_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KM_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_PECAS_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_PECAS_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_MAO_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_MAO_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_TOTAL_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_TOTAL_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Orcamento] ([NUM_ORC], [PRECO_ORC], [COD_ORC], [DESCR_ORC], [QTTD_ORC], [COD_AGEND]) VALUES (@NUM_ORC, @PRECO_ORC, @COD_ORC, @DESCR_ORC, @QTTD_ORC, @COD_AGEND);
-SELECT NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND FROM Orcamento WHERE (NUM_ORC = @NUM_ORC)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Orcamentos] ([NUM_ORC], [DESC_ORC], [CPF_ORC], [PLACA_ORC], [NOME_ORC], [TEL_ORC], [ANO_FAB_ORC], [MOD_ORC], [KM_ORC], [VALOR_PECAS_ORC], [VALOR_MAO_ORC], [VALOR_TOTAL_ORC]) VALUES (@NUM_ORC, @DESC_ORC, @CPF_ORC, @PLACA_ORC, @NOME_ORC, @TEL_ORC, @ANO_FAB_ORC, @MOD_ORC, @KM_ORC, @VALOR_PECAS_ORC, @VALOR_MAO_ORC, @VALOR_TOTAL_ORC);
+SELECT NUM_ORC, DESC_ORC, CPF_ORC, PLACA_ORC, NOME_ORC, TEL_ORC, ANO_FAB_ORC, MOD_ORC, KM_ORC, VALOR_PECAS_ORC, VALOR_MAO_ORC, VALOR_TOTAL_ORC FROM Orcamentos WHERE (NUM_ORC = @NUM_ORC)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUM_ORC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PRECO_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PRECO_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COD_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESCR_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCR_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTTD_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTTD_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COD_AGEND", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_AGEND", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUM_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESC_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESC_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CPF_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PLACA_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TEL_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEL_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ANO_FAB_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ANO_FAB_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MOD_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MOD_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KM_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KM_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_PECAS_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_PECAS_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_MAO_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_MAO_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_TOTAL_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_TOTAL_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Orcamento] SET [NUM_ORC] = @NUM_ORC, [PRECO_ORC] = @PRECO_ORC, [COD_ORC] = @COD_ORC, [DESCR_ORC] = @DESCR_ORC, [QTTD_ORC] = @QTTD_ORC, [COD_AGEND] = @COD_AGEND WHERE (([NUM_ORC] = @Original_NUM_ORC) AND ([PRECO_ORC] = @Original_PRECO_ORC) AND ([COD_ORC] = @Original_COD_ORC) AND ([DESCR_ORC] = @Original_DESCR_ORC) AND ([QTTD_ORC] = @Original_QTTD_ORC) AND ([COD_AGEND] = @Original_COD_AGEND));
-SELECT NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND FROM Orcamento WHERE (NUM_ORC = @NUM_ORC)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Orcamentos] SET [NUM_ORC] = @NUM_ORC, [DESC_ORC] = @DESC_ORC, [CPF_ORC] = @CPF_ORC, [PLACA_ORC] = @PLACA_ORC, [NOME_ORC] = @NOME_ORC, [TEL_ORC] = @TEL_ORC, [ANO_FAB_ORC] = @ANO_FAB_ORC, [MOD_ORC] = @MOD_ORC, [KM_ORC] = @KM_ORC, [VALOR_PECAS_ORC] = @VALOR_PECAS_ORC, [VALOR_MAO_ORC] = @VALOR_MAO_ORC, [VALOR_TOTAL_ORC] = @VALOR_TOTAL_ORC WHERE (([NUM_ORC] = @Original_NUM_ORC) AND ([DESC_ORC] = @Original_DESC_ORC) AND ([CPF_ORC] = @Original_CPF_ORC) AND ([PLACA_ORC] = @Original_PLACA_ORC) AND ([NOME_ORC] = @Original_NOME_ORC) AND ([TEL_ORC] = @Original_TEL_ORC) AND ([ANO_FAB_ORC] = @Original_ANO_FAB_ORC) AND ([MOD_ORC] = @Original_MOD_ORC) AND ([KM_ORC] = @Original_KM_ORC) AND ([VALOR_PECAS_ORC] = @Original_VALOR_PECAS_ORC) AND ([VALOR_MAO_ORC] = @Original_VALOR_MAO_ORC) AND ([VALOR_TOTAL_ORC] = @Original_VALOR_TOTAL_ORC));
+SELECT NUM_ORC, DESC_ORC, CPF_ORC, PLACA_ORC, NOME_ORC, TEL_ORC, ANO_FAB_ORC, MOD_ORC, KM_ORC, VALOR_PECAS_ORC, VALOR_MAO_ORC, VALOR_TOTAL_ORC FROM Orcamentos WHERE (NUM_ORC = @NUM_ORC)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUM_ORC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PRECO_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PRECO_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COD_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESCR_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCR_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTTD_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTTD_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COD_AGEND", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_AGEND", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NUM_ORC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PRECO_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PRECO_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COD_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DESCR_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCR_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTTD_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTTD_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COD_AGEND", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_AGEND", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NUM_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESC_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESC_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CPF_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PLACA_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NOME_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TEL_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEL_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ANO_FAB_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ANO_FAB_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MOD_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MOD_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@KM_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KM_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_PECAS_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_PECAS_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_MAO_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_MAO_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@VALOR_TOTAL_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_TOTAL_ORC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NUM_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NUM_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DESC_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESC_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CPF_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CPF_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PLACA_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PLACA_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NOME_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NOME_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TEL_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TEL_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ANO_FAB_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ANO_FAB_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MOD_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MOD_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_KM_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "KM_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_PECAS_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_PECAS_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_MAO_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_MAO_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_VALOR_TOTAL_ORC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "VALOR_TOTAL_ORC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecConnectionString;
+            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5798,8 +6177,9 @@ SELECT NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND FROM Orcament
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND FROM dbo.Orcam" +
-                "ento";
+            this._commandCollection[0].CommandText = "SELECT NUM_ORC, DESC_ORC, CPF_ORC, PLACA_ORC, NOME_ORC, TEL_ORC, ANO_FAB_ORC, MOD" +
+                "_ORC, KM_ORC, VALOR_PECAS_ORC, VALOR_MAO_ORC, VALOR_TOTAL_ORC FROM dbo.Orcamento" +
+                "s";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5807,7 +6187,7 @@ SELECT NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND FROM Orcament
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(OficinaMecDataSet.OrcamentoDataTable dataTable) {
+        public virtual int Fill(OficinaMecDataSet.OrcamentosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5820,9 +6200,9 @@ SELECT NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND FROM Orcament
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual OficinaMecDataSet.OrcamentoDataTable GetData() {
+        public virtual OficinaMecDataSet.OrcamentosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            OficinaMecDataSet.OrcamentoDataTable dataTable = new OficinaMecDataSet.OrcamentoDataTable();
+            OficinaMecDataSet.OrcamentosDataTable dataTable = new OficinaMecDataSet.OrcamentosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5830,7 +6210,7 @@ SELECT NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND FROM Orcament
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(OficinaMecDataSet.OrcamentoDataTable dataTable) {
+        public virtual int Update(OficinaMecDataSet.OrcamentosDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -5838,7 +6218,7 @@ SELECT NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND FROM Orcament
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(OficinaMecDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Orcamento");
+            return this.Adapter.Update(dataSet, "Orcamentos");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5860,37 +6240,78 @@ SELECT NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND FROM Orcament
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_NUM_ORC, string Original_PRECO_ORC, string Original_COD_ORC, string Original_DESCR_ORC, string Original_QTTD_ORC, string Original_COD_AGEND) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_NUM_ORC));
-            if ((Original_PRECO_ORC == null)) {
-                throw new global::System.ArgumentNullException("Original_PRECO_ORC");
+        public virtual int Delete(string Original_NUM_ORC, string Original_DESC_ORC, string Original_CPF_ORC, string Original_PLACA_ORC, string Original_NOME_ORC, string Original_TEL_ORC, string Original_ANO_FAB_ORC, string Original_MOD_ORC, string Original_KM_ORC, string Original_VALOR_PECAS_ORC, string Original_VALOR_MAO_ORC, string Original_VALOR_TOTAL_ORC) {
+            if ((Original_NUM_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_NUM_ORC");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_PRECO_ORC));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_NUM_ORC));
             }
-            if ((Original_COD_ORC == null)) {
-                throw new global::System.ArgumentNullException("Original_COD_ORC");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_COD_ORC));
-            }
-            if ((Original_DESCR_ORC == null)) {
-                throw new global::System.ArgumentNullException("Original_DESCR_ORC");
+            if ((Original_DESC_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_DESC_ORC");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_DESCR_ORC));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_DESC_ORC));
             }
-            if ((Original_QTTD_ORC == null)) {
-                throw new global::System.ArgumentNullException("Original_QTTD_ORC");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_QTTD_ORC));
-            }
-            if ((Original_COD_AGEND == null)) {
-                throw new global::System.ArgumentNullException("Original_COD_AGEND");
+            if ((Original_CPF_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_CPF_ORC");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_COD_AGEND));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_CPF_ORC));
+            }
+            if ((Original_PLACA_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_PLACA_ORC");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_PLACA_ORC));
+            }
+            if ((Original_NOME_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_NOME_ORC");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_NOME_ORC));
+            }
+            if ((Original_TEL_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_TEL_ORC");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_TEL_ORC));
+            }
+            if ((Original_ANO_FAB_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_ANO_FAB_ORC");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_ANO_FAB_ORC));
+            }
+            if ((Original_MOD_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_MOD_ORC");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_MOD_ORC));
+            }
+            if ((Original_KM_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_KM_ORC");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_KM_ORC));
+            }
+            if ((Original_VALOR_PECAS_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_VALOR_PECAS_ORC");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_VALOR_PECAS_ORC));
+            }
+            if ((Original_VALOR_MAO_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_VALOR_MAO_ORC");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_VALOR_MAO_ORC));
+            }
+            if ((Original_VALOR_TOTAL_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_VALOR_TOTAL_ORC");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_VALOR_TOTAL_ORC));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5912,37 +6333,78 @@ SELECT NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND FROM Orcament
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int NUM_ORC, string PRECO_ORC, string COD_ORC, string DESCR_ORC, string QTTD_ORC, string COD_AGEND) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(NUM_ORC));
-            if ((PRECO_ORC == null)) {
-                throw new global::System.ArgumentNullException("PRECO_ORC");
+        public virtual int Insert(string NUM_ORC, string DESC_ORC, string CPF_ORC, string PLACA_ORC, string NOME_ORC, string TEL_ORC, string ANO_FAB_ORC, string MOD_ORC, string KM_ORC, string VALOR_PECAS_ORC, string VALOR_MAO_ORC, string VALOR_TOTAL_ORC) {
+            if ((NUM_ORC == null)) {
+                throw new global::System.ArgumentNullException("NUM_ORC");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(PRECO_ORC));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(NUM_ORC));
             }
-            if ((COD_ORC == null)) {
-                throw new global::System.ArgumentNullException("COD_ORC");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(COD_ORC));
-            }
-            if ((DESCR_ORC == null)) {
-                throw new global::System.ArgumentNullException("DESCR_ORC");
+            if ((DESC_ORC == null)) {
+                throw new global::System.ArgumentNullException("DESC_ORC");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(DESCR_ORC));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(DESC_ORC));
             }
-            if ((QTTD_ORC == null)) {
-                throw new global::System.ArgumentNullException("QTTD_ORC");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(QTTD_ORC));
-            }
-            if ((COD_AGEND == null)) {
-                throw new global::System.ArgumentNullException("COD_AGEND");
+            if ((CPF_ORC == null)) {
+                throw new global::System.ArgumentNullException("CPF_ORC");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(COD_AGEND));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(CPF_ORC));
+            }
+            if ((PLACA_ORC == null)) {
+                throw new global::System.ArgumentNullException("PLACA_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(PLACA_ORC));
+            }
+            if ((NOME_ORC == null)) {
+                throw new global::System.ArgumentNullException("NOME_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(NOME_ORC));
+            }
+            if ((TEL_ORC == null)) {
+                throw new global::System.ArgumentNullException("TEL_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(TEL_ORC));
+            }
+            if ((ANO_FAB_ORC == null)) {
+                throw new global::System.ArgumentNullException("ANO_FAB_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(ANO_FAB_ORC));
+            }
+            if ((MOD_ORC == null)) {
+                throw new global::System.ArgumentNullException("MOD_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(MOD_ORC));
+            }
+            if ((KM_ORC == null)) {
+                throw new global::System.ArgumentNullException("KM_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(KM_ORC));
+            }
+            if ((VALOR_PECAS_ORC == null)) {
+                throw new global::System.ArgumentNullException("VALOR_PECAS_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[9].Value = ((string)(VALOR_PECAS_ORC));
+            }
+            if ((VALOR_MAO_ORC == null)) {
+                throw new global::System.ArgumentNullException("VALOR_MAO_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(VALOR_MAO_ORC));
+            }
+            if ((VALOR_TOTAL_ORC == null)) {
+                throw new global::System.ArgumentNullException("VALOR_TOTAL_ORC");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[11].Value = ((string)(VALOR_TOTAL_ORC));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -5964,68 +6426,174 @@ SELECT NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND FROM Orcament
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int NUM_ORC, string PRECO_ORC, string COD_ORC, string DESCR_ORC, string QTTD_ORC, string COD_AGEND, int Original_NUM_ORC, string Original_PRECO_ORC, string Original_COD_ORC, string Original_DESCR_ORC, string Original_QTTD_ORC, string Original_COD_AGEND) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(NUM_ORC));
-            if ((PRECO_ORC == null)) {
-                throw new global::System.ArgumentNullException("PRECO_ORC");
+        public virtual int Update(
+                    string NUM_ORC, 
+                    string DESC_ORC, 
+                    string CPF_ORC, 
+                    string PLACA_ORC, 
+                    string NOME_ORC, 
+                    string TEL_ORC, 
+                    string ANO_FAB_ORC, 
+                    string MOD_ORC, 
+                    string KM_ORC, 
+                    string VALOR_PECAS_ORC, 
+                    string VALOR_MAO_ORC, 
+                    string VALOR_TOTAL_ORC, 
+                    string Original_NUM_ORC, 
+                    string Original_DESC_ORC, 
+                    string Original_CPF_ORC, 
+                    string Original_PLACA_ORC, 
+                    string Original_NOME_ORC, 
+                    string Original_TEL_ORC, 
+                    string Original_ANO_FAB_ORC, 
+                    string Original_MOD_ORC, 
+                    string Original_KM_ORC, 
+                    string Original_VALOR_PECAS_ORC, 
+                    string Original_VALOR_MAO_ORC, 
+                    string Original_VALOR_TOTAL_ORC) {
+            if ((NUM_ORC == null)) {
+                throw new global::System.ArgumentNullException("NUM_ORC");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(PRECO_ORC));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(NUM_ORC));
             }
-            if ((COD_ORC == null)) {
-                throw new global::System.ArgumentNullException("COD_ORC");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(COD_ORC));
-            }
-            if ((DESCR_ORC == null)) {
-                throw new global::System.ArgumentNullException("DESCR_ORC");
+            if ((DESC_ORC == null)) {
+                throw new global::System.ArgumentNullException("DESC_ORC");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(DESCR_ORC));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(DESC_ORC));
             }
-            if ((QTTD_ORC == null)) {
-                throw new global::System.ArgumentNullException("QTTD_ORC");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(QTTD_ORC));
-            }
-            if ((COD_AGEND == null)) {
-                throw new global::System.ArgumentNullException("COD_AGEND");
+            if ((CPF_ORC == null)) {
+                throw new global::System.ArgumentNullException("CPF_ORC");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(COD_AGEND));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(CPF_ORC));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_NUM_ORC));
-            if ((Original_PRECO_ORC == null)) {
-                throw new global::System.ArgumentNullException("Original_PRECO_ORC");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_PRECO_ORC));
-            }
-            if ((Original_COD_ORC == null)) {
-                throw new global::System.ArgumentNullException("Original_COD_ORC");
+            if ((PLACA_ORC == null)) {
+                throw new global::System.ArgumentNullException("PLACA_ORC");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_COD_ORC));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(PLACA_ORC));
             }
-            if ((Original_DESCR_ORC == null)) {
-                throw new global::System.ArgumentNullException("Original_DESCR_ORC");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_DESCR_ORC));
-            }
-            if ((Original_QTTD_ORC == null)) {
-                throw new global::System.ArgumentNullException("Original_QTTD_ORC");
+            if ((NOME_ORC == null)) {
+                throw new global::System.ArgumentNullException("NOME_ORC");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_QTTD_ORC));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(NOME_ORC));
             }
-            if ((Original_COD_AGEND == null)) {
-                throw new global::System.ArgumentNullException("Original_COD_AGEND");
+            if ((TEL_ORC == null)) {
+                throw new global::System.ArgumentNullException("TEL_ORC");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_COD_AGEND));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(TEL_ORC));
+            }
+            if ((ANO_FAB_ORC == null)) {
+                throw new global::System.ArgumentNullException("ANO_FAB_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(ANO_FAB_ORC));
+            }
+            if ((MOD_ORC == null)) {
+                throw new global::System.ArgumentNullException("MOD_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(MOD_ORC));
+            }
+            if ((KM_ORC == null)) {
+                throw new global::System.ArgumentNullException("KM_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(KM_ORC));
+            }
+            if ((VALOR_PECAS_ORC == null)) {
+                throw new global::System.ArgumentNullException("VALOR_PECAS_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(VALOR_PECAS_ORC));
+            }
+            if ((VALOR_MAO_ORC == null)) {
+                throw new global::System.ArgumentNullException("VALOR_MAO_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(VALOR_MAO_ORC));
+            }
+            if ((VALOR_TOTAL_ORC == null)) {
+                throw new global::System.ArgumentNullException("VALOR_TOTAL_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(VALOR_TOTAL_ORC));
+            }
+            if ((Original_NUM_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_NUM_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_NUM_ORC));
+            }
+            if ((Original_DESC_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_DESC_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_DESC_ORC));
+            }
+            if ((Original_CPF_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_CPF_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_CPF_ORC));
+            }
+            if ((Original_PLACA_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_PLACA_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_PLACA_ORC));
+            }
+            if ((Original_NOME_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_NOME_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_NOME_ORC));
+            }
+            if ((Original_TEL_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_TEL_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_TEL_ORC));
+            }
+            if ((Original_ANO_FAB_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_ANO_FAB_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_ANO_FAB_ORC));
+            }
+            if ((Original_MOD_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_MOD_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_MOD_ORC));
+            }
+            if ((Original_KM_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_KM_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_KM_ORC));
+            }
+            if ((Original_VALOR_PECAS_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_VALOR_PECAS_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_VALOR_PECAS_ORC));
+            }
+            if ((Original_VALOR_MAO_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_VALOR_MAO_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_VALOR_MAO_ORC));
+            }
+            if ((Original_VALOR_TOTAL_ORC == null)) {
+                throw new global::System.ArgumentNullException("Original_VALOR_TOTAL_ORC");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_VALOR_TOTAL_ORC));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6047,8 +6615,31 @@ SELECT NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND FROM Orcament
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string PRECO_ORC, string COD_ORC, string DESCR_ORC, string QTTD_ORC, string COD_AGEND, int Original_NUM_ORC, string Original_PRECO_ORC, string Original_COD_ORC, string Original_DESCR_ORC, string Original_QTTD_ORC, string Original_COD_AGEND) {
-            return this.Update(Original_NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND, Original_NUM_ORC, Original_PRECO_ORC, Original_COD_ORC, Original_DESCR_ORC, Original_QTTD_ORC, Original_COD_AGEND);
+        public virtual int Update(
+                    string DESC_ORC, 
+                    string CPF_ORC, 
+                    string PLACA_ORC, 
+                    string NOME_ORC, 
+                    string TEL_ORC, 
+                    string ANO_FAB_ORC, 
+                    string MOD_ORC, 
+                    string KM_ORC, 
+                    string VALOR_PECAS_ORC, 
+                    string VALOR_MAO_ORC, 
+                    string VALOR_TOTAL_ORC, 
+                    string Original_NUM_ORC, 
+                    string Original_DESC_ORC, 
+                    string Original_CPF_ORC, 
+                    string Original_PLACA_ORC, 
+                    string Original_NOME_ORC, 
+                    string Original_TEL_ORC, 
+                    string Original_ANO_FAB_ORC, 
+                    string Original_MOD_ORC, 
+                    string Original_KM_ORC, 
+                    string Original_VALOR_PECAS_ORC, 
+                    string Original_VALOR_MAO_ORC, 
+                    string Original_VALOR_TOTAL_ORC) {
+            return this.Update(Original_NUM_ORC, DESC_ORC, CPF_ORC, PLACA_ORC, NOME_ORC, TEL_ORC, ANO_FAB_ORC, MOD_ORC, KM_ORC, VALOR_PECAS_ORC, VALOR_MAO_ORC, VALOR_TOTAL_ORC, Original_NUM_ORC, Original_DESC_ORC, Original_CPF_ORC, Original_PLACA_ORC, Original_NOME_ORC, Original_TEL_ORC, Original_ANO_FAB_ORC, Original_MOD_ORC, Original_KM_ORC, Original_VALOR_PECAS_ORC, Original_VALOR_MAO_ORC, Original_VALOR_TOTAL_ORC);
         }
     }
     
@@ -6173,58 +6764,58 @@ SELECT NUM_ORC, PRECO_ORC, COD_ORC, DESCR_ORC, QTTD_ORC, COD_AGEND FROM Orcament
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Pecas_estoque";
+            tableMapping.ColumnMappings.Add("COD_PECA", "COD_PECA");
             tableMapping.ColumnMappings.Add("QTTD_PECA", "QTTD_PECA");
             tableMapping.ColumnMappings.Add("DESCR_PECA", "DESCR_PECA");
             tableMapping.ColumnMappings.Add("FABRIC_PECA", "FABRIC_PECA");
             tableMapping.ColumnMappings.Add("PRECO_PECA", "PRECO_PECA");
             tableMapping.ColumnMappings.Add("MODELO_PECA", "MODELO_PECA");
-            tableMapping.ColumnMappings.Add("COD_PECA", "COD_PECA");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Pecas_estoque] WHERE (([QTTD_PECA] = @Original_QTTD_PECA) AND ([DESCR_PECA] = @Original_DESCR_PECA) AND ([FABRIC_PECA] = @Original_FABRIC_PECA) AND ([PRECO_PECA] = @Original_PRECO_PECA) AND ([MODELO_PECA] = @Original_MODELO_PECA) AND ([COD_PECA] = @Original_COD_PECA))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Pecas_estoque] WHERE (([COD_PECA] = @Original_COD_PECA) AND ([QTTD_PECA] = @Original_QTTD_PECA) AND ([DESCR_PECA] = @Original_DESCR_PECA) AND ([FABRIC_PECA] = @Original_FABRIC_PECA) AND ([PRECO_PECA] = @Original_PRECO_PECA) AND ([MODELO_PECA] = @Original_MODELO_PECA))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTTD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTTD_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTTD_PECA", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "QTTD_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DESCR_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCR_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FABRIC_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FABRIC_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PRECO_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PRECO_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PRECO_PECA", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "PRECO_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MODELO_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MODELO_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Pecas_estoque] ([QTTD_PECA], [DESCR_PECA], [FABRIC_PECA], [PRECO_PECA], [MODELO_PECA], [COD_PECA]) VALUES (@QTTD_PECA, @DESCR_PECA, @FABRIC_PECA, @PRECO_PECA, @MODELO_PECA, @COD_PECA);
-SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FROM Pecas_estoque WHERE (COD_PECA = @COD_PECA)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Pecas_estoque] ([COD_PECA], [QTTD_PECA], [DESCR_PECA], [FABRIC_PECA], [PRECO_PECA], [MODELO_PECA]) VALUES (@COD_PECA, @QTTD_PECA, @DESCR_PECA, @FABRIC_PECA, @PRECO_PECA, @MODELO_PECA);
+SELECT COD_PECA, QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA FROM Pecas_estoque WHERE (COD_PECA = @COD_PECA)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTTD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTTD_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTTD_PECA", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "QTTD_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESCR_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCR_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FABRIC_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FABRIC_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PRECO_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PRECO_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PRECO_PECA", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "PRECO_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MODELO_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MODELO_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Pecas_estoque] SET [QTTD_PECA] = @QTTD_PECA, [DESCR_PECA] = @DESCR_PECA, [FABRIC_PECA] = @FABRIC_PECA, [PRECO_PECA] = @PRECO_PECA, [MODELO_PECA] = @MODELO_PECA, [COD_PECA] = @COD_PECA WHERE (([QTTD_PECA] = @Original_QTTD_PECA) AND ([DESCR_PECA] = @Original_DESCR_PECA) AND ([FABRIC_PECA] = @Original_FABRIC_PECA) AND ([PRECO_PECA] = @Original_PRECO_PECA) AND ([MODELO_PECA] = @Original_MODELO_PECA) AND ([COD_PECA] = @Original_COD_PECA));
-SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FROM Pecas_estoque WHERE (COD_PECA = @COD_PECA)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Pecas_estoque] SET [COD_PECA] = @COD_PECA, [QTTD_PECA] = @QTTD_PECA, [DESCR_PECA] = @DESCR_PECA, [FABRIC_PECA] = @FABRIC_PECA, [PRECO_PECA] = @PRECO_PECA, [MODELO_PECA] = @MODELO_PECA WHERE (([COD_PECA] = @Original_COD_PECA) AND ([QTTD_PECA] = @Original_QTTD_PECA) AND ([DESCR_PECA] = @Original_DESCR_PECA) AND ([FABRIC_PECA] = @Original_FABRIC_PECA) AND ([PRECO_PECA] = @Original_PRECO_PECA) AND ([MODELO_PECA] = @Original_MODELO_PECA));
+SELECT COD_PECA, QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA FROM Pecas_estoque WHERE (COD_PECA = @COD_PECA)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTTD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTTD_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@QTTD_PECA", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "QTTD_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DESCR_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCR_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@FABRIC_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FABRIC_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PRECO_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PRECO_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@PRECO_PECA", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "PRECO_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MODELO_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MODELO_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@COD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_PECA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTTD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "QTTD_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_QTTD_PECA", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "QTTD_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DESCR_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DESCR_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_FABRIC_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "FABRIC_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PRECO_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "PRECO_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_PRECO_PECA", global::System.Data.SqlDbType.Decimal, 0, global::System.Data.ParameterDirection.Input, 18, 0, "PRECO_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MODELO_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MODELO_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_COD_PECA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "COD_PECA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecConnectionString;
+            this._connection.ConnectionString = global::OficinaMec.Properties.Settings.Default.OficinaMecBD;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6233,7 +6824,7 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FROM" +
+            this._commandCollection[0].CommandText = "SELECT COD_PECA, QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA FROM" +
                 " dbo.Pecas_estoque";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
@@ -6295,42 +6886,32 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_QTTD_PECA, string Original_DESCR_PECA, string Original_FABRIC_PECA, string Original_PRECO_PECA, string Original_MODELO_PECA, string Original_COD_PECA) {
-            if ((Original_QTTD_PECA == null)) {
-                throw new global::System.ArgumentNullException("Original_QTTD_PECA");
+        public virtual int Delete(string Original_COD_PECA, decimal Original_QTTD_PECA, string Original_DESCR_PECA, string Original_FABRIC_PECA, decimal Original_PRECO_PECA, string Original_MODELO_PECA) {
+            if ((Original_COD_PECA == null)) {
+                throw new global::System.ArgumentNullException("Original_COD_PECA");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_QTTD_PECA));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_COD_PECA));
             }
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((decimal)(Original_QTTD_PECA));
             if ((Original_DESCR_PECA == null)) {
                 throw new global::System.ArgumentNullException("Original_DESCR_PECA");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_DESCR_PECA));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_DESCR_PECA));
             }
             if ((Original_FABRIC_PECA == null)) {
                 throw new global::System.ArgumentNullException("Original_FABRIC_PECA");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_FABRIC_PECA));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_FABRIC_PECA));
             }
-            if ((Original_PRECO_PECA == null)) {
-                throw new global::System.ArgumentNullException("Original_PRECO_PECA");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_PRECO_PECA));
-            }
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_PRECO_PECA));
             if ((Original_MODELO_PECA == null)) {
                 throw new global::System.ArgumentNullException("Original_MODELO_PECA");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_MODELO_PECA));
-            }
-            if ((Original_COD_PECA == null)) {
-                throw new global::System.ArgumentNullException("Original_COD_PECA");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_COD_PECA));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_MODELO_PECA));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6352,42 +6933,32 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string QTTD_PECA, string DESCR_PECA, string FABRIC_PECA, string PRECO_PECA, string MODELO_PECA, string COD_PECA) {
-            if ((QTTD_PECA == null)) {
-                throw new global::System.ArgumentNullException("QTTD_PECA");
+        public virtual int Insert(string COD_PECA, decimal QTTD_PECA, string DESCR_PECA, string FABRIC_PECA, decimal PRECO_PECA, string MODELO_PECA) {
+            if ((COD_PECA == null)) {
+                throw new global::System.ArgumentNullException("COD_PECA");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(QTTD_PECA));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(COD_PECA));
             }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((decimal)(QTTD_PECA));
             if ((DESCR_PECA == null)) {
                 throw new global::System.ArgumentNullException("DESCR_PECA");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(DESCR_PECA));
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(DESCR_PECA));
             }
             if ((FABRIC_PECA == null)) {
                 throw new global::System.ArgumentNullException("FABRIC_PECA");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(FABRIC_PECA));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(FABRIC_PECA));
             }
-            if ((PRECO_PECA == null)) {
-                throw new global::System.ArgumentNullException("PRECO_PECA");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(PRECO_PECA));
-            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((decimal)(PRECO_PECA));
             if ((MODELO_PECA == null)) {
                 throw new global::System.ArgumentNullException("MODELO_PECA");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(MODELO_PECA));
-            }
-            if ((COD_PECA == null)) {
-                throw new global::System.ArgumentNullException("COD_PECA");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(COD_PECA));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(MODELO_PECA));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6409,78 +6980,58 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string QTTD_PECA, string DESCR_PECA, string FABRIC_PECA, string PRECO_PECA, string MODELO_PECA, string COD_PECA, string Original_QTTD_PECA, string Original_DESCR_PECA, string Original_FABRIC_PECA, string Original_PRECO_PECA, string Original_MODELO_PECA, string Original_COD_PECA) {
-            if ((QTTD_PECA == null)) {
-                throw new global::System.ArgumentNullException("QTTD_PECA");
+        public virtual int Update(string COD_PECA, decimal QTTD_PECA, string DESCR_PECA, string FABRIC_PECA, decimal PRECO_PECA, string MODELO_PECA, string Original_COD_PECA, decimal Original_QTTD_PECA, string Original_DESCR_PECA, string Original_FABRIC_PECA, decimal Original_PRECO_PECA, string Original_MODELO_PECA) {
+            if ((COD_PECA == null)) {
+                throw new global::System.ArgumentNullException("COD_PECA");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(QTTD_PECA));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(COD_PECA));
             }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((decimal)(QTTD_PECA));
             if ((DESCR_PECA == null)) {
                 throw new global::System.ArgumentNullException("DESCR_PECA");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(DESCR_PECA));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(DESCR_PECA));
             }
             if ((FABRIC_PECA == null)) {
                 throw new global::System.ArgumentNullException("FABRIC_PECA");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(FABRIC_PECA));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(FABRIC_PECA));
             }
-            if ((PRECO_PECA == null)) {
-                throw new global::System.ArgumentNullException("PRECO_PECA");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(PRECO_PECA));
-            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((decimal)(PRECO_PECA));
             if ((MODELO_PECA == null)) {
                 throw new global::System.ArgumentNullException("MODELO_PECA");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(MODELO_PECA));
-            }
-            if ((COD_PECA == null)) {
-                throw new global::System.ArgumentNullException("COD_PECA");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(COD_PECA));
-            }
-            if ((Original_QTTD_PECA == null)) {
-                throw new global::System.ArgumentNullException("Original_QTTD_PECA");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_QTTD_PECA));
-            }
-            if ((Original_DESCR_PECA == null)) {
-                throw new global::System.ArgumentNullException("Original_DESCR_PECA");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_DESCR_PECA));
-            }
-            if ((Original_FABRIC_PECA == null)) {
-                throw new global::System.ArgumentNullException("Original_FABRIC_PECA");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_FABRIC_PECA));
-            }
-            if ((Original_PRECO_PECA == null)) {
-                throw new global::System.ArgumentNullException("Original_PRECO_PECA");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_PRECO_PECA));
-            }
-            if ((Original_MODELO_PECA == null)) {
-                throw new global::System.ArgumentNullException("Original_MODELO_PECA");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_MODELO_PECA));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(MODELO_PECA));
             }
             if ((Original_COD_PECA == null)) {
                 throw new global::System.ArgumentNullException("Original_COD_PECA");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_COD_PECA));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_COD_PECA));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((decimal)(Original_QTTD_PECA));
+            if ((Original_DESCR_PECA == null)) {
+                throw new global::System.ArgumentNullException("Original_DESCR_PECA");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_DESCR_PECA));
+            }
+            if ((Original_FABRIC_PECA == null)) {
+                throw new global::System.ArgumentNullException("Original_FABRIC_PECA");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_FABRIC_PECA));
+            }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(Original_PRECO_PECA));
+            if ((Original_MODELO_PECA == null)) {
+                throw new global::System.ArgumentNullException("Original_MODELO_PECA");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_MODELO_PECA));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6502,8 +7053,8 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string QTTD_PECA, string DESCR_PECA, string FABRIC_PECA, string PRECO_PECA, string MODELO_PECA, string Original_QTTD_PECA, string Original_DESCR_PECA, string Original_FABRIC_PECA, string Original_PRECO_PECA, string Original_MODELO_PECA, string Original_COD_PECA) {
-            return this.Update(QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, Original_COD_PECA, Original_QTTD_PECA, Original_DESCR_PECA, Original_FABRIC_PECA, Original_PRECO_PECA, Original_MODELO_PECA, Original_COD_PECA);
+        public virtual int Update(decimal QTTD_PECA, string DESCR_PECA, string FABRIC_PECA, decimal PRECO_PECA, string MODELO_PECA, string Original_COD_PECA, decimal Original_QTTD_PECA, string Original_DESCR_PECA, string Original_FABRIC_PECA, decimal Original_PRECO_PECA, string Original_MODELO_PECA) {
+            return this.Update(Original_COD_PECA, QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, Original_COD_PECA, Original_QTTD_PECA, Original_DESCR_PECA, Original_FABRIC_PECA, Original_PRECO_PECA, Original_MODELO_PECA);
         }
     }
     
@@ -6529,7 +7080,7 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
         
         private FuncionarioTableAdapter _funcionarioTableAdapter;
         
-        private OrcamentoTableAdapter _orcamentoTableAdapter;
+        private OrcamentosTableAdapter _orcamentosTableAdapter;
         
         private Pecas_estoqueTableAdapter _pecas_estoqueTableAdapter;
         
@@ -6623,12 +7174,12 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public OrcamentoTableAdapter OrcamentoTableAdapter {
+        public OrcamentosTableAdapter OrcamentosTableAdapter {
             get {
-                return this._orcamentoTableAdapter;
+                return this._orcamentosTableAdapter;
             }
             set {
-                this._orcamentoTableAdapter = value;
+                this._orcamentosTableAdapter = value;
             }
         }
         
@@ -6685,9 +7236,9 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
                             && (this._funcionarioTableAdapter.Connection != null))) {
                     return this._funcionarioTableAdapter.Connection;
                 }
-                if (((this._orcamentoTableAdapter != null) 
-                            && (this._orcamentoTableAdapter.Connection != null))) {
-                    return this._orcamentoTableAdapter.Connection;
+                if (((this._orcamentosTableAdapter != null) 
+                            && (this._orcamentosTableAdapter.Connection != null))) {
+                    return this._orcamentosTableAdapter.Connection;
                 }
                 if (((this._pecas_estoqueTableAdapter != null) 
                             && (this._pecas_estoqueTableAdapter.Connection != null))) {
@@ -6721,7 +7272,7 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
                 if ((this._funcionarioTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._orcamentoTableAdapter != null)) {
+                if ((this._orcamentosTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._pecas_estoqueTableAdapter != null)) {
@@ -6738,12 +7289,12 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(OficinaMecDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._clienteTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._carroTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Carro.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._clienteTableAdapter.Update(updatedRows));
+                    result = (result + this._carroTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6756,12 +7307,12 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._carroTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Carro.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._clienteTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._carroTableAdapter.Update(updatedRows));
+                    result = (result + this._clienteTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6783,12 +7334,12 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._orcamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Orcamento.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._orcamentosTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Orcamentos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._orcamentoTableAdapter.Update(updatedRows));
+                    result = (result + this._orcamentosTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -6811,11 +7362,11 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(OficinaMecDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._clienteTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._carroTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Carro.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._clienteTableAdapter.Update(addedRows));
+                    result = (result + this._carroTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -6827,11 +7378,11 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._carroTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Carro.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._clienteTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._carroTableAdapter.Update(addedRows));
+                    result = (result + this._clienteTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -6851,11 +7402,11 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._orcamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Orcamento.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._orcamentosTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Orcamentos.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._orcamentoTableAdapter.Update(addedRows));
+                    result = (result + this._orcamentosTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -6885,11 +7436,11 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._orcamentoTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Orcamento.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._orcamentosTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Orcamentos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._orcamentoTableAdapter.Update(deletedRows));
+                    result = (result + this._orcamentosTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -6909,11 +7460,11 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._carroTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Carro.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._clienteTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._carroTableAdapter.Update(deletedRows));
+                    result = (result + this._clienteTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -6925,11 +7476,11 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._clienteTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Cliente.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._carroTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Carro.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._clienteTableAdapter.Update(deletedRows));
+                    result = (result + this._carroTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -6997,8 +7548,8 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
                 throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
                         "cadeia de conexão.");
             }
-            if (((this._orcamentoTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._orcamentoTableAdapter.Connection) == false))) {
+            if (((this._orcamentosTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._orcamentosTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos os TableAdapters gerenciados por um TableAdapterManager devem usar a mesma " +
                         "cadeia de conexão.");
             }
@@ -7084,13 +7635,13 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
                         adaptersWithAcceptChangesDuringUpdate.Add(this._funcionarioTableAdapter.Adapter);
                     }
                 }
-                if ((this._orcamentoTableAdapter != null)) {
-                    revertConnections.Add(this._orcamentoTableAdapter, this._orcamentoTableAdapter.Connection);
-                    this._orcamentoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._orcamentoTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._orcamentoTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._orcamentoTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._orcamentoTableAdapter.Adapter);
+                if ((this._orcamentosTableAdapter != null)) {
+                    revertConnections.Add(this._orcamentosTableAdapter, this._orcamentosTableAdapter.Connection);
+                    this._orcamentosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._orcamentosTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._orcamentosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._orcamentosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._orcamentosTableAdapter.Adapter);
                     }
                 }
                 if ((this._pecas_estoqueTableAdapter != null)) {
@@ -7180,9 +7731,9 @@ SELECT QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA, COD_PECA FRO
                     this._funcionarioTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._funcionarioTableAdapter]));
                     this._funcionarioTableAdapter.Transaction = null;
                 }
-                if ((this._orcamentoTableAdapter != null)) {
-                    this._orcamentoTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._orcamentoTableAdapter]));
-                    this._orcamentoTableAdapter.Transaction = null;
+                if ((this._orcamentosTableAdapter != null)) {
+                    this._orcamentosTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._orcamentosTableAdapter]));
+                    this._orcamentosTableAdapter.Transaction = null;
                 }
                 if ((this._pecas_estoqueTableAdapter != null)) {
                     this._pecas_estoqueTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._pecas_estoqueTableAdapter]));

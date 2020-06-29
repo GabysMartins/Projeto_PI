@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.oficinaMecDataSet = new OficinaMec.OficinaMecDataSet();
-            this.orcamentoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.orcamentoTableAdapter = new OficinaMec.OficinaMecDataSetTableAdapters.OrcamentoTableAdapter();
+            this.orcamentosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.orcamentosTableAdapter = new OficinaMec.OficinaMecDataSetTableAdapters.OrcamentosTableAdapter();
             this.tableAdapterManager = new OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager();
             this.BOSair = new System.Windows.Forms.Button();
             this.textbox2 = new System.Windows.Forms.MaskedTextBox();
@@ -42,8 +42,11 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orcamentosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // oficinaMecDataSet
@@ -51,14 +54,14 @@
             this.oficinaMecDataSet.DataSetName = "OficinaMecDataSet";
             this.oficinaMecDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // orcamentoBindingSource
+            // orcamentosBindingSource
             // 
-            this.orcamentoBindingSource.DataMember = "Orcamento";
-            this.orcamentoBindingSource.DataSource = this.oficinaMecDataSet;
+            this.orcamentosBindingSource.DataMember = "Orcamentos";
+            this.orcamentosBindingSource.DataSource = this.oficinaMecDataSet;
             // 
-            // orcamentoTableAdapter
+            // orcamentosTableAdapter
             // 
-            this.orcamentoTableAdapter.ClearBeforeFill = true;
+            this.orcamentosTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
@@ -68,7 +71,7 @@
             this.tableAdapterManager.ClienteTableAdapter = null;
             this.tableAdapterManager.Consulta_BancoTableAdapter = null;
             this.tableAdapterManager.FuncionarioTableAdapter = null;
-            this.tableAdapterManager.OrcamentoTableAdapter = this.orcamentoTableAdapter;
+            this.tableAdapterManager.OrcamentosTableAdapter = this.orcamentosTableAdapter;
             this.tableAdapterManager.Pecas_estoqueTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = OficinaMec.OficinaMecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
@@ -89,7 +92,7 @@
             // textbox2
             // 
             this.textbox2.BackColor = System.Drawing.Color.Moccasin;
-            this.textbox2.Location = new System.Drawing.Point(624, 243);
+            this.textbox2.Location = new System.Drawing.Point(624, 195);
             this.textbox2.Mask = "00/00/0000";
             this.textbox2.Name = "textbox2";
             this.textbox2.Size = new System.Drawing.Size(164, 20);
@@ -99,7 +102,7 @@
             // TAData
             // 
             this.TAData.BackColor = System.Drawing.Color.Moccasin;
-            this.TAData.Location = new System.Drawing.Point(624, 179);
+            this.TAData.Location = new System.Drawing.Point(624, 131);
             this.TAData.Mask = "00/00/0000";
             this.TAData.Name = "TAData";
             this.TAData.Size = new System.Drawing.Size(164, 20);
@@ -113,7 +116,7 @@
             this.button1.BackColor = System.Drawing.Color.Moccasin;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 8F);
-            this.button1.Location = new System.Drawing.Point(624, 269);
+            this.button1.Location = new System.Drawing.Point(624, 221);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(92, 25);
             this.button1.TabIndex = 132;
@@ -127,7 +130,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Moccasin;
-            this.label4.Location = new System.Drawing.Point(620, 216);
+            this.label4.Location = new System.Drawing.Point(620, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 21);
             this.label4.TabIndex = 131;
@@ -139,7 +142,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Moccasin;
-            this.label3.Location = new System.Drawing.Point(620, 151);
+            this.label3.Location = new System.Drawing.Point(620, 103);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 21);
             this.label3.TabIndex = 130;
@@ -162,11 +165,11 @@
             this.label1.BackColor = System.Drawing.Color.Black;
             this.label1.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Moccasin;
-            this.label1.Location = new System.Drawing.Point(141, 420);
+            this.label1.Location = new System.Drawing.Point(254, 420);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(389, 21);
+            this.label1.Size = new System.Drawing.Size(276, 21);
             this.label1.TabIndex = 136;
-            this.label1.Text = "QUANTIDADE DE ORDENS DE SERVIÇO NESTE PERÍODO:";
+            this.label1.Text = "QUANTIDADE DE ORDENS DE SERVIÇO:";
             // 
             // label2
             // 
@@ -180,6 +183,41 @@
             this.label2.TabIndex = 137;
             this.label2.Text = "00";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.BackColor = System.Drawing.Color.Moccasin;
+            this.maskedTextBox1.Location = new System.Drawing.Point(624, 309);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(164, 20);
+            this.maskedTextBox1.TabIndex = 140;
+            this.maskedTextBox1.ValidatingType = typeof(System.DateTime);
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.Moccasin;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Calibri", 8F);
+            this.button2.Location = new System.Drawing.Point(624, 335);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(92, 25);
+            this.button2.TabIndex = 139;
+            this.button2.Text = "Consultar Data";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Moccasin;
+            this.label5.Location = new System.Drawing.Point(620, 282);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(41, 21);
+            this.label5.TabIndex = 138;
+            this.label5.Text = "CPF:";
+            // 
             // OsGeral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +225,9 @@
             this.BackgroundImage = global::OficinaMec.Properties.Resources.Editado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.listBox1);
@@ -200,7 +241,7 @@
             this.Text = "OsGeral";
             this.Load += new System.EventHandler(this.OsGeral_Load);
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.orcamentoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.orcamentosBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -209,8 +250,8 @@
         #endregion
 
         private OficinaMecDataSet oficinaMecDataSet;
-        private System.Windows.Forms.BindingSource orcamentoBindingSource;
-        private OficinaMecDataSetTableAdapters.OrcamentoTableAdapter orcamentoTableAdapter;
+        private System.Windows.Forms.BindingSource orcamentosBindingSource;
+        private OficinaMecDataSetTableAdapters.OrcamentosTableAdapter orcamentosTableAdapter;
         private OficinaMecDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Button BOSair;
         private System.Windows.Forms.MaskedTextBox textbox2;
@@ -221,5 +262,8 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label5;
     }
 }
