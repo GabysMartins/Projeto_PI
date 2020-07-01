@@ -7,6 +7,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Drawing.Printing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,7 +48,43 @@ namespace OficinaMec
 
                 while (leitor.Read())
                 {
-                    textBox1.Text = (leitor[0].ToString() + ", " + leitor[1].ToString());
+                    textBox1.Text = ("---------------------PEÇAS---------------------" + System.Environment.NewLine+
+                        "Peça: "+leitor[0].ToString() + 
+                        ", Valor: R$ " + leitor[1].ToString() + System.Environment.NewLine + System.Environment.NewLine+
+                        "-----------------------------------------------" + System.Environment.NewLine+ System.Environment.NewLine);
+                    
+                }
+                conexao.desconectar();
+            }
+            catch (SqlException)
+            {
+                this.mensagem = "Erro ao Buscar Itens!!";
+                // Console.WriteLine(e);
+            }
+
+            string sql1 = $"select * from Orcamentos where NUM_ORC={textBox3.Text}";
+            try
+            {
+                SqlCommand cmd = new SqlCommand(sql1, conexao.conectar());
+                SqlDataReader leitor = cmd.ExecuteReader();
+
+                while (leitor.Read())
+                {
+                    textBox1.Text += ("---------------------ORDEM DE SERVIÇO---------------------" + System.Environment.NewLine+ System.Environment.NewLine+
+                        "Numero OS: " + leitor[0].ToString() + System.Environment.NewLine +
+                        "Descrição OS: " + leitor[1].ToString() + System.Environment.NewLine +
+                        "CPF: " + leitor[2].ToString() + System.Environment.NewLine +
+                        "Placa: " + leitor[3].ToString() + System.Environment.NewLine +
+                        "Nome: " + leitor[4].ToString() + System.Environment.NewLine +
+                        "Telefone: " + leitor[5].ToString() + System.Environment.NewLine +
+                        "Ano de Fabricação: " + leitor[6].ToString() + System.Environment.NewLine +
+                        "Kilometragem: " + leitor[8].ToString() + System.Environment.NewLine +
+                        "Modelo: " + leitor[7].ToString() + System.Environment.NewLine +
+                        "Valor Peças: " + leitor[9].ToString() + System.Environment.NewLine +
+                        "Valor Mão de Obra: " + leitor[10].ToString()+ System.Environment.NewLine+ 
+                        "Valor Total: " + leitor[11].ToString() + System.Environment.NewLine+ System.Environment.NewLine +
+                        "----------------------------------------------------------"+ System.Environment.NewLine + System.Environment.NewLine +
+                        "OFICINA ABELHA");
                     // textBox2.Text = (leitor[1].ToString());
 
                 }
@@ -59,38 +96,21 @@ namespace OficinaMec
                 // Console.WriteLine(e);
             }
 
-            //listBox1.ValueMember = ("QTTD_PECA");
-            //listBox2.ValueMember = ("COD_PECA");
-            //listBox1.DisplayMember = (epo.ExibeDesc);
-            //listBox2.DisplayMember = (epo.ExibePreco);
-            TODescritivo.Text = eos.ExibeDescricao;
-            TOCPF.Text = eos.ExibeCPF;
-            TOPlaca.Text = eos.ExibePlaca;
-            TONome.Text = eos.ExibeNome;
-            TOTelefone.Text = eos.ExibeTel;
-            TOANO.Text = eos.ExibeAno;
-            TOModelo.Text = eos.ExibeModelo;
-            TOKM.Text = eos.ExibeKM;
-            textBox2.Text = eos.ExibeValorPec;
-            TOMao.Text = eos.ExibeValorMao;
-            textBox4.Text = eos.ExibeValorTotal;
+
+            //TODescritivo.Text = eos.ExibeDescricao;
+            //TOCPF.Text = eos.ExibeCPF;
+            //TOPlaca.Text = eos.ExibePlaca;
+            //TONome.Text = eos.ExibeNome;
+            //TOTelefone.Text = eos.ExibeTel;
+            //TOANO.Text = eos.ExibeAno;
+            //TOModelo.Text = eos.ExibeModelo;
+            //TOKM.Text = eos.ExibeKM;
+            //textBox2.Text = eos.ExibeValorPec;
+            //TOMao.Text = eos.ExibeValorMao;
+            //textBox4.Text = eos.ExibeValorTotal;
 
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            TOCPF.Enabled = true;
-            TOPlaca.Enabled = true;
-            TONome.Enabled = true;
-            TOTelefone.Enabled = true;
-            TOANO.Enabled = true;
-            TOModelo.Enabled = true;
-            TOKM.Enabled = true;
-            textBox1.Enabled = true;
-            TODescritivo.Enabled = true;
-            textBox2.Enabled = true;
-            TOMao.Enabled = true;
-            textBox4.Enabled = true;
-        }
+
 
         private void BOSair_Click(object sender, EventArgs e)
         {
@@ -101,38 +121,21 @@ namespace OficinaMec
 
         private void button1_Click(object sender, EventArgs e)
         {
+            SaveFileDialog sFileD = new SaveFileDialog();
+            sFileD.Filter = "Arquivo (*.txt)|*.txt";
+            if (sFileD.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter strW = new StreamWriter(sFileD.FileName);
 
-            PrintPreviewDialog previewDialog = new PrintPreviewDialog();
-            PrintDocument printDocument = new PrintDocument();
-
-            shot = GetScreenShot();
-
-            printDocument.DocumentName = this.Name;
-            printDocument1.DefaultPageSettings.Landscape = false;
-
-
-            printDocument.PrintPage += new PrintPageEventHandler(this.PrintPage);
-            previewDialog.Document = printDocument;
-            previewDialog.ShowDialog();
+                strW.Write(textBox1.Text);
+                
+                
+                strW.Close();
+            }
 
         }
-        private Image GetScreenShot()
-        {
-            Bitmap bmp = new Bitmap(this.Width, this.Height);
-            Graphics g = Graphics.FromImage(bmp);
-            g.CopyFromScreen(new Point(this.Left, this.Top), Point.Empty, this.Size);
-            return bmp;
-        }
-
-        Bitmap memoryImage;
-
-        Image shot;
-
-        private void PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
-        {
-            e.Graphics.DrawImage(shot, 0, 0, shot.Width, shot.Height);
-            e.HasMorePages = false;
-        }
+       
+       
 
         private void TOMao_TextChanged(object sender, EventArgs e)
         {

@@ -2780,7 +2780,7 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public Pecas_estoqueRow AddPecas_estoqueRow(string COD_PECA, decimal QTTD_PECA, string DESCR_PECA, string FABRIC_PECA, decimal PRECO_PECA, string MODELO_PECA) {
+            public Pecas_estoqueRow AddPecas_estoqueRow(string COD_PECA, string QTTD_PECA, string DESCR_PECA, string FABRIC_PECA, string PRECO_PECA, string MODELO_PECA) {
                 Pecas_estoqueRow rowPecas_estoqueRow = ((Pecas_estoqueRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         COD_PECA,
@@ -2831,13 +2831,13 @@ namespace OficinaMec {
             private void InitClass() {
                 this.columnCOD_PECA = new global::System.Data.DataColumn("COD_PECA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCOD_PECA);
-                this.columnQTTD_PECA = new global::System.Data.DataColumn("QTTD_PECA", typeof(decimal), null, global::System.Data.MappingType.Element);
+                this.columnQTTD_PECA = new global::System.Data.DataColumn("QTTD_PECA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnQTTD_PECA);
                 this.columnDESCR_PECA = new global::System.Data.DataColumn("DESCR_PECA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDESCR_PECA);
                 this.columnFABRIC_PECA = new global::System.Data.DataColumn("FABRIC_PECA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFABRIC_PECA);
-                this.columnPRECO_PECA = new global::System.Data.DataColumn("PRECO_PECA", typeof(decimal), null, global::System.Data.MappingType.Element);
+                this.columnPRECO_PECA = new global::System.Data.DataColumn("PRECO_PECA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPRECO_PECA);
                 this.columnMODELO_PECA = new global::System.Data.DataColumn("MODELO_PECA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMODELO_PECA);
@@ -3620,9 +3620,9 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal QTTD_PECA {
+            public string QTTD_PECA {
                 get {
-                    return ((decimal)(this[this.tablePecas_estoque.QTTD_PECAColumn]));
+                    return ((string)(this[this.tablePecas_estoque.QTTD_PECAColumn]));
                 }
                 set {
                     this[this.tablePecas_estoque.QTTD_PECAColumn] = value;
@@ -3653,9 +3653,9 @@ namespace OficinaMec {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal PRECO_PECA {
+            public string PRECO_PECA {
                 get {
-                    return ((decimal)(this[this.tablePecas_estoque.PRECO_PECAColumn]));
+                    return ((string)(this[this.tablePecas_estoque.PRECO_PECAColumn]));
                 }
                 set {
                     this[this.tablePecas_estoque.PRECO_PECAColumn] = value;

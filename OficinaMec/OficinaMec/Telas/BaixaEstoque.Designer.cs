@@ -108,6 +108,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackgroundImage = global::OficinaMec.Properties.Resources.Editado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(692, 388);
@@ -118,6 +119,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Name = "BaixaEstoque";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BaixaEstoque";
             this.ResumeLayout(false);
             this.PerformLayout();

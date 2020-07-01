@@ -34,14 +34,32 @@ namespace OficinaMec
             TATelefone.Text = "";
             TAANO.Text = "";
             TAModelo.Text = "";
-            listBox1.Text = "";
+            listBox1.Items.Clear();
+            TAData.Text = "";
+            textbox2.Text = "";
+            TAHorario.Text = "";
+            textBox1.Text = "";
         }
 
         private void BAAgendar_Click(object sender, EventArgs e)
         {
+            if (TAHorario.Text != "")
+            {
+                if (TAData.Text != "")
+                {
+                    InsereAgendamento ia = new InsereAgendamento(textBox1.Text, textBox1.Text, TADescritivo.Text, TACPF.Text, TAPlaca.Text, TANome.Text, TATelefone.Text, TAANO.Text, TAModelo.Text, TAData.Text, TAHorario.Text);
+                    MessageBox.Show(ia.mensagem, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Insira a data", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Insira o horário", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
-            InsereAgendamento ia = new InsereAgendamento(textBox1.Text, textBox1.Text, TADescritivo.Text, TACPF.Text, TAPlaca.Text, TANome.Text, TATelefone.Text, TAANO.Text, TAModelo.Text, TAData.Text, TAHorario.Text);
-            MessageBox.Show(ia.mensagem, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
 

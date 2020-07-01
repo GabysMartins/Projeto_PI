@@ -195,6 +195,7 @@
             this.Controls.Add(this.Usuario);
             this.Controls.Add(this.Abelha);
             this.Name = "TelaInicial";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelaInicial";
             this.ResumeLayout(false);
             this.PerformLayout();

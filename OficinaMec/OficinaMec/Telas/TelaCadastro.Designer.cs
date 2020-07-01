@@ -248,6 +248,7 @@
             this.Controls.Add(this.Nome);
             this.Controls.Add(this.BCadSair);
             this.Name = "TelaCadastro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tela Cadastro";
             this.Load += new System.EventHandler(this.TelaCadastro_Load);
             this.ResumeLayout(false);

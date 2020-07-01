@@ -44,6 +44,7 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pecas_estoqueBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pecas_estoqueDataGridView)).BeginInit();
@@ -54,7 +55,7 @@
             this.BEExcluir.BackColor = System.Drawing.Color.Moccasin;
             this.BEExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BEExcluir.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BEExcluir.Location = new System.Drawing.Point(479, 370);
+            this.BEExcluir.Location = new System.Drawing.Point(411, 369);
             this.BEExcluir.Name = "BEExcluir";
             this.BEExcluir.Size = new System.Drawing.Size(122, 57);
             this.BEExcluir.TabIndex = 42;
@@ -67,7 +68,7 @@
             this.BEAcrescentar.BackColor = System.Drawing.Color.Moccasin;
             this.BEAcrescentar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BEAcrescentar.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BEAcrescentar.Location = new System.Drawing.Point(351, 370);
+            this.BEAcrescentar.Location = new System.Drawing.Point(283, 369);
             this.BEAcrescentar.Name = "BEAcrescentar";
             this.BEAcrescentar.Size = new System.Drawing.Size(122, 57);
             this.BEAcrescentar.TabIndex = 41;
@@ -80,7 +81,7 @@
             this.BESair.BackColor = System.Drawing.Color.Moccasin;
             this.BESair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BESair.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BESair.Location = new System.Drawing.Point(223, 369);
+            this.BESair.Location = new System.Drawing.Point(155, 368);
             this.BESair.Name = "BESair";
             this.BESair.Size = new System.Drawing.Size(122, 57);
             this.BESair.TabIndex = 46;
@@ -168,6 +169,19 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "MODELO_PECA";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Moccasin;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(539, 368);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 57);
+            this.button1.TabIndex = 47;
+            this.button1.Text = "EFETUAR BAIXA";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TelaEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -175,12 +189,14 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 458);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pecas_estoqueDataGridView);
             this.Controls.Add(this.BESair);
             this.Controls.Add(this.BEExcluir);
             this.Controls.Add(this.BEAcrescentar);
             this.Name = "TelaEstoque";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TelaEstoque";
             this.Load += new System.EventHandler(this.TelaEstoque_Load);
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).EndInit();
@@ -205,5 +221,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Button button1;
     }
 }

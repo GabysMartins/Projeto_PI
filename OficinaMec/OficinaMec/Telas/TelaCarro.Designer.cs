@@ -210,6 +210,7 @@
             this.Controls.Add(this.BCCSalvar);
             this.Controls.Add(this.BCCSair);
             this.Name = "TelaCarro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TelaCarro";
             this.Load += new System.EventHandler(this.TelaCarro_Load);
             this.ResumeLayout(false);

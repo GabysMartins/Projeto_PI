@@ -202,6 +202,7 @@
             this.Controls.Add(this.BMAgendamento);
             this.Name = "TelaMenu";
             this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TelaMenu";
             this.Load += new System.EventHandler(this.TelaMenu_Load);
             this.ResumeLayout(false);

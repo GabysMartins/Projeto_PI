@@ -192,7 +192,6 @@
             // 
             this.textBox5.BackColor = System.Drawing.Color.Moccasin;
             this.textBox5.Location = new System.Drawing.Point(201, 246);
-            this.textBox5.Mask = "$000.00";
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(147, 20);
             this.textBox5.TabIndex = 96;
@@ -219,6 +218,7 @@
             this.Controls.Add(this.CPF);
             this.Controls.Add(this.Nome);
             this.Name = "InserirPeca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "InserirPeca";
             this.Load += new System.EventHandler(this.InserirPeca_Load);
             this.ResumeLayout(false);

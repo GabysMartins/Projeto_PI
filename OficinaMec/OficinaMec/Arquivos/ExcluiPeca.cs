@@ -10,7 +10,8 @@ namespace OficinaMec.Arquivos
     class ExcluiPeca
     {
         Conexao conexao = new Conexao();
-        SqlCommand cmd = new SqlCommand();
+        Conexao conexao1 = new Conexao();
+
         public string mensagem = "";
 
         public ExcluiPeca(String Codigo)
@@ -21,7 +22,7 @@ namespace OficinaMec.Arquivos
             }
             else
             {
-                string sql = $"select COD_PECA from Consulta_Banco where COD_PECA={Codigo}";
+                string sql = $"select COD_PECA from Pecas_estoque where COD_PECA={Codigo}";
                 try
                 {
                     SqlCommand cmd1 = new SqlCommand(sql, conexao.conectar());
@@ -31,29 +32,31 @@ namespace OficinaMec.Arquivos
                     if (leitor.Read())
                     {
                         String ExibeDesc = leitor[0].ToString();
-                      
+                        SqlCommand cmd = new SqlCommand();
                         cmd.CommandText = "delete from Pecas_estoque where COD_PECA = @Codigo ";
                         cmd.Parameters.AddWithValue("@Codigo", Codigo);
 
                         try
                         {
-                            cmd.Connection = conexao.conectar();
+
+                            cmd.Connection = conexao1.conectar();
                             cmd.ExecuteNonQuery();
 
                             this.mensagem = ("Peça excluída com sucesso!");
-                            conexao.desconectar();
+                            conexao1.desconectar();
 
                         }
                         catch (SqlException ex)
                         {
                             this.mensagem = ("Peça não existe!! ");
+                            Console.WriteLine(ex);
                         }
 
 
                     }
                     else
                     {
-                        this.mensagem = ("Peça não existe!! ");
+                        this.mensagem = ("Peça não existe!! "); 
 
                     }
                 }

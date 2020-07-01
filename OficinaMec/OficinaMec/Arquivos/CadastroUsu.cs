@@ -15,7 +15,7 @@ namespace OficinaMec
         public CadastroUsu(String COD_FUNC,String CPF_FUNC, String NOME_FUNC, String EMAIL_FUNC, String SENHA_FUNC, String PERMIS_FUNC)
         {
 
-            cmd.CommandText = "insert into Funcionario (COD_FUNC,CPF_FUNC,NOME_FUNC,EMAIL_FUNC,SENHA_FUNC,PERMIS_FUNC) values (@COD_FUNC,@CPF_FUNC,@NOME_FUNC,@EMAIL_FUNC,@SENHA_FUNC,@PERMIS_FUNC)";
+            cmd.CommandText = @"insert into Funcionario (COD_FUNC,CPF_FUNC,NOME_FUNC,EMAIL_FUNC,SENHA_FUNC,PERMIS_FUNC) values (@COD_FUNC,@CPF_FUNC,@NOME_FUNC,@EMAIL_FUNC,@SENHA_FUNC,@PERMIS_FUNC)";
             cmd.Parameters.AddWithValue("@COD_FUNC", COD_FUNC);
             cmd.Parameters.AddWithValue("@CPF_FUNC",CPF_FUNC);
             cmd.Parameters.AddWithValue("@NOME_FUNC", NOME_FUNC);

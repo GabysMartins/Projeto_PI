@@ -363,12 +363,12 @@
             this.oficinaMecDataSet.DataSetName = "OficinaMecDataSet";
             this.oficinaMecDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // orcamentoBindingSource
+            // orcamentosBindingSource
             // 
             this.orcamentosBindingSource.DataMember = "Orcamentos";
             this.orcamentosBindingSource.DataSource = this.oficinaMecDataSet;
             // 
-            // orcamentoTableAdapter
+            // orcamentosTableAdapter
             // 
             this.orcamentosTableAdapter.ClearBeforeFill = true;
             // 
@@ -403,9 +403,9 @@
             this.listBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 19;
-            this.listBox1.Location = new System.Drawing.Point(304, 161);
+            this.listBox1.Location = new System.Drawing.Point(259, 153);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(259, 194);
+            this.listBox1.Size = new System.Drawing.Size(325, 232);
             this.listBox1.TabIndex = 72;
             // 
             // textBox1
@@ -554,6 +554,7 @@
             this.Controls.Add(this.placa);
             this.Controls.Add(this.Informacoes);
             this.Name = "TelaOrcamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TelaOrcamento";
             this.Load += new System.EventHandler(this.TelaOrcamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).EndInit();

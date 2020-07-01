@@ -21,17 +21,6 @@ namespace OficinaMec.Arquivos
             }
             else
             {
-                string sql = $"select DESC_PECA from Consulta_Banco where QTTD_PECA={QTTD_PECA}";
-                try
-                {
-                    SqlCommand cmd1 = new SqlCommand(sql, conexao.conectar());
-                    SqlDataReader leitor = cmd1.ExecuteReader();
-
-
-                    if (leitor.Read())
-                    {
-                        String ExibeDesc = leitor[0].ToString();
-
                         cmd.CommandText = "delete from Consulta_Banco where QTTD_PECA = @QTTD_PECA ";
                         cmd.Parameters.AddWithValue("@QTTD_PECA", QTTD_PECA);
 
@@ -51,19 +40,11 @@ namespace OficinaMec.Arquivos
 
 
                     }
-                    else
-                    {
-                        this.mensagem = ("Peça não existe!! ");
-
-                    }
+                    
                 }
-                catch (SqlException e)
-                {
-                    this.mensagem = ("Peça não existe!! ");
-                    Console.WriteLine(e);
-                }
+               
             }
         }
 
-    }
-}
+    
+

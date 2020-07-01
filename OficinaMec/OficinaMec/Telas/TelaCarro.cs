@@ -21,7 +21,7 @@ namespace OficinaMec
 
         private void BCCSair_Click(object sender, EventArgs e)
         {
-            TelaInicial telaInicial = new TelaInicial();
+            TelaCadastro telaInicial = new TelaCadastro();
             this.Hide();
             telaInicial.ShowDialog();
         }

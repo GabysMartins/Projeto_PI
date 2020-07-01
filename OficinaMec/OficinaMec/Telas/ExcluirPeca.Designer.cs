@@ -93,6 +93,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Name = "ExcluirPeca";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ExcluirPeca";
             this.ResumeLayout(false);
             this.PerformLayout();

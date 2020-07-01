@@ -354,6 +354,7 @@
             this.Controls.Add(this.BCUSair);
             this.Controls.Add(this.BCURemover);
             this.Name = "TelaCadUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TelaCadUsuario";
             this.Load += new System.EventHandler(this.TelaCadUsuario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.funcionarioBindingSource)).EndInit();

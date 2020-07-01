@@ -46,15 +46,11 @@ namespace OficinaMec
             ex.ShowDialog();
         }
 
-        private void BEBaixa_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             BaixaEstoque be = new BaixaEstoque();
             this.Hide();
             be.ShowDialog();
-        }
-
-        private void BESolicitacao_Click(object sender, EventArgs e)
-        {
 
         }
     }

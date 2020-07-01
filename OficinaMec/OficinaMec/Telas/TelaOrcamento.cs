@@ -36,7 +36,7 @@ namespace OficinaMec
             {
                 if (label3.Text != "0")
                 {
-                    Salva_OS so = new Salva_OS(label3.Text, TODescritivo.Text, TOCPF.Text, TOPlaca.Text, TONome.Text, TOTelefone.Text, TOANO.Text, TOModelo.Text, TOKM.Text, label2.Text, TOMao.Text, ValorTotal.Text);
+                    Salva_OS so = new Salva_OS(label3.Text, TODescritivo.Text, TOCPF.Text, TOPlaca.Text, TONome.Text, TOTelefone.Text, TOANO.Text, TOModelo.Text, TOKM.Text, label2.Text, TOMao.Text, ValorServico.Text);
                     MessageBox.Show("Ordem de Serviço gerada!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     TelaOrdemServico telaOrdemServico = new TelaOrdemServico();
                     this.Hide();

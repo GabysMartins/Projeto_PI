@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,9 @@ namespace OficinaMec.Telas
         {
             InitializeComponent();
         }
+        Conexao conexao = new Conexao();
+        public String mensagem = "";
+        int i;
 
         private void orcamentoBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
@@ -37,25 +41,25 @@ namespace OficinaMec.Telas
         {
             TelaOrdemServico TO = new TelaOrdemServico();
             this.Hide();
-                TO.Show();
+            TO.Show();
         }
-        Conexao conexao = new Conexao();
-        public String mensagem = "";
-        int i;
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string sql = $"SELECT NUM_ORC,DATA_AG FROM Agendamento where data between'{TAData.Text}' and '{textbox2.Text}' Order by DATA_AG ASC";
+
+            string sql = $"SELECT NUM_ORC,DATA_AG FROM Agendamento where DATA_AG between'{TAData.Text}' and '{textbox2.Text}' Order by DATA_AG ASC";
 
             SqlCommand cmd = new SqlCommand(sql, conexao.conectar());
             SqlDataReader leitor = cmd.ExecuteReader();
-            
+
             try
             {
                 while (leitor.Read())
                 {
-                    i++;
+
                     listBox1.Items.Add(" - Numero OS: " + leitor[0].ToString() + " - Data: " + leitor[1].ToString());
+                    i++;
                 }
                 conexao.desconectar();
             }
@@ -64,7 +68,7 @@ namespace OficinaMec.Telas
                 this.mensagem = "Erro ao Cadastrar!!";
                 // Console.WriteLine(e);
             }
-            i = int.Parse(label2.Text);
+
         }
 
         private void TAData_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
@@ -74,7 +78,7 @@ namespace OficinaMec.Telas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string sql = $"SELECT NOME_ORC,DESC_ORC,PLACA_ORC,VALOR_TOTAL_ORC FROM Agendamento where CPF_ORC = {maskedTextBox1}";
+            string sql = $"SELECT NOME_ORC,DESC_ORC,PLACA_ORC,VALOR_TOTAL_ORC FROM Orcamentos where CPF_ORC = '{maskedTextBox1}'";
 
             SqlCommand cmd = new SqlCommand(sql, conexao.conectar());
             SqlDataReader leitor = cmd.ExecuteReader();
@@ -83,8 +87,9 @@ namespace OficinaMec.Telas
             {
                 while (leitor.Read())
                 {
-                    i++;
+
                     listBox1.Items.Add(" - Nome: " + leitor[0].ToString() + " - Placa: " + leitor[2].ToString() + " - Valor: " + leitor[3].ToString() + " - Descricao: " + leitor[1].ToString());
+                    i++;
                 }
                 conexao.desconectar();
             }
@@ -93,7 +98,8 @@ namespace OficinaMec.Telas
                 this.mensagem = "Erro ao Cadastrar!!";
                 // Console.WriteLine(e);
             }
-            i = int.Parse(label2.Text);
+
         }
+
     }
 }

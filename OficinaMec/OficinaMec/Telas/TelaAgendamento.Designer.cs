@@ -382,7 +382,6 @@
             // 
             this.TAData.BackColor = System.Drawing.Color.Moccasin;
             this.TAData.Location = new System.Drawing.Point(12, 245);
-            this.TAData.Mask = "00/00/0000";
             this.TAData.Name = "TAData";
             this.TAData.Size = new System.Drawing.Size(164, 20);
             this.TAData.TabIndex = 128;
@@ -402,7 +401,6 @@
             // 
             this.TAHorario.BackColor = System.Drawing.Color.Moccasin;
             this.TAHorario.Location = new System.Drawing.Point(665, 271);
-            this.TAHorario.Mask = "00:00";
             this.TAHorario.Name = "TAHorario";
             this.TAHorario.Size = new System.Drawing.Size(131, 20);
             this.TAHorario.TabIndex = 130;
@@ -477,6 +475,7 @@
             this.Controls.Add(this.placa);
             this.Controls.Add(this.Informacoes);
             this.Name = "TelaAgendamento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Tela Agendamento";
             this.Load += new System.EventHandler(this.TelaAgendamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).EndInit();

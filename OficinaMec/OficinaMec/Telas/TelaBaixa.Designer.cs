@@ -162,6 +162,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Name = "TelaBaixa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "TelaBaixa";
             this.Load += new System.EventHandler(this.TelaBaixa_Load);
             this.ResumeLayout(false);

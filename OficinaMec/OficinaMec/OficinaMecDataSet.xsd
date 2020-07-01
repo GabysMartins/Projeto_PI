@@ -838,7 +838,7 @@ SELECT COD_PECA, QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA FRO
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="QTTD_PECA" msprop:Generator_ColumnVarNameInTable="columnQTTD_PECA" msprop:Generator_ColumnPropNameInRow="QTTD_PECA" msprop:Generator_ColumnPropNameInTable="QTTD_PECAColumn" msprop:Generator_UserColumnName="QTTD_PECA" type="xs:decimal" />
+              <xs:element name="QTTD_PECA" msprop:Generator_ColumnVarNameInTable="columnQTTD_PECA" msprop:Generator_ColumnPropNameInRow="QTTD_PECA" msprop:Generator_ColumnPropNameInTable="QTTD_PECAColumn" msprop:Generator_UserColumnName="QTTD_PECA" type="xs:string" />
               <xs:element name="DESCR_PECA" msprop:Generator_ColumnVarNameInTable="columnDESCR_PECA" msprop:Generator_ColumnPropNameInRow="DESCR_PECA" msprop:Generator_ColumnPropNameInTable="DESCR_PECAColumn" msprop:Generator_UserColumnName="DESCR_PECA">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -853,7 +853,7 @@ SELECT COD_PECA, QTTD_PECA, DESCR_PECA, FABRIC_PECA, PRECO_PECA, MODELO_PECA FRO
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="PRECO_PECA" msprop:Generator_ColumnVarNameInTable="columnPRECO_PECA" msprop:Generator_ColumnPropNameInRow="PRECO_PECA" msprop:Generator_ColumnPropNameInTable="PRECO_PECAColumn" msprop:Generator_UserColumnName="PRECO_PECA" type="xs:decimal" />
+              <xs:element name="PRECO_PECA" msprop:Generator_ColumnVarNameInTable="columnPRECO_PECA" msprop:Generator_ColumnPropNameInRow="PRECO_PECA" msprop:Generator_ColumnPropNameInTable="PRECO_PECAColumn" msprop:Generator_UserColumnName="PRECO_PECA" type="xs:string" />
               <xs:element name="MODELO_PECA" msprop:Generator_ColumnVarNameInTable="columnMODELO_PECA" msprop:Generator_ColumnPropNameInRow="MODELO_PECA" msprop:Generator_ColumnPropNameInTable="MODELO_PECAColumn" msprop:Generator_UserColumnName="MODELO_PECA">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
