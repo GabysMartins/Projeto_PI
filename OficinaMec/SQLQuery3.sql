@@ -1,1 +1,0 @@
-﻿select NOME_CLI,TELEFONE_CLI from Cliente where CPF_CNPJ_CLI=123456789
