@@ -65,7 +65,7 @@ namespace OficinaMec
         private void TelaCadUsuario_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'oficinaMecDataSet.Funcionario'. Você pode movê-la ou removê-la conforme necessário.
-            this.funcionarioTableAdapter.Fill(this.oficinaMecDataSet.Funcionario);
+            //this.funcionarioTableAdapter.Fill(this.oficinaMecDataSet.Funcionario);
 
         }
 

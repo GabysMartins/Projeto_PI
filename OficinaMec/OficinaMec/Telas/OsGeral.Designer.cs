@@ -39,10 +39,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.oficinaMecDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.orcamentosBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +90,7 @@
             // textbox2
             // 
             this.textbox2.BackColor = System.Drawing.Color.Moccasin;
-            this.textbox2.Location = new System.Drawing.Point(624, 195);
+            this.textbox2.Location = new System.Drawing.Point(624, 127);
             this.textbox2.Mask = "00/00/0000";
             this.textbox2.Name = "textbox2";
             this.textbox2.Size = new System.Drawing.Size(164, 20);
@@ -100,7 +100,7 @@
             // TAData
             // 
             this.TAData.BackColor = System.Drawing.Color.Moccasin;
-            this.TAData.Location = new System.Drawing.Point(624, 131);
+            this.TAData.Location = new System.Drawing.Point(624, 192);
             this.TAData.Mask = "00/00/0000";
             this.TAData.Name = "TAData";
             this.TAData.Size = new System.Drawing.Size(164, 20);
@@ -146,17 +146,6 @@
             this.label3.TabIndex = 130;
             this.label3.Text = "DATA INICIAL:";
             // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.Color.Moccasin;
-            this.listBox1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 26;
-            this.listBox1.Location = new System.Drawing.Point(106, 26);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(508, 368);
-            this.listBox1.TabIndex = 135;
-            // 
             // maskedTextBox1
             // 
             this.maskedTextBox1.BackColor = System.Drawing.Color.Moccasin;
@@ -176,7 +165,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(92, 25);
             this.button2.TabIndex = 139;
-            this.button2.Text = "Consultar Data";
+            this.button2.Text = "Consultar OS";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -192,6 +181,17 @@
             this.label5.TabIndex = 138;
             this.label5.Text = "CPF:";
             // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.Color.Moccasin;
+            this.listBox1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 19;
+            this.listBox1.Location = new System.Drawing.Point(12, 29);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(602, 384);
+            this.listBox1.TabIndex = 141;
+            // 
             // OsGeral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,10 +199,10 @@
             this.BackgroundImage = global::OficinaMec.Properties.Resources.Editado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.textbox2);
             this.Controls.Add(this.TAData);
             this.Controls.Add(this.button1);
@@ -232,9 +232,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

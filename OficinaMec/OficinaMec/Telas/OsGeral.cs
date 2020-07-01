@@ -47,7 +47,7 @@ namespace OficinaMec.Telas
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            //listBox1.Text = "";
             string sql = $"SELECT NUM_ORC,DATA_AG FROM Agendamento where DATA_AG between'{TAData.Text}' and '{textbox2.Text}' Order by DATA_AG ASC";
 
             SqlCommand cmd = new SqlCommand(sql, conexao.conectar());
@@ -78,7 +78,8 @@ namespace OficinaMec.Telas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string sql = $"SELECT NOME_ORC,DESC_ORC,PLACA_ORC,VALOR_TOTAL_ORC FROM Orcamentos where CPF_ORC = '{maskedTextBox1}'";
+            //listBox1.Text = "";
+            string sql = $"SELECT NOME_ORC,DESC_ORC,PLACA_ORC,VALOR_TOTAL_ORC FROM Orcamentos where CPF_ORC = '{maskedTextBox1.Text}'";
 
             SqlCommand cmd = new SqlCommand(sql, conexao.conectar());
             SqlDataReader leitor = cmd.ExecuteReader();
@@ -93,10 +94,10 @@ namespace OficinaMec.Telas
                 }
                 conexao.desconectar();
             }
-            catch (SqlException)
+            catch (SqlException exx)
             {
                 this.mensagem = "Erro ao Cadastrar!!";
-                // Console.WriteLine(e);
+                Console.WriteLine(exx);
             }
 
         }

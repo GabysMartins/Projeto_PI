@@ -145,12 +145,12 @@ namespace OficinaMec
                 }
                 else
                 {
-                    MessageBox.Show("Gere um numero de OS primeiro!");
+                    MessageBox.Show("Gere um numero de OS primeiro!","",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Insira o código do produto primeiro!");
+                MessageBox.Show("Insira o código do produto primeiro!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             }
         }

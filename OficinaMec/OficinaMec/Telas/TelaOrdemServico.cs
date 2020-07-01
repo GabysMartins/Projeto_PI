@@ -33,27 +33,28 @@ namespace OficinaMec
         Conexao conexao = new Conexao();
         SqlCommand cmd = new SqlCommand();
         public String mensagem = "";
-
+        int i;
         private void button3_Click(object sender, EventArgs e)
         {
 
             ExibeOS eos = new ExibeOS(textBox3.Text);
             ExibePecasOS epo = new ExibePecasOS(textBox3.Text);
 
+
             string sql = $"select QTTD_PECA,COD_PECA from Consulta_Banco where NUM_ORC={textBox3.Text}";
             try
             {
                 SqlCommand cmd = new SqlCommand(sql, conexao.conectar());
                 SqlDataReader leitor = cmd.ExecuteReader();
+                textBox1.Text += ("---------------------PEÇAS---------------------" + System.Environment.NewLine);
 
                 while (leitor.Read())
                 {
-                    textBox1.Text = ("---------------------PEÇAS---------------------" + System.Environment.NewLine+
-                        "Peça: "+leitor[0].ToString() + 
-                        ", Valor: R$ " + leitor[1].ToString() + System.Environment.NewLine + System.Environment.NewLine+
-                        "-----------------------------------------------" + System.Environment.NewLine+ System.Environment.NewLine);
-                    
+                    textBox1.Text += "Peça: " + leitor[0].ToString() + ", Valor: R$ " + leitor[1].ToString() + System.Environment.NewLine;
+                    //Console.WriteLine("Peça: " + leitor[0].ToString() + ", Valor: R$ " + leitor[1].ToString() + System.Environment.NewLine);
+                    i++;
                 }
+                textBox1.Text += "-----------------------------------------------" + System.Environment.NewLine + System.Environment.NewLine;
                 conexao.desconectar();
             }
             catch (SqlException)
